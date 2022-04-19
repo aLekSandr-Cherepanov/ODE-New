@@ -5901,37 +5901,37 @@ button.close {
 .clearfix:after,
 .clearfix:before {
     content: " ";
-    display: table
+    display: table;
 }
 
 .clearfix:after {
-    clear: both
+    clear: both;
 }
 
 .center-block {
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .pull-right {
-    float: right !important
+    float: right !important;
 }
 
 .pull-left {
-    float: left !important
+    float: left !important;
 }
 
 .hide {
-    display: none !important
+    display: none !important;
 }
 
 .show {
-    display: block !important
+    display: block !important;
 }
 
 .invisible {
-    visibility: hidden
+    visibility: hidden;
 }
 
 .text-hide {
@@ -5944,7 +5944,7 @@ button.close {
 
 .hidden {
     display: none !important;
-    visibility: hidden !important
+    visibility: hidden !important;
 }
 
 .affix {
@@ -5959,66 +5959,66 @@ button.close {
 td.visible-xs,
 th.visible-xs,
 tr.visible-xs {
-    display: none !important
+    display: none !important;
 }
 
 @media (max-width:767px) {
     .visible-xs {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-xs {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-xs,
     th.visible-xs {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-xs.visible-sm {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-xs.visible-sm {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-xs.visible-sm,
     th.visible-xs.visible-sm {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .visible-xs.visible-md {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-xs.visible-md {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-xs.visible-md,
     th.visible-xs.visible-md {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:1200px) {
     .visible-xs.visible-lg {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-xs.visible-lg {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-xs.visible-lg,
     th.visible-xs.visible-lg {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
@@ -6026,66 +6026,66 @@ tr.visible-xs {
 td.visible-sm,
 th.visible-sm,
 tr.visible-sm {
-    display: none !important
+    display: none !important;
 }
 
 @media (max-width:767px) {
     .visible-sm.visible-xs {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-sm.visible-xs {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-sm.visible-xs,
     th.visible-sm.visible-xs {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-sm {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-sm {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-sm,
     th.visible-sm {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .visible-sm.visible-md {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-sm.visible-md {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-sm.visible-md,
     th.visible-sm.visible-md {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:1200px) {
     .visible-sm.visible-lg {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-sm.visible-lg {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-sm.visible-lg,
     th.visible-sm.visible-lg {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
@@ -6093,66 +6093,67 @@ tr.visible-sm {
 td.visible-md,
 th.visible-md,
 tr.visible-md {
-    display: none !important
+    display: none !important;
 }
 
 @media (max-width:767px) {
     .visible-md.visible-xs {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-md.visible-xs {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-md.visible-xs,
     th.visible-md.visible-xs {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-md.visible-sm {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-md.visible-sm {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-md.visible-sm,
     th.visible-md.visible-sm {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .visible-md {
-        display: block !important
+        display: block !important;
     }
 
     tr.visible-md {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-md,
     th.visible-md {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:1200px) {
     .visible-md.visible-lg {
-        display: block !important
+        display: block !important;
+        margin-top: 40px;
     }
 
     tr.visible-md.visible-lg {
-        display: table-row !important
+        display: table-row !important;
     }
 
     td.visible-md.visible-lg,
     th.visible-md.visible-lg {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
@@ -6160,7 +6161,7 @@ tr.visible-md {
 td.visible-lg,
 th.visible-lg,
 tr.visible-lg {
-    display: none !important
+    display: none !important;
 }
 
 @media (max-width:767px) {
