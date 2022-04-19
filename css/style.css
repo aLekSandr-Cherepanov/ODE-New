@@ -13,36 +13,7 @@ textarea.bxeditor-textarea {
 }
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-    display: block
-}
 
-audio,
-canvas,
-video {
-    display: inline-block
-}
-
-audio:not([controls]) {
-    display: none;
-    height: 0
-}
-
-[hidden],
-template {
-    display: none
-}
 
 html {
     font-family: sans-serif;
@@ -28334,7 +28305,7 @@ table[data-bx-no-border="Y"] td {
 }
 
 .styled-block {
-    border-left: 2px solid;
+    border-bottom: 2px solid;
     background: #f5f5f5;
     color: #555555;
     margin-bottom: 40px;
@@ -35030,6 +35001,8 @@ html.mobile li.viber.viber_desktop {
 
 #title-search_fixed {
     position: relative;
+    border: 1px solid;
+    border-radius: 20px;
 }
 
 .rounded_block .social-icons li a,
@@ -35597,11 +35570,11 @@ form.search {
 .search .search-input {
     color: #444444;
     display: block;
-    height: 34px;
+    height: 45px;
     line-height: 18px;
     padding: 0 70px 3px 14px;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 20px;
 }
 
 .search .btn-search {
@@ -71086,63 +71059,6 @@ body .basket-item-info-name-link {
     height: 53px
 }
 
-/* End */
-
-
-/* Start:/bitrix/templates/aspro_max/css/custom.css?1613117250389*/
-/*NOTE: This file is intended for programmers. Aspro technical support is not advised to work with him.*/
-
-/* Examples (uncomment to use):*/
-
-/* Expand site width */
-/* body .wrapper { max-width: 1400px !important;  } */
-
-/* Set site background image */
-/* body {  background: url(/bitrix/templates/aspro_max/css/image_source) top no-repeat; }
-
-/* Hide compare button */
-/* a.compare_item { display: none !important;  }*/
-/* End */
-/* /bitrix/templates/aspro_max/vendor/css/bootstrap.min.css?161311725092469 */
-/* /bitrix/templates/aspro_max/css/jquery.fancybox.min.css?161311725012936 */
-/* /bitrix/templates/aspro_max/vendor/css/carousel/owl/owl.carousel.min.css?16131172503351 */
-/* /bitrix/templates/aspro_max/vendor/css/carousel/owl/owl.theme.default.min.css?16131172501013 */
-/* /bitrix/templates/aspro_max/css/styles.min.css?1613117250154573 */
-/* /bitrix/templates/aspro_max/css/blocks/blocks.min.css?161485923816184 */
-/* /bitrix/templates/aspro_max/css/blocks/common.blocks/counter-state/counter-state.min.css?1613117250291 */
-/* /bitrix/templates/aspro_max/css/banners.min.css?161311725011810 */
-/* /bitrix/templates/aspro_max/css/menu.min.css?161311725063475 */
-/* /bitrix/templates/aspro_max/css/catalog.min.css?16131172509869 */
-/* /bitrix/templates/aspro_max/css/animation/animation_ext.css?16131172504934 */
-/* /bitrix/templates/aspro_max/css/jquery.mCustomScrollbar.min.css?161311725042839 */
-/* /bitrix/templates/aspro_max/vendor/css/ripple.css?1613117250854 */
-/* /bitrix/templates/aspro_max/css/left_block_main_page.min.css?161311725019952 */
-/* /bitrix/templates/aspro_max/css/stores.min.css?16131172508470 */
-/* /bitrix/templates/aspro_max/css/yandex_map.min.css?16131172506444 */
-/* /bitrix/templates/aspro_max/css/header_fixed.min.css?16131172509507 */
-/* /bitrix/templates/aspro_max/ajax/ajax.min.css?1613117250247 */
-/* /bitrix/templates/aspro_max/components/bitrix/search.title/corp/style.min.css?16131172501122 */
-/* /bitrix/templates/aspro_max/components/bitrix/breadcrumb/main/style.min.css?16131172511552 */
-/* /bitrix/templates/aspro_max/components/bitrix/menu/left_menu/style.min.css?16131172511500 */
-/* /bitrix/templates/aspro_max/css/footer.min.css?161311725026452 */
-/* /bitrix/components/aspro/marketing.popup.max/templates/.default/style.min.css?16131172524610 */
-/* /bitrix/templates/aspro_max/styles.css?163178114617295 */
-/* /bitrix/templates/aspro_max/template_styles.css?1631781164433438 */
-/* /bitrix/templates/aspro_max/css/header.min.css?161311725025185 */
-/* /bitrix/templates/aspro_max/css/media.min.css?1613117250173387 */
-/* /bitrix/templates/aspro_max/vendor/fonts/font-awesome/css/font-awesome.min.css?161311725031000 */
-/* /bitrix/templates/aspro_max/css/print.min.css?161311725020055 */
-/* /bitrix/templates/aspro_max/css/h1-normal.min.css?161311725034 */
-/* /bitrix/templates/aspro_max/css/round-elements.min.css?16131172501049 */
-/* /bitrix/templates/aspro_max/themes/12/theme.min.css?161311725050398 */
-/* /bitrix/templates/aspro_max/bg_color/light/bgcolors.min.css?161311725054 */
-/* /bitrix/templates/aspro_max/css/widths/width-3.min.css?16131172503679 */
-/* /bitrix/templates/aspro_max/css/fonts/font-10.min.css?1613117250867 */
-/* /bitrix/templates/aspro_max/css/custom.css?1613117250389 */
-
-
-
-
 
 /*стили для проверки*/
 
@@ -71291,5 +71207,36 @@ body .basket-item-info-name-link {
 
 .dropdown-toggle:hover:before {
     width: 100%;
+}
+
+.search_wrap {
+    padding-left: 30px;
+    padding-right: 62px;
+}
+
+.search-block {
+    height: 82px;
+    display: table;
+    width: 100%;
+}
+
+.search-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    height: 82px;
+    width: 100vw;
+}
+
+.search-input {
+    padding: 0 44px 0 16px;
+    height: 42px;
+    font-size: 0.867em;
+    line-height: 40px;
+    background: #fafafa;
+    border: 1px solid #ececec;
+}
+
+.header-wrapper .block_search_wrap {
+    display: block;
 }
 
