@@ -33180,6 +33180,7 @@ body .logo-row .phone .svg-inline-down {
     line-height: 40px;
     background: #fafafa;
     border: 1px solid #a1a1a1;
+    border-radius: 20px;
 }
 
 .logo_and_menu-row .search .svg path {
@@ -71259,4 +71260,36 @@ body .basket-item-info-name-link {
     display: none;
 }
 
+.dropdown-toggle {
+    background-image: linear-gradient(
+    to right,
+    #088b4a,
+    #088b4a 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-toggle:before {
+    content: '';
+    background: #088b4a;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+}
+
+.dropdown-toggle:hover {
+    background-position: 0;
+}
+
+.dropdown-toggle:hover:before {
+    width: 100%;
+}
 
