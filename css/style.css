@@ -56097,6 +56097,10 @@ handheld and (max-width:991px) {
         margin-bottom: 17px
     }
 
+    .container_inner {
+        flex-wrap: wrap;
+    }
+
     .basket-coupon-alert-section {
         margin-bottom: 0
     }
@@ -59639,11 +59643,7 @@ handheld and (max-width:767px) {
 }
 
 @media all and (max-width:650px) {
-
-    .container_inner {
-        flex-wrap: wrap;
-    }
-
+    
     .footer_top .sblock .wrap_icon {
         display: none
     }
@@ -71153,6 +71153,7 @@ body .basket-item-info-name-link {
     font: 14px playregular, verdana;
     font-family: 'Roboto', sans-serif;
     padding-top: 30px;
+    margin-bottom: 230px;
 }
 
 .container_inner {
@@ -71239,5 +71240,49 @@ body .basket-item-info-name-link {
 
 .header-wrapper .block_search_wrap {
     display: block;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin-top: 50px
+    ;
+}
+  
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.valve_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_left {
+    float: left;
+}
+
+.full_list {
+    padding-left: 8%;
 }
 
