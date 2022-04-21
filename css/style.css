@@ -19808,7 +19808,6 @@ body.fill_bg_n .header-v6.wrapper1.long_banner_contents .menu-row.middle-block.b
 .logo_and_menu-row .search_wrap {
     opacity: 0;
     visibility: hidden;
-    padding-left: 30px;
     padding-right: 62px;
     width: 1px
 }
@@ -71212,8 +71211,9 @@ body .basket-item-info-name-link {
 }
 
 .search_wrap {
-    padding-left: 30px;
-    padding-right: 62px;
+    width: 350px;
+    padding-right: 35px;
+    float: right;
 }
 
 .search-block {
@@ -71240,6 +71240,8 @@ body .basket-item-info-name-link {
 
 .header-wrapper .block_search_wrap {
     display: block;
+    width: 1408px;
+    margin: 0 auto;
 }
 
 .card {
