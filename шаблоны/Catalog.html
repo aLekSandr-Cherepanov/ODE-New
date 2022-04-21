@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/файлы сайтов/ODE/код/переделывание ODE/css/style.css" rel="stylesheet">
     <link href="/переделывание ODE/css/style2.css" rel="stylesheet">
-    <title>List</title>
+    <title>Catalog</title>
 </head>
 
 <body>
@@ -384,95 +384,281 @@
                     </div>
                 </form>
             </div>
-			<div class="right_block  wide_N ">
-				<div class="middle  ">
-					<div class="container">
-                        <div class="element_right_bottom">
-                            <div class="category_bg_center">
-                                <br>
-                                <div class="element_bg_left"></div>
-                
-                                <div class="valve_list_cont">
-                                    <div class="basket_cat"></div>
-                                    <div class="full_list">
-                                        <!--span class="sep-vert"><span>&nbsp;</span></span-->               
-                                        <div>
-                                            Дополнительно:
-                                            &nbsp;&nbsp;
-                                            <a class="active" href="/catalog">Показать все</a>                
-                                        </div>               
-                                    </div>
-                                    <div class="valve_list">
-                                        <div class="card">
-                                            <img src="https://ode-rus.ru/assets/image/valves/big/21a3kv15.jpg" alt="Джинсы из денима" style="width:200px">
-                                            <h1>Двухходовые клапаны</h1>
-                                            <p>Прямого действия</p>
-                                            <p>
-                                                <button>Перейти</button>
-                                            </p>
-                                        </div>               
-                                        <div class="card">
-                                            <img src="https://ode-rus.ru/assets/image/valves/big/21en2k0b105.jpg" alt="Джинсы из денима" style="width:200px">
-                                            <h1>Двухходовые клапаны</h1>
-                                            <p>непрямого действия</p>
-                                            <p>
-                                                <button>Перейти</button>
-                                            </p>
-                                        </div>
-                                        <div class="card">
-                                            <img src="https://ode-rus.ru/assets/image/valves/big/21h11k0v120.jpg" alt="Джинсы из денима" style="width:200px">
-                                            <h1>Двухходовые клапаны</h1>
-                                            <p>комбинированного действия</p>
-                                            <p>
-                                                <button>Перейти</button>
-                                            </p>
-                                        </div>
-                
-                                        <div class="card">
-                                            <img src="https://ode-rus.ru/assets/image/valves/big/31a1av10.jpg" alt="Джинсы из денима" style="width:200px">
-                                            <h1>Трехходовые клапаны</h1>
-                                            <p>
-                                                <button>Перейти</button>
-                                            </p>
-                                        </div>
-                
-                                        <div class="card">
-                                            <img src="https://ode-rus.ru/assets/image/valves/big/21asgk1b30-ri.jpg" alt="Джинсы из денима" style="width:200px">
-                                            <h1>Клапаны под трубки</h1>
-                                            <p>
-                                                <button>Перейти</button>
-                                            </p>
-                                        </div>
-
-                                        <div class="card">
-                                            <img src="https://ode-rus.ru/assets/image/valves/big/512621w0b12-a.jpg" alt="Джинсы из денима" style="width:200px">
-                                            <h1>Пятиходовые клапаны</h1>
-                                            <p>
-                                                <button>Перейти</button>
-                                            </p>
-                                        </div>
-                
-                                        <div class="card card_left">
-                                            <img src="https://ode-rus.ru/assets/image/valves/big/bda08012as.jpg" alt="Джинсы из денима" style="width:200px">
-                                            <h1>Электромагнитные катушки</h1>
-                                            <p>
-                                                <button>Перейти</button>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="element_bg_right"></div>
+			<div class="element_right_bottom">
+                <div class="category_bg_center">
+                    <br>  
+                    <div class="valve_list_cont">
+                        <div class="sorting">
+    
+                            <div style="float:right;">
+                                <select style="width:168px;" id="showLimit" class="f_limit" name="limit" onchange="tmFilters.changeOrder(this);">
+                                    <option value="20" selected="selected">Показывать по 20</option>
+                                    <option value="30">Показывать по 30</option>
+                                    <option value="50">Показывать по 50</option>
+                                </select>
                             </div>
+    
+                            <!--span class="sep-vert"><span>&nbsp;</span></span-->
+    
+                            <div id="sorting">
+                                Сортировать по:
+                                &nbsp;&nbsp;
+                                <select class="f_sortby" name="sortby" onchange="tmFilters.changeOrder(this);">
+                                    <option value="pagetitle">по названию</option>
+                                    <option value="price">по цене</option>
+                                    <option value="kv">расходу</option>
+                                </select>
+                                &nbsp;
+                                <select class="f_sortdir" name="sortdir" onchange="tmFilters.changeOrder(this);">
+                                    <option value="asc">по возрастанию</option>
+                                    <option value="desc">по убыванию</option>
+                                </select>
+                            </div>
+    
+    
                         </div>
-	                </div>
-			        <div style="clear:both"></div>
-			    </div>
+                        <div id="products"><div class="shk-item">
+                        <form>
+                        <input type="hidden" name="shk-id" value="89">
+                                <input type="hidden" name="shk-name" value="212A2KB15">
+                                <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
+                        <div class="category_module"><a href="catalog/2-way-direct-acting/212a2kb15.html" title="212A2KB15"><img title="Электромагнитный клапан 212A2KB15" alt="212A2KB15" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/21a3kv15.jpg"></a><div class="category_module_environment"><img title="Клапаны на воду" src="/assets/image/enviroment/water_small.png"><img title="Клапаны на воздух" src="/assets/image/enviroment/air_small.png"></div>
+                        <div class="category_module_info">
+                        <ul>
+                        <li>Наименование: 212A2KB15</li>
+                        
+                        <li>Температура: -10C..+90C</li>
+                        <li>Присоединение: 1/4 дюйма</li>
+                        <li>Расход: 1,4 л/мин</li>
+                        
+                        <br>
+                        <li>Цена: по запросу</li>
+                        </ul>
+                        <div class="category_module_basket" style="text-align:center"><a style="color:#333" href="catalog/2-way-direct-acting/212a2kb15.html">Описание позиции</a>
+                        
+                        
+                        
+                        
+                        </div>
+
+
+
+
+
+                        </div>
+                        </div>
+
+                        </form>
+                        </div>
+                        <div class="shk-item">
+                        <form>
+                        <input type="hidden" name="shk-id" value="90">
+                                <input type="hidden" name="shk-name" value="212A2KB20">
+                                <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
+                        <div class="category_module"><a href="catalog/2-way-direct-acting/212a2kb20.html" title="212A2KB20"><img title="Электромагнитный клапан 212A2KB20" alt="212A2KB20" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/21a3kv15.jpg"></a><div class="category_module_environment"><img title="Клапаны на воду" src="/assets/image/enviroment/water_small.png"><img title="Клапаны на воздух" src="/assets/image/enviroment/air_small.png"></div>
+                        <div class="category_module_info">
+                        <ul>
+                        <li>Наименование: 212A2KB20</li>
+
+                        <li>Температура: -10C..+90C</li>
+                        <li>Присоединение: 1/4 дюйма</li>
+                        <li>Расход: 2 л/мин</li>
+
+                        <br>
+                        <li>Цена: по запросу</li>
+                        </ul>
+                        <div class="category_module_basket" style="text-align:center"><a style="color:#333" href="catalog/2-way-direct-acting/212a2kb20.html">Описание позиции</a>
+
+
+
+
+                        </div>
+
+
+
+
+
+                        </div>
+                        </div>
+
+                        </form>
+                        </div>
+                        <div class="shk-item">
+                        <form>
+                        <input type="hidden" name="shk-id" value="91">
+                                <input type="hidden" name="shk-name" value="212A2KB25">
+                                <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
+                        <div class="category_module"><a href="catalog/2-way-direct-acting/212a2kb25.html" title="212A2KB25"><img title="Электромагнитный клапан 212A2KB25" alt="212A2KB25" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/21a3kv15.jpg"></a><div class="category_module_environment"><img title="Клапаны на воду" src="/assets/image/enviroment/water_small.png"><img title="Клапаны на воздух" src="/assets/image/enviroment/air_small.png"></div>
+                        <div class="category_module_info">
+                        <ul>
+                        <li>Наименование: 212A2KB25</li>
+
+                        <li>Температура: -10C..+90C</li>
+                        <li>Присоединение: 1/4 дюйма</li>
+                        <li>Расход: 3,2 л/мин</li>
+
+                        <br>
+                        <li>Цена: по запросу</li>
+                        </ul>
+                        <div class="category_module_basket" style="text-align:center"><a style="color:#333" href="catalog/2-way-direct-acting/212a2kb25.html">Описание позиции</a>
+
+
+
+
+                        </div>
+
+
+
+
+
+                        </div>
+                        </div>
+
+                        </form>
+                        </div>
+                        <div class="shk-item">
+                        <form>
+                        <input type="hidden" name="shk-id" value="92">
+                                <input type="hidden" name="shk-name" value="212A2KB30">
+                                <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
+                        <div class="category_module"><a href="catalog/2-way-direct-acting/212a2kb30.html" title="212A2KB30"><img title="Электромагнитный клапан 212A2KB30" alt="212A2KB30" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/21a3kv15.jpg"></a><div class="category_module_environment"><img title="Клапаны на воду" src="/assets/image/enviroment/water_small.png"><img title="Клапаны на воздух" src="/assets/image/enviroment/air_small.png"></div>
+                        <div class="category_module_info">
+                        <ul>
+                        <li>Наименование: 212A2KB30</li>
+
+                        <li>Температура: -10C..+90C</li>
+                        <li>Присоединение: 1/4 дюйма</li>
+                        <li>Расход: 4 л/мин</li>
+
+                        <br>
+                        <li>Цена: по запросу</li>
+                        </ul>
+                        <div class="category_module_basket" style="text-align:center"><a style="color:#333" href="catalog/2-way-direct-acting/212a2kb30.html">Описание позиции</a>
+
+
+
+
+                        </div>
+
+
+
+
+
+                        </div>
+                        </div>
+
+                        </form>
+                        </div>
+                        <div class="shk-item">
+                        <form>
+                        <input type="hidden" name="shk-id" value="93">
+                                <input type="hidden" name="shk-name" value="212A2KB45">
+                                <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
+                        <div class="category_module"><a href="catalog/2-way-direct-acting/212a2kb45.html" title="212A2KB45"><img title="Электромагнитный клапан 212A2KB45" alt="212A2KB45" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/21a3kv15.jpg"></a><div class="category_module_environment"><img title="Клапаны на воду" src="/assets/image/enviroment/water_small.png"><img title="Клапаны на пар" src="/assets/image/enviroment/steam_small.png"><img title="Клапаны на воздух" src="/assets/image/enviroment/air_small.png"><img title="Клапаны для химпрома" src="/assets/image/enviroment/chemistry_small.png"></div>
+                        <div class="category_module_info">
+                        <ul>
+                        <li>Наименование: 212A2KB45</li>
+
+                        <li>Температура: -10C..+140C</li>
+                        <li>Присоединение: 1/4 дюйма</li>
+                        <li>Расход: 6,5 л/мин</li>
+
+                        <br>
+                        <li>Цена: по запросу</li>
+                        </ul>
+                        <div class="category_module_basket" style="text-align:center"><a style="color:#333" href="catalog/2-way-direct-acting/212a2kb45.html">Описание позиции</a>
+
+
+
+
+                        </div>
+
+
+
+
+
+                        </div>
+                        </div>
+
+                        </form>
+                        </div>
+                        <div class="shk-item">
+                        <form>
+                        <input type="hidden" name="shk-id" value="94">
+                                <input type="hidden" name="shk-name" value="212A2KB55">
+                                <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
+                        <div class="category_module"><a href="catalog/2-way-direct-acting/212a2kb55.html" title="212A2KB55"><img title="Электромагнитный клапан 212A2KB55" alt="212A2KB55" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/21a3kv15.jpg"></a><div class="category_module_environment"><img title="Клапаны на воду" src="/assets/image/enviroment/water_small.png"><img title="Клапаны на воздух" src="/assets/image/enviroment/air_small.png"></div>
+                        <div class="category_module_info">
+                        <ul>
+                        <li>Наименование: 212A2KB55</li>
+
+                        <li>Температура: -10C..+90C</li>
+                        <li>Присоединение: 1/4 дюйма</li>
+                        <li>Расход: 9 л/мин</li>
+
+                        <br>
+                        <li>Цена: по запросу</li>
+                        </ul>
+                        <div class="category_module_basket" style="text-align:center"><a style="color:#333" href="catalog/2-way-direct-acting/212a2kb55.html">Описание позиции</a>
+
+
+
+
+                        </div>
+
+
+
+
+
+                        </div>
+                        </div>
+
+                        </form>
+                        </div>
+                        <div class="shk-item">
+                        <form>
+                        <input type="hidden" name="shk-id" value="78">
+                                <input type="hidden" name="shk-name" value="212A2KV15">
+                                <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
+                        <div class="category_module"><a href="catalog/2-way-direct-acting/212a2kv15.html" title="212A2KV15"><img title="Электромагнитный клапан 212A2KV15" alt="212A2KV15" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/21a3kv15.jpg"></a><div class="category_module_environment"><img title="Клапаны на воду" src="/assets/image/enviroment/water_small.png"><img title="Клапаны на пар" src="/assets/image/enviroment/steam_small.png"><img title="Клапаны на воздух" src="/assets/image/enviroment/air_small.png"><img title="Клапаны для химпрома" src="/assets/image/enviroment/chemistry_small.png"></div>
+                        <div class="category_module_info">
+                        <ul>
+                        <li>Наименование: 212A2KV15</li>
+
+                        <li>Температура: -10C..+140C</li>
+                        <li>Присоединение: 1/4 дюйма</li>
+                        <li>Расход: 1,4 л/мин</li>
+
+                        <br>
+                        <li>Цена: 28  €</li>
+                        </ul>
+                        <div class="category_module_basket" style="text-align:center"><a style="color:#333" href="catalog/2-way-direct-acting/212a2kv15.html">Описание позиции</a>
+
+                        </div>
+                        </div>
+                        </div>
+
+                        </form>
+                        </div>
+
+                        </div>                       
+                        <div class="pages">
+                            <ul id="pages">
+                                <li><a class="active" href="catalog/2-way-direct-acting/">1</a></li> 
+                                <li><a href="catalog/2-way-direct-acting/?page=2">2</a></li>
+                                <li><a href="catalog/2-way-direct-acting/?page=3">3</a></li>
+                                <li><a href="catalog/2-way-direct-acting/?page=4">4</a></li>
+                                <li><a href="catalog/2-way-direct-acting/?page=5">5</a></li>
+                                <li><a href="catalog/2-way-direct-acting/?page=6">6</a></li> <li><a href="catalog/2-way-direct-acting/?page=2" title="следующая">››</a></li>  <li><a href="catalog/2-way-direct-acting/?page=14">последняя</a></li> 
+                            </ul>
+                        </div>    
+                    </div>
+                </div>
             </div>        			
         </div> 	
         <div class="left_block sticky-sidebar"></div>		
     </div> 	
     <footer class="footer">
-
         <div class="row">
             <div class="col-md-2 col-sm-3">
                 <div class="fourth_bottom_menu">
