@@ -71290,3 +71290,21 @@ body .basket-item-info-name-link {
     width: 770px;
 }
 
+#products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shk-item {
+   padding: 15px;
+   border: 1px solid #00000038; 
+   margin-right: 9px;
+   margin-bottom: 30px;
+}
+
+.category_module_basket {
+    text-align: center;
+    background-color: #088b4a;
+    height: 40px;
+}
+
