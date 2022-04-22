@@ -17876,7 +17876,7 @@ body div.section-banner-top {
 
 .ordered-block__title {
     color: #000;
-    padding-bottom: 1.933rem
+    padding-bottom: 4.933rem;
 }
 
 .brand-detail-info {
@@ -27714,7 +27714,7 @@ h6 {
 }
 
 h1 {
-    font-size: 2.133em;
+    font-size: 1.5em;
     line-height: 36px;
 }
 
@@ -29403,6 +29403,7 @@ form label {
     font-weight: normal;
     font-size: 13px;
     margin-bottom: 2px;
+    margin-right: 145px;
 }
 
 #content .right_block.catalog .catalog_list,
@@ -71065,7 +71066,7 @@ body .basket-item-info-name-link {
 
 
 .filter_span_left {
-    width: 30%;
+    width: 25%;
     float: left;
     padding-top: 5px;
     max-height: 130px;
@@ -71082,7 +71083,7 @@ body .basket-item-info-name-link {
 }
 
 .filter_span_right {
-    width: 30%;
+    width: 25%;
     float: left;
     /*padding-left: 15px;*/
     padding-top: 5px;
@@ -71286,7 +71287,7 @@ body .basket-item-info-name-link {
 }
 
 .full_list {
-    padding-left: 8%;
+    margin-bottom: 60px;
 }
 
 .element_right_bottom {
@@ -71313,4 +71314,26 @@ body .basket-item-info-name-link {
 .description-product {
     padding: 0 15px;
 }
+
+.block_heading {
+    margin-bottom: 50px;
+}
+
+.sorting {
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.f_sortby {
+    border: 1px solid #00000073;
+}
+
+.f_sortdir {
+    border: 1px solid #00000073;
+}
+
+.block-f_limit {
+    margin-bottom: 30px;
+}
+
 
