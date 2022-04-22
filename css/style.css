@@ -33073,6 +33073,7 @@ body .logo-row .phone .svg-inline-down {
 
 .logo_and_menu-row .search-block {
     height: 82px;
+    padding-top: 20px;
     display: table;
     width: 100%;
 }
