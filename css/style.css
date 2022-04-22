@@ -382,7 +382,7 @@ hr {
 }
 
 p {
-    margin: 0 0 10px
+    margin: 35px 0 0;
 }
 
 .lead {
@@ -27851,9 +27851,9 @@ hr.long {
     margin: 35px 0px 30px;
 }
 
-p {
+/*p {
     margin: 1.666rem 0px;
-}
+}*/
 
 .popup p {
     margin: 25px 0px;
@@ -71265,7 +71265,7 @@ body .basket-item-info-name-link {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: #000;
+  background-color: #088b4a;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -71299,7 +71299,6 @@ body .basket-item-info-name-link {
 }
 
 .shk-item {
-   padding: 15px;
    border: 1px solid #00000038; 
    margin-right: 9px;
    margin-bottom: 30px;
@@ -71309,5 +71308,9 @@ body .basket-item-info-name-link {
     text-align: center;
     background-color: #088b4a;
     height: 40px;
+}
+
+.description-product {
+    padding: 0 15px;
 }
 
