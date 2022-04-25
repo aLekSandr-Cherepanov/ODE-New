@@ -27905,9 +27905,9 @@ ul>li {
     position: relative;
 }
 
-ul>li:first-of-type {
+/*ul>li:first-of-type {
     margin-top: 0;
-}
+}*/
 
 ul ul {
     margin-left: 20px;
@@ -27917,10 +27917,10 @@ ol ol {
     margin-left: 20px;
 }
 
-ul:not([id*="bx_"])>li:before {
+/*ul:not([id*="bx_"])>li:before {
     content: "\2014";
     margin: 0 7px 0 -21px;
-}
+}*/
 
 ul.list-unstyled li {
     padding-left: 0px;
@@ -28977,7 +28977,7 @@ blockquote p {
 /* End */
 
 
-/* Start:/bitrix/templates/aspro_max/template_styles.css?1631781164433438*/
+
 * {
     margin: 0;
     padding: 0;
@@ -71334,6 +71334,30 @@ body .basket-item-info-name-link {
 
 .block-f_limit {
     margin-bottom: 30px;
+}
+
+#pages {
+    display: flex;
+}
+
+.pages {
+    color: #747474;
+    font-size: 18px;
+    padding: 10px 0 0;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.pages li.active a, .pages a.active {
+    background-color: #555;
+    color: #fff;
+}
+
+.pages a {
+    background-color: #999;
+    color: #FFFFFF;
+    padding: 0 3px;
+    text-decoration: none;
 }
 
 
