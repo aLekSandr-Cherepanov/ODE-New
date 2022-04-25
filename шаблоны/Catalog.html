@@ -296,79 +296,561 @@
     <div class="wrapper_inner">
 		<div class="container_inner clearfix">
             <div class="filter_center">
-                <form action="[[~[[*id]]]]filterresults/" method="get">
-                    <div class="wrapper-block-form">
-                         <div class="block-form">
-                            <div class="filter_span_left">
-                                <span>Соединение:</span>
-                                <span>Тип клапана:</span>
-                                <span>Функция:</span>
-                            </div>
-                            <div class="filter_list">
-                                <select name="f_pipetype">
-                                    <option value="" selected="selected"> любое соединение</option>
-                                    <option value="резьба G">резьба G</option>
-                                    <option value="резьба NPT">резьба NPT</option>
-                                    <option value="монтаж на плиту">монтаж на плиту</option>
-                                    <option value="под трубки">под трубки</option>
-                                </select>
-                                <select name="f_type">
-                                    <option value="" selected="selected"> любой тип </option>
-                                    <option value="двухходовой">двухходовой</option>
-                                    <option value="трехходовой">трехходовой</option>
-                                    <option value="пятиходовой">пятиходовой</option>
-                                </select>
-                                <select name="f_func">
-                                    <option value="" selected="selected"> любая функция </option>
-                                    <option value="нормально-закрытый">нормально-закрытый</option>
-                                    <option value="нормально-открытый">нормально-открытый</option>
-                                </select>
-                            </div>
-                         </div>
-                        <div class="block-form">
-                            <div class="filter_span_right">
-                                <span>Диаметр:</span>
-                                <span>Вид клапана:</span>
-                                <span>Применение:</span>
-                            </div>
-                            <div class="filter_list">
-                                <select name="f_pipe">
-                                    <option value="" selected="selected"> любой диаметр </option>
-                                    <option value="1/8 дюйма">1/8 дюйма</option>
-                                    <option value="1/4 дюйма">1/4 дюйма</option>
-                                    <option value="3/8 дюйма">3/8 дюйма</option>
-                                    <option value="1/2 дюйма">1/2 дюйма</option>
-                                    <option value="3/4 дюйма">3/4 дюйма</option>
-                                    <option value="1 дюйм">1 дюйм</option>
-                                    <option value="1 1/4 дюйма">1 1/4 дюйма</option>
-                                    <option value="1 1/2 дюйма">1 1/2 дюйма</option>
-                                    <option value="2 дюйма">2 дюйма</option>
-                                </select>
-                            
-                                <select name="f_kind">
-                                    <option value="" selected="selected"> любой вид </option>
-                                    <option value="прямого действия">прямого действия</option>
-                                    <option value="непрямого действия">непрямого действия</option>
-                                    <option value="комбинированного действия">комбинированный</option>
-                                </select>
-                            
-                                <select name="f_envioronmentfilter[like]">
-                                    <option value="" selected="selected"> любая среда </option>
-                                    <option value="Клапаны на воду">клапаны на воду</option>
-                                    <option value="Клапаны на пар">клапаны на пар</option>
-                                    <option value="Клапаны на воздух">клапаны на воздух</option>
-                                    <option value="Клапаны для химпрома">клапаны для химпрома</option>
-                                    <option value="Клапаны для кофемашин">клапаны для кофемашин</option>
-                                </select>
+                <div>
+                    <form action="[[~[[*id]]]]filterresults/" method="get">
+                        <div class="wrapper-block-form">
+                             <div class="block-form">
+                                <div class="filter_span_left">
+                                    <span>Соединение:</span>
+                                    <span>Тип клапана:</span>
+                                    <span>Функция:</span>
+                                </div>
+                                <div class="filter_list">
+                                    <select name="f_pipetype">
+                                        <option value="" selected="selected"> любое соединение</option>
+                                        <option value="резьба G">резьба G</option>
+                                        <option value="резьба NPT">резьба NPT</option>
+                                        <option value="монтаж на плиту">монтаж на плиту</option>
+                                        <option value="под трубки">под трубки</option>
+                                    </select>
+                                    <select name="f_type">
+                                        <option value="" selected="selected"> любой тип </option>
+                                        <option value="двухходовой">двухходовой</option>
+                                        <option value="трехходовой">трехходовой</option>
+                                        <option value="пятиходовой">пятиходовой</option>
+                                    </select>
+                                    <select name="f_func">
+                                        <option value="" selected="selected"> любая функция </option>
+                                        <option value="нормально-закрытый">нормально-закрытый</option>
+                                        <option value="нормально-открытый">нормально-открытый</option>
+                                    </select>
+                                </div>
+                             </div>
+                            <div class="block-form">
+                                <div class="filter_span_right">
+                                    <span>Диаметр:</span>
+                                    <span>Вид клапана:</span>
+                                    <span>Применение:</span>
+                                </div>
+                                <div class="filter_list">
+                                    <select name="f_pipe">
+                                        <option value="" selected="selected"> любой диаметр </option>
+                                        <option value="1/8 дюйма">1/8 дюйма</option>
+                                        <option value="1/4 дюйма">1/4 дюйма</option>
+                                        <option value="3/8 дюйма">3/8 дюйма</option>
+                                        <option value="1/2 дюйма">1/2 дюйма</option>
+                                        <option value="3/4 дюйма">3/4 дюйма</option>
+                                        <option value="1 дюйм">1 дюйм</option>
+                                        <option value="1 1/4 дюйма">1 1/4 дюйма</option>
+                                        <option value="1 1/2 дюйма">1 1/2 дюйма</option>
+                                        <option value="2 дюйма">2 дюйма</option>
+                                    </select>
+                                
+                                    <select name="f_kind">
+                                        <option value="" selected="selected"> любой вид </option>
+                                        <option value="прямого действия">прямого действия</option>
+                                        <option value="непрямого действия">непрямого действия</option>
+                                        <option value="комбинированного действия">комбинированный</option>
+                                    </select>
+                                
+                                    <select name="f_envioronmentfilter[like]">
+                                        <option value="" selected="selected"> любая среда </option>
+                                        <option value="Клапаны на воду">клапаны на воду</option>
+                                        <option value="Клапаны на пар">клапаны на пар</option>
+                                        <option value="Клапаны на воздух">клапаны на воздух</option>
+                                        <option value="Клапаны для химпрома">клапаны для химпрома</option>
+                                        <option value="Клапаны для кофемашин">клапаны для кофемашин</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
+                        <div class="filter_button">
+                            <label>
+                                <input type="submit" value="Подобрать" >
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div id="sidebar_category">
+
+                    <div class="filters">
+    
+                        
+                        <div class="filters__inner" id="filters">
+                            <form action="catalog/2-way-direct-acting/" method="get">
+    
+                                <input type="hidden" name="page_id" value="3" disabled="disabled">
+    
+                                <div class="filter_block">
+        
+                                <div class="filter_head">
+                                    <h3>Среда применения</h3>
+                                </div>
+
+                                <div class="filter_row">
+                                    <input type="checkbox" id="envioronmentfilter__0" name="f_envioronmentfilter[like][]" value="Клапаны для кофемашин">
+                                    <label class="label_wrapper" for="envioronmentfilter__0">Клапаны для кофемашин</label>
+                                    <sup>55</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="envioronmentfilter__1" name="f_envioronmentfilter[like][]" value="Клапаны для химпрома">
+                                    <label class="label_wrapper" for="envioronmentfilter__1">Клапаны для химпрома</label>
+                                    <sup>149</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="envioronmentfilter__2" name="f_envioronmentfilter[like][]" value="Клапаны на воду">
+                                    <label class="label_wrapper" for="envioronmentfilter__2">Клапаны на воду</label>
+                                    <sup>263</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="envioronmentfilter__3" name="f_envioronmentfilter[like][]" value="Клапаны на воздух">
+                                    <label class="label_wrapper" for="envioronmentfilter__3">Клапаны на воздух</label>
+                                    <sup>183</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="envioronmentfilter__4" name="f_envioronmentfilter[like][]" value="Клапаны на пар">
+                                    <label class="label_wrapper" for="envioronmentfilter__4">Клапаны на пар</label>
+                                    <sup>190</sup>
+                                </div>
+    
+    
+                                </div>
+                                <div class="filter_block">
+
+                                    <div class="filter_head">
+                                        <h3>Тип соединения</h3>
+                                    </div>
+
+                                    <div class="filter_row">
+                                    <input type="checkbox" id="pipetype__0" name="f_pipetype[]" value="монтаж на плиту">
+                                    <label class="label_wrapper" for="pipetype__0">монтаж на плиту</label>
+                                    <sup>13</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipetype__1" name="f_pipetype[]" value="резьба G">
+                                    <label class="label_wrapper" for="pipetype__1">резьба G</label>
+                                    <sup>238</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipetype__2" name="f_pipetype[]" value="резьба NPT">
+                                    <label class="label_wrapper" for="pipetype__2">резьба NPT</label>
+                                    <sup>12</sup>
+                                </div>
+
+
+                                </div>
+                                <div class="filter_block">
+
+                                    <div class="filter_head"><h3>Диаметр соединения</h3></div>
+
+                                    <div class="filter_row">
+                                    <input type="checkbox" id="pipe__0" name="f_pipe[]" value="1 1/2 дюйма">
+                                    <label class="label_wrapper" for="pipe__0">1 1/2 дюйма</label>
+                                    <sup>4</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__1" name="f_pipe[]" value="1 1/4 дюйма">
+                                    <label class="label_wrapper" for="pipe__1">1 1/4 дюйма</label>
+                                    <sup>4</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__2" name="f_pipe[]" value="1 дюйм">
+                                    <label class="label_wrapper" for="pipe__2">1 дюйм</label>
+                                    <sup>4</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__3" name="f_pipe[]" value="1/2 дюйма">
+                                    <label class="label_wrapper" for="pipe__3">1/2 дюйма</label>
+                                    <sup>19</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__4" name="f_pipe[]" value="1/4 дюйма">
+                                    <label class="label_wrapper" for="pipe__4">1/4 дюйма</label>
+                                    <sup>101</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__5" name="f_pipe[]" value="1/8 дюйма">
+                                    <label class="label_wrapper" for="pipe__5">1/8 дюйма</label>
+                                    <sup>93</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__6" name="f_pipe[]" value="2 дюйма">
+                                    <label class="label_wrapper" for="pipe__6">2 дюйма</label>
+                                    <sup>4</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__7" name="f_pipe[]" value="3/4 дюйма">
+                                    <label class="label_wrapper" for="pipe__7">3/4 дюйма</label>
+                                    <sup>4</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="pipe__8" name="f_pipe[]" value="3/8 дюйма">
+                                    <label class="label_wrapper" for="pipe__8">3/8 дюйма</label>
+                                    <sup>17</sup>
+                                </div>
+
+
+                                </div>
+                                <div class="filter_block">
+
+                                    <div class="filter_head"><h3>Функция клапана</h3></div>
+
+                                    <div class="filter_row">
+                                    <input type="checkbox" id="func__0" name="f_func[]" value="нормально-закрытый">
+                                    <label class="label_wrapper" for="func__0">нормально-закрытый</label>
+                                    <sup>175</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="func__1" name="f_func[]" value="нормально-открытый">
+                                    <label class="label_wrapper" for="func__1">нормально-открытый</label>
+                                    <sup>88</sup>
+                                </div>
+
+
+                                </div>
+                                <div class="filter_block">
+
+                                    <div class="filter_head"><h3>Уплотнение</h3></div>
+
+                                    <div class="filter_row">
+                                    <input type="checkbox" id="gasket__0" name="f_gasket[]" value="EPDM">
+                                    <label class="label_wrapper" for="gasket__0">EPDM</label><sup>14</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="gasket__1" name="f_gasket[]" value="FKM">
+                                    <label class="label_wrapper" for="gasket__1">FKM</label><sup>104</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="gasket__2" name="f_gasket[]" value="NBR">
+                                    <label class="label_wrapper" for="gasket__2">NBR</label><sup>73</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="gasket__3" name="f_gasket[]" value="PTFE">
+                                    <label class="label_wrapper" for="gasket__3">PTFE</label><sup>45</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="gasket__4" name="f_gasket[]" value="RUBY">
+                                    <label class="label_wrapper" for="gasket__4">RUBY</label><sup>27</sup>
+                                </div>
+    
+    
+                                </div>
+                                <div class="filter_block">
+
+                                    <div class="filter_head"><h3>Температура рабочей среды</h3></div>
+
+                                    <div class="filter_row">
+                                    <input type="checkbox" id="tvalve__0" name="f_tvalve[]" value="-10C..+140C">
+                                    <label class="label_wrapper" for="tvalve__0">-10C..+140C</label><sup>118</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="tvalve__1" name="f_tvalve[]" value="-10C..+180C">
+                                    <label class="label_wrapper" for="tvalve__1">-10C..+180C</label><sup>24</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="tvalve__2" name="f_tvalve[]" value="-10C..+90C">
+                                    <label class="label_wrapper" for="tvalve__2">-10C..+90C</label><sup>73</sup>
+                                </div>
+                                <div class="filter_row">
+                                    <input type="checkbox" id="tvalve__3" name="f_tvalve[]" value="-40C..+180C">
+                                    <label class="label_wrapper" for="tvalve__3">-40C..+180C</label><sup>48</sup>
+                                </div>
+    
+    
+                                </div>
+                                <div class="filter_block">
+
+                                    <div class="filter_head"><h3>Расход</h3></div>
+
+                                    <div id="range_kv" class="range-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
+                                <div class="filter_slider">
+                                    от
+                                    <input type="text" id="kvMin" value="0,45" name="f_kv[from]" style="width:50px;">
+                                    до
+                                    <input type="text" id="kvMax" value="620" name="f_kv[to]" style="width:50px;">
+                                </div>
+
+
+                                </div>
+    
+    <script type="text/javascript">
+                var flt_data = {"products": [
+    { "id": "1", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "1,4", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-40C..+180C" },
+    { "id": "3", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "2", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-40C..+180C" },
+    { "id": "4", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "5", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "6", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "7", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "0,45", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-40C..+180C" },
+    { "id": "8", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "3,2", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-40C..+180C" },
+    { "id": "9", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "4", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-40C..+180C" },
+    { "id": "10", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,4", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+140C" },
+    { "id": "11", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+140C" },
+    { "id": "12", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+140C" },
+    { "id": "13", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+140C" },
+    { "id": "14", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "1,4", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+90C" },
+    { "id": "15", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "2", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+90C" },
+    { "id": "16", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+90C" },
+    { "id": "17", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "4", "pipe": "", "pipetype": "монтаж на плиту", "tvalve": "-10C..+90C" },
+    { "id": "20", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "21", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "22", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "23", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "24", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "25", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "26", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "27", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "28", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "29", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "30", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "31", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "32", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "33", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "34", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "35", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "36", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "37", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "38", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "39", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "40", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "41", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "42", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "43", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "44", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "45", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "46", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "47", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "48", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "49", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "50", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "51", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "52", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "53", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "54", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "55", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "56", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "57", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "58", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "59", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "60", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "61", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "62", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "63", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "64", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "65", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "66", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "67", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "68", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "69", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "70", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "71", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "72", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "73", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "74", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "75", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "76", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "77", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "78", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "79", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "80", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "81", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "82", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "83", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "84", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "85", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "86", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "87", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "88", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "89", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "90", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "91", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "92", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "93", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "94", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "95", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "96", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "97", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "98", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "99", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "100", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "101", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "9", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "102", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "103", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "9", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "104", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "105", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "9", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "106", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "107", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "108", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "109", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "110", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "111", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "112", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "113", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "114", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "115", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "116", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "117", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "118", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "119", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "120", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "121", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "122", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "123", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "124", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "125", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "126", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "RUBY", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "127", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "128", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "129", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "130", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "131", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "132", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "133", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "134", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "135", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "136", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "137", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "138", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "139", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "140", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "141", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "142", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "143", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "144", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "145", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "146", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "147", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "1,4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "148", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "149", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "150", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "151", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "152", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "153", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "154", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "155", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "156", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "1,4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "157", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "158", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "159", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "160", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "161", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "162", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "163", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "164", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "165", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "166", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "167", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "168", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "169", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "9", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "170", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "171", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "172", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "173", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "9", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "174", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "175", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "176", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "177", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "9", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "178", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "3/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "179", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "180", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "181", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "9", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "182", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "6,5", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "183", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "184", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "185", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "186", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "187", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "EPDM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "188", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "189", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "RUBY", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "190", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "191", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "192", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2,3", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "193", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "194", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "195", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2,1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "196", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2,1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "197", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "198", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "199", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2,1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "200", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2,1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "201", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "202", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "203", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "204", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "205", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "206", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "207", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "208", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-40C..+180C" },
+    { "id": "209", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "210", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "211", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "212", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "9", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "213", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,2", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "214", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "FKM", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "215", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "216", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "217", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "218", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "219", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "220", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "221", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "222", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "223", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "4", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "224", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "225", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "226", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2,1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "227", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "228", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "229", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "1,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "230", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "2,1", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "231", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#", "func": "нормально-закрытый", "gasket": "FKM", "kv": "5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "232", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "1,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "233", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "2,1", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "234", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "235", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "5", "pipe": "1/8 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "236", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "1,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "237", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "2,1", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "238", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "3,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "239", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "240", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-закрытый", "gasket": "NBR", "kv": "5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "241", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на воздух#", "func": "нормально-открытый", "gasket": "NBR", "kv": "3,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+90C" },
+    { "id": "242", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны на воздух#||#Клапаны для химпрома#", "func": "нормально-открытый", "gasket": "FKM", "kv": "3,5", "pipe": "1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+140C" },
+    { "id": "722", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "80", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "723", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "150", "pipe": "3/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "724", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "190", "pipe": "1 дюйм", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "725", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "340", "pipe": "1 1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "726", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "430", "pipe": "1 1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "727", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "620", "pipe": "2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "728", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "80", "pipe": "1/2 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "729", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "150", "pipe": "3/4 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "730", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "190", "pipe": "1 дюйм", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "731", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "340", "pipe": "1 1/4 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "732", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "430", "pipe": "1 1/2 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "733", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-закрытый", "gasket": "PTFE", "kv": "620", "pipe": "2 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "734", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "80", "pipe": "1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "735", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "150", "pipe": "3/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "736", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "190", "pipe": "1 дюйм", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "737", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "340", "pipe": "1 1/4 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "738", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "430", "pipe": "1 1/2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "739", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "620", "pipe": "2 дюйма", "pipetype": "резьба G", "tvalve": "-10C..+180C" },
+    { "id": "740", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "80", "pipe": "1/2 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "741", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "150", "pipe": "3/4 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "742", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "190", "pipe": "1 дюйм", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "743", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "340", "pipe": "1 1/4 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "744", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "430", "pipe": "1 1/2 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" },
+    { "id": "745", "envioronmentfilter": "#Клапаны на воду#||#Клапаны на пар#||#Клапаны для химпрома#||#Клапаны для кофемашин#", "func": "нормально-открытый", "gasket": "PTFE", "kv": "620", "pipe": "2 дюйма", "pipetype": "резьба NPT", "tvalve": "-10C..+180C" }
+    ]};
+    
+                </script>
+    
+    
+    
+                            </form>
+                        </div>
                     </div>
-                    <div class="filter_button">
-                        <label>
-                            <input type="submit" value="Подобрать" >
-                        </label>
-                    </div>
-                </form>
+    
+    
+    
+                </div>
             </div>
 			<div class="element_right_bottom">
                 <div class="category_bg_center">

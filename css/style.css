@@ -71146,7 +71146,7 @@ body .basket-item-info-name-link {
 
 .filter_center {
     position: relative;
-    height: 270px;
+    /*height: 270px;*/
     /* float: left; */
     margin: 0 30px 0 30px;
     margin: 0 auto;
@@ -71358,6 +71358,18 @@ body .basket-item-info-name-link {
     color: #FFFFFF;
     padding: 0 3px;
     text-decoration: none;
+}
+
+.label_wrapper {
+    margin-right: 0;
+}
+
+#sidebar_category {
+    border-radius: 10px;
+    /*text-align: center;*/
+    overflow: hidden;
+    padding: 10px 0;
+    margin-top: 116px;
 }
 
 
