@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/файлы сайтов/ODE/код/переделывание ODE/css/style.css" rel="stylesheet">
     <link href="/переделывание ODE/css/style2.css" rel="stylesheet">
-    <title>Catalog</title>
+    <title>List</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="search_wrap pull-left" style="max-width: 735px; opacity: 1; visibility: visible;margin: 0 auto;">
+                                    <div class="search_wrap pull-left" style="opacity: 1; visibility: visible;margin: 0 auto;">
                                         <div class="search-block inner-table-block">
                                             <div class="search-wrapper">
                                                 <!--место под код  который вырезал для теста начало-->
@@ -296,590 +296,172 @@
     <div class="wrapper_inner">
 		<div class="container_inner clearfix">
             <div class="filter_center">
-                <div>
-                    <form action="[[~[[*id]]]]filterresults/" method="get">
-                        <div class="wrapper-block-form">
-                             <div class="block-form">
-                                <div class="filter_span_left">
-                                    <span>Соединение:</span>
-                                    <span>Тип клапана:</span>
-                                    <span>Функция:</span>
-                                </div>
-                                <div class="filter_list">
-                                    <select name="f_pipetype">
-                                        <option value="" selected="selected"> любое соединение</option>
-                                        <option value="резьба G">резьба G</option>
-                                        <option value="резьба NPT">резьба NPT</option>
-                                        <option value="монтаж на плиту">монтаж на плиту</option>
-                                        <option value="под трубки">под трубки</option>
-                                    </select>
-                                    <select name="f_type">
-                                        <option value="" selected="selected"> любой тип </option>
-                                        <option value="двухходовой">двухходовой</option>
-                                        <option value="трехходовой">трехходовой</option>
-                                        <option value="пятиходовой">пятиходовой</option>
-                                    </select>
-                                    <select name="f_func">
-                                        <option value="" selected="selected"> любая функция </option>
-                                        <option value="нормально-закрытый">нормально-закрытый</option>
-                                        <option value="нормально-открытый">нормально-открытый</option>
-                                    </select>
-                                </div>
-                             </div>
-                            <div class="block-form">
-                                <div class="filter_span_right">
-                                    <span>Диаметр:</span>
-                                    <span>Вид клапана:</span>
-                                    <span>Применение:</span>
-                                </div>
-                                <div class="filter_list">
-                                    <select name="f_pipe">
-                                        <option value="" selected="selected"> любой диаметр </option>
-                                        <option value="1/8 дюйма">1/8 дюйма</option>
-                                        <option value="1/4 дюйма">1/4 дюйма</option>
-                                        <option value="3/8 дюйма">3/8 дюйма</option>
-                                        <option value="1/2 дюйма">1/2 дюйма</option>
-                                        <option value="3/4 дюйма">3/4 дюйма</option>
-                                        <option value="1 дюйм">1 дюйм</option>
-                                        <option value="1 1/4 дюйма">1 1/4 дюйма</option>
-                                        <option value="1 1/2 дюйма">1 1/2 дюйма</option>
-                                        <option value="2 дюйма">2 дюйма</option>
-                                    </select>
-                                
-                                    <select name="f_kind">
-                                        <option value="" selected="selected"> любой вид </option>
-                                        <option value="прямого действия">прямого действия</option>
-                                        <option value="непрямого действия">непрямого действия</option>
-                                        <option value="комбинированного действия">комбинированный</option>
-                                    </select>
-                                
-                                    <select name="f_envioronmentfilter[like]">
-                                        <option value="" selected="selected"> любая среда </option>
-                                        <option value="Клапаны на воду">клапаны на воду</option>
-                                        <option value="Клапаны на пар">клапаны на пар</option>
-                                        <option value="Клапаны на воздух">клапаны на воздух</option>
-                                        <option value="Клапаны для химпрома">клапаны для химпрома</option>
-                                        <option value="Клапаны для кофемашин">клапаны для кофемашин</option>
-                                    </select>
-                                </div>
+                <form action="[[~[[*id]]]]filterresults/" method="get">
+                    <div class="wrapper-block-form">
+                         <div class="block-form">
+                            <div class="filter_span_left">
+                                <span>Соединение:</span>
+                                <span>Тип клапана:</span>
+                                <span>Функция:</span>
                             </div>
-                        </div>
-                        <div class="filter_button">
-                            <label>
-                                <input type="submit" value="Подобрать" >
-                            </label>
-                        </div>
-                    </form>
-                </div>
-                <div id="sidebar_category">
-
-                    <div class="filters">
-    
-                        
-                        <div class="filters__inner" id="filters">
-                            <form action="catalog/2-way-direct-acting/" method="get">
-    
-                                <input type="hidden" name="page_id" value="3" disabled="disabled">
-    
-                                <div class="filter_block">
-        
-                                <div class="filter_head">
-                                    <h3>Среда применения</h3>
-                                </div>
-
-                                <div class="filter_row">
-                                    <input type="checkbox" id="envioronmentfilter__0" name="f_envioronmentfilter[like][]" value="Клапаны для кофемашин">
-                                    <label class="label_wrapper" for="envioronmentfilter__0">Клапаны для кофемашин</label>
-                                    <sup>55</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="envioronmentfilter__1" name="f_envioronmentfilter[like][]" value="Клапаны для химпрома">
-                                    <label class="label_wrapper" for="envioronmentfilter__1">Клапаны для химпрома</label>
-                                    <sup>149</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="envioronmentfilter__2" name="f_envioronmentfilter[like][]" value="Клапаны на воду">
-                                    <label class="label_wrapper" for="envioronmentfilter__2">Клапаны на воду</label>
-                                    <sup>263</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="envioronmentfilter__3" name="f_envioronmentfilter[like][]" value="Клапаны на воздух">
-                                    <label class="label_wrapper" for="envioronmentfilter__3">Клапаны на воздух</label>
-                                    <sup>183</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="envioronmentfilter__4" name="f_envioronmentfilter[like][]" value="Клапаны на пар">
-                                    <label class="label_wrapper" for="envioronmentfilter__4">Клапаны на пар</label>
-                                    <sup>190</sup>
-                                </div>
-    
-    
-                                </div>
-                                <div class="filter_block">
-
-                                    <div class="filter_head">
-                                        <h3>Тип соединения</h3>
-                                    </div>
-
-                                    <div class="filter_row">
-                                    <input type="checkbox" id="pipetype__0" name="f_pipetype[]" value="монтаж на плиту">
-                                    <label class="label_wrapper" for="pipetype__0">монтаж на плиту</label>
-                                    <sup>13</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipetype__1" name="f_pipetype[]" value="резьба G">
-                                    <label class="label_wrapper" for="pipetype__1">резьба G</label>
-                                    <sup>238</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipetype__2" name="f_pipetype[]" value="резьба NPT">
-                                    <label class="label_wrapper" for="pipetype__2">резьба NPT</label>
-                                    <sup>12</sup>
-                                </div>
-
-
-                                </div>
-                                <div class="filter_block">
-
-                                    <div class="filter_head"><h3>Диаметр соединения</h3></div>
-
-                                    <div class="filter_row">
-                                    <input type="checkbox" id="pipe__0" name="f_pipe[]" value="1 1/2 дюйма">
-                                    <label class="label_wrapper" for="pipe__0">1 1/2 дюйма</label>
-                                    <sup>4</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__1" name="f_pipe[]" value="1 1/4 дюйма">
-                                    <label class="label_wrapper" for="pipe__1">1 1/4 дюйма</label>
-                                    <sup>4</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__2" name="f_pipe[]" value="1 дюйм">
-                                    <label class="label_wrapper" for="pipe__2">1 дюйм</label>
-                                    <sup>4</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__3" name="f_pipe[]" value="1/2 дюйма">
-                                    <label class="label_wrapper" for="pipe__3">1/2 дюйма</label>
-                                    <sup>19</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__4" name="f_pipe[]" value="1/4 дюйма">
-                                    <label class="label_wrapper" for="pipe__4">1/4 дюйма</label>
-                                    <sup>101</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__5" name="f_pipe[]" value="1/8 дюйма">
-                                    <label class="label_wrapper" for="pipe__5">1/8 дюйма</label>
-                                    <sup>93</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__6" name="f_pipe[]" value="2 дюйма">
-                                    <label class="label_wrapper" for="pipe__6">2 дюйма</label>
-                                    <sup>4</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__7" name="f_pipe[]" value="3/4 дюйма">
-                                    <label class="label_wrapper" for="pipe__7">3/4 дюйма</label>
-                                    <sup>4</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="pipe__8" name="f_pipe[]" value="3/8 дюйма">
-                                    <label class="label_wrapper" for="pipe__8">3/8 дюйма</label>
-                                    <sup>17</sup>
-                                </div>
-
-
-                                </div>
-                                <div class="filter_block">
-
-                                    <div class="filter_head"><h3>Функция клапана</h3></div>
-
-                                    <div class="filter_row">
-                                    <input type="checkbox" id="func__0" name="f_func[]" value="нормально-закрытый">
-                                    <label class="label_wrapper" for="func__0">нормально-закрытый</label>
-                                    <sup>175</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="func__1" name="f_func[]" value="нормально-открытый">
-                                    <label class="label_wrapper" for="func__1">нормально-открытый</label>
-                                    <sup>88</sup>
-                                </div>
-
-
-                                </div>
-                                <div class="filter_block">
-
-                                    <div class="filter_head"><h3>Уплотнение</h3></div>
-
-                                    <div class="filter_row">
-                                    <input type="checkbox" id="gasket__0" name="f_gasket[]" value="EPDM">
-                                    <label class="label_wrapper" for="gasket__0">EPDM</label>
-                                    <sup>14</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="gasket__1" name="f_gasket[]" value="FKM">
-                                    <label class="label_wrapper" for="gasket__1">FKM</label>
-                                    <sup>104</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="gasket__2" name="f_gasket[]" value="NBR">
-                                    <label class="label_wrapper" for="gasket__2">NBR</label>
-                                    <sup>73</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="gasket__3" name="f_gasket[]" value="PTFE">
-                                    <label class="label_wrapper" for="gasket__3">PTFE</label>
-                                    <sup>45</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="gasket__4" name="f_gasket[]" value="RUBY">
-                                    <label class="label_wrapper" for="gasket__4">RUBY</label>
-                                    <sup>27</sup>
-                                </div>
-    
-    
-                                </div>
-                                <div class="filter_block">
-
-                                    <div class="filter_head"><h3>Температура рабочей среды</h3></div>
-
-                                    <div class="filter_row">
-                                    <input type="checkbox" id="tvalve__0" name="f_tvalve[]" value="-10C..+140C">
-                                    <label class="label_wrapper" for="tvalve__0">-10C..+140C</label>
-                                    <sup>118</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="tvalve__1" name="f_tvalve[]" value="-10C..+180C">
-                                    <label class="label_wrapper" for="tvalve__1">-10C..+180C</label>
-                                    <sup>24</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="tvalve__2" name="f_tvalve[]" value="-10C..+90C">
-                                    <label class="label_wrapper" for="tvalve__2">-10C..+90C</label>
-                                    <sup>73</sup>
-                                </div>
-                                <div class="filter_row">
-                                    <input type="checkbox" id="tvalve__3" name="f_tvalve[]" value="-40C..+180C">
-                                    <label class="label_wrapper" for="tvalve__3">-40C..+180C</label>
-                                    <sup>48</sup>
-                                </div>
-    
-    
-                                </div>
-                                <div class="filter_block">
-
-                                    <div class="filter_head"><h3>Расход</h3></div>
-
-                                    <div id="range_kv" class="range-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
-                                <div class="filter_slider">
-                                    от
-                                    <input type="text" id="kvMin" value="0,45" name="f_kv[from]" style="width:50px;">
-                                    до
-                                    <input type="text" id="kvMax" value="620" name="f_kv[to]" style="width:50px;">
-                                </div>
-
-
-                                </div>
-    
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="element_right_bottom">
-                <div class="category_bg_center">
-                    <br>  
-                    <div class="valve_list_cont">
-                        <div class="sorting">
-                            <div class="block_heading">
-                                <h1>Каталог</h1>
-                            </div>
-                            <div class="block-f_limit">
-                                <select class="f_limit" style="width:168px;border: 1px solid #00000073;" id="showLimit"  name="limit" onchange="tmFilters.changeOrder(this);">
-                                    <option value="20" selected="selected">Показывать по 20</option>
-                                    <option value="30">Показывать по 30</option>
-                                    <option value="50">Показывать по 50</option>
+                            <div class="filter_list">
+                                <select name="f_pipetype">
+                                    <option value="" selected="selected"> любое соединение</option>
+                                    <option value="резьба G">резьба G</option>
+                                    <option value="резьба NPT">резьба NPT</option>
+                                    <option value="монтаж на плиту">монтаж на плиту</option>
+                                    <option value="под трубки">под трубки</option>
+                                </select>
+                                <select name="f_type">
+                                    <option value="" selected="selected"> любой тип </option>
+                                    <option value="двухходовой">двухходовой</option>
+                                    <option value="трехходовой">трехходовой</option>
+                                    <option value="пятиходовой">пятиходовой</option>
+                                </select>
+                                <select name="f_func">
+                                    <option value="" selected="selected"> любая функция </option>
+                                    <option value="нормально-закрытый">нормально-закрытый</option>
+                                    <option value="нормально-открытый">нормально-открытый</option>
                                 </select>
                             </div>
-    
-                            <div id="sorting">
-                                Сортировать по:
-                                &nbsp;&nbsp;
-                                <select class="f_sortby" name="sortby" onchange="tmFilters.changeOrder(this);">
-                                    <option value="pagetitle">по названию</option>
-                                    <option value="price">по цене</option>
-                                    <option value="kv">расходу</option>
-                                </select>
-                                &nbsp;
-                                <select class="f_sortdir" name="sortdir" onchange="tmFilters.changeOrder(this);">
-                                    <option value="asc">по возрастанию</option>
-                                    <option value="desc">по убыванию</option>
-                                </select>
+                         </div>
+                        <div class="block-form">
+                            <div class="filter_span_right">
+                                <span>Диаметр:</span>
+                                <span>Вид клапана:</span>
+                                <span>Применение:</span>
                             </div>
-                        </div>
-                        <div id="products">
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="89">
-                                    <input type="hidden" name="shk-name" value="212A2KB15">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kb15.html" title="212A2KB15">
-                                            <img title="Электромагнитный клапан 212A2KB15" alt="212A2KB15" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KB15</li>
-                                                <li>Температура: -10C..+90C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 1,4 л/мин</li>
-                                                <br>
-                                                <li>Цена: по запросу</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kb15.html">Подробнее</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="filter_list">
+                                <select name="f_pipe">
+                                    <option value="" selected="selected"> любой диаметр </option>
+                                    <option value="1/8 дюйма">1/8 дюйма</option>
+                                    <option value="1/4 дюйма">1/4 дюйма</option>
+                                    <option value="3/8 дюйма">3/8 дюйма</option>
+                                    <option value="1/2 дюйма">1/2 дюйма</option>
+                                    <option value="3/4 дюйма">3/4 дюйма</option>
+                                    <option value="1 дюйм">1 дюйм</option>
+                                    <option value="1 1/4 дюйма">1 1/4 дюйма</option>
+                                    <option value="1 1/2 дюйма">1 1/2 дюйма</option>
+                                    <option value="2 дюйма">2 дюйма</option>
+                                </select>
                             
-                                </form>
+                                <select name="f_kind">
+                                    <option value="" selected="selected"> любой вид </option>
+                                    <option value="прямого действия">прямого действия</option>
+                                    <option value="непрямого действия">непрямого действия</option>
+                                    <option value="комбинированного действия">комбинированный</option>
+                                </select>
+                            
+                                <select name="f_envioronmentfilter[like]">
+                                    <option value="" selected="selected"> любая среда </option>
+                                    <option value="Клапаны на воду">клапаны на воду</option>
+                                    <option value="Клапаны на пар">клапаны на пар</option>
+                                    <option value="Клапаны на воздух">клапаны на воздух</option>
+                                    <option value="Клапаны для химпрома">клапаны для химпрома</option>
+                                    <option value="Клапаны для кофемашин">клапаны для кофемашин</option>
+                                </select>
                             </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="90">
-                                    <input type="hidden" name="shk-name" value="212A2KB20">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kb20.html" title="212A2KB20">
-                                            <img title="Электромагнитный клапан 212A2KB20" alt="212A2KB20" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KB20</li>
-                                                <li>Температура: -10C..+90C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 2 л/мин</li>
-                                                <br>
-                                                <li>Цена: по запросу</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kb20.html">Подробнее</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="91">
-                                    <input type="hidden" name="shk-name" value="212A2KB25">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kb25.html" title="212A2KB25">
-                                            <img title="Электромагнитный клапан 212A2KB25" alt="212A2KB25" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KB25</li>
-                                                <li>Температура: -10C..+90C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 3,2 л/мин</li>
-                                                <br>
-                                                <li>Цена: по запросу</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kb25.html">Подробнее</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="92">
-                                    <input type="hidden" name="shk-name" value="212A2KB30">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kb30.html" title="212A2KB30">
-                                            <img title="Электромагнитный клапан 212A2KB30" alt="212A2KB30" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KB30</li>  
-                                                <li>Температура: -10C..+90C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 4 л/мин</li>                                            
-                                                <br>
-                                                <li>Цена: по запросу</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kb30.html">Подробнее</a>  
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="93">
-                                    <input type="hidden" name="shk-name" value="212A2KB45">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kb45.html" title="212A2KB45">
-                                            <img title="Электромагнитный клапан 212A2KB45" alt="212A2KB45" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KB45</li>                                            
-                                                <li>Температура: -10C..+140C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 6,5 л/мин</li>                                
-                                                <br>
-                                                <li>Цена: по запросу</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center"><a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kb45.html">Подробнее</a>                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="94">
-                                    <input type="hidden" name="shk-name" value="212A2KB55">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kb55.html" title="212A2KB55">
-                                            <img title="Электромагнитный клапан 212A2KB55" alt="212A2KB55" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KB55</li>
-                                                <li>Температура: -10C..+90C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 9 л/мин</li>
-                                                <br>
-                                                <li>Цена: по запросу</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kb55.html">Подробнее</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="78">
-                                    <input type="hidden" name="shk-name" value="212A2KV15">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kv15.html" title="212A2KV15">
-                                            <img title="Электромагнитный клапан 212A2KV15" alt="212A2KV15" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KV15</li>
-                                                <li>Температура: -10C..+140C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 1,4 л/мин</li>
-                                                <br>
-                                                <li>Цена: 28  €</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kv15.html">Подробнее</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="78">
-                                    <input type="hidden" name="shk-name" value="212A2KV15">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kv15.html" title="212A2KV15">
-                                            <img title="Электромагнитный клапан 212A2KV15" alt="212A2KV15" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KV15</li>
-                                                <li>Температура: -10C..+140C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 1,4 л/мин</li>
-                                                <br>
-                                                <li>Цена: 28  €</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kv15.html">Подробнее</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="shk-item">
-                                <form>
-                                    <input type="hidden" name="shk-id" value="78">
-                                    <input type="hidden" name="shk-name" value="212A2KV15">
-                                    <input type="hidden" name="shk-count" value="1" size="2" maxlength="3">
-                                    <div class="category_module">
-                                        <a href="catalog/2-way-direct-acting/212a2kv15.html" title="212A2KV15">
-                                            <img title="Электромагнитный клапан 212A2KV15" alt="212A2KV15" style="display:block;height: 180px;" src="https://ode-rus.ru/assets/image/valves/big/21545.jpg">
-                                        </a>
-                                        <div class="category_module_info">
-                                            <ul class="description-product">
-                                                <li>Наименование: 212A2KV15</li>
-                                                <li>Температура: -10C..+140C</li>
-                                                <li>Присоединение: 1/4 дюйма</li>
-                                                <li>Расход: 1,4 л/мин</li>
-                                                <br>
-                                                <li>Цена: 28  €</li>
-                                            </ul>
-                                            <div class="category_module_basket" style="text-align:center">
-                                                <a style="color:rgb(255, 255, 255)" href="catalog/2-way-direct-acting/212a2kv15.html">Подробнее</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>                       
-                        <div class="pages">
-                            <ul id="pages">
-                                <li>
-                                    <a class="active" href="catalog/2-way-direct-acting/">1</a>
-                                </li> 
-                                <li>
-                                    <a href="catalog/2-way-direct-acting/?page=2">2</a>
-                                </li>
-                                <li>
-                                    <a href="catalog/2-way-direct-acting/?page=3">3</a>
-                                </li>
-                                <li>
-                                    <a href="catalog/2-way-direct-acting/?page=4">4</a>
-                                </li>
-                                <li>
-                                    <a href="catalog/2-way-direct-acting/?page=5">5</a>
-                                </li>
-                                <li>
-                                    <a href="catalog/2-way-direct-acting/?page=6">6</a>
-                                </li> 
-                                <li>
-                                    <a href="catalog/2-way-direct-acting/?page=2" title="следующая">››</a>
-                                </li>  
-                                <li>
-                                    <a href="catalog/2-way-direct-acting/?page=14">последняя</a>
-                                </li> 
-                            </ul>
-                        </div>    
+                        </div>
                     </div>
-                </div>
+                    <div class="filter_button">
+                        <label>
+                            <input type="submit" value="Подобрать" >
+                        </label>
+                    </div>
+                </form>
+            </div>
+			<div class="right_block  wide_N ">
+				<div class="middle  ">
+					<div class="container">
+                        <div class="element_right_bottom">
+                            <div class="category_bg_center">
+                                <br>
+                                <div class="element_bg_left"></div>
+                
+                                <div class="valve_list_cont">
+                                    <div class="basket_cat"></div>
+                                    <div class="block_heading">
+                                        <h1>Электромагнитный клапан</h1>
+                                    </div>
+                                    <div class="full_list">
+                                        <!--span class="sep-vert"><span>&nbsp;</span></span-->               
+                                        <div>
+                                            Дополнительно:
+                                            &nbsp;&nbsp;
+                                            <a class="active" href="/catalog">Показать все</a>                
+                                        </div>               
+                                    </div>
+                                    <div class="valve_list">
+                                        <div class="card">
+                                            <img src="https://ode-rus.ru/assets/image/valves/big/21a3kv15.jpg" alt="Двухходовые клапаны" style="width:170px">
+                                            <h1 class="heading-card">Двухходовые клапаны</h1>
+                                            <p>Прямого действия</p>
+                                            <p>
+                                                <button>Перейти</button>
+                                            </p>
+                                        </div>               
+                                        <div class="card">
+                                            <img src="https://ode-rus.ru/assets/image/valves/big/21en2k0b105.jpg" alt="Двухходовые клапаны" style="width:170px">
+                                            <h1 class="heading-card">Двухходовые клапаны</h1>
+                                            <p>непрямого действия</p>
+                                            <p>
+                                                <button>Перейти</button>
+                                            </p>
+                                        </div>
+                                        <div class="card">
+                                            <img src="https://ode-rus.ru/assets/image/valves/big/21h11k0v120.jpg" alt="Двухходовые клапаны" style="width:170px">
+                                            <h1 class="heading-card">Двухходовые клапаны</h1>
+                                            <p>комбинированного действия</p>
+                                            <p>
+                                                <button>Перейти</button>
+                                            </p>
+                                        </div>
+                
+                                        <div class="card">
+                                            <img src="https://ode-rus.ru/assets/image/valves/big/31a1av10.jpg" alt="Трехходовые клапаны" style="width:170px">
+                                            <h1 class="heading-card">Трехходовые клапаны</h1>
+                                            <p>
+                                                <button>Перейти</button>
+                                            </p>
+                                        </div>
+                
+                                        <div class="card">
+                                            <img src="https://ode-rus.ru/assets/image/valves/big/21asgk1b30-ri.jpg" alt="Клапаны под трубки" style="width:170px">
+                                            <h1 class="heading-card">Клапаны под трубки</h1>
+                                            <p>
+                                                <button>Перейти</button>
+                                            </p>
+                                        </div>
+
+                                        <div class="card">
+                                            <img src="https://ode-rus.ru/assets/image/valves/big/512621w0b12-a.jpg" alt="Пятиходовые клапаны" style="width:170px">
+                                            <h1 class="heading-card">Пятиходовые клапаны</h1>
+                                            <p>
+                                                <button>Перейти</button>
+                                            </p>
+                                        </div>
+                
+                                        <div class="card card_left">
+                                            <img src="https://ode-rus.ru/assets/image/valves/big/bda08012as.jpg" alt="Электромагнитные катушки" style="width:170px">
+                                            <h1>Электромагнитные катушки</h1>
+                                            <p>
+                                                <button>Перейти</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element_bg_right"></div>
+                            </div>
+                        </div>
+	                </div>
+			        <div style="clear:both"></div>
+			    </div>
             </div>        			
         </div> 	
         <div class="left_block sticky-sidebar"></div>		
     </div> 	
     <footer class="footer">
+
         <div class="row">
             <div class="col-md-2 col-sm-3">
                 <div class="fourth_bottom_menu">
