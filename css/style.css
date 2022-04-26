@@ -71154,7 +71154,7 @@ body .basket-item-info-name-link {
     font: 14px playregular, verdana;
     font-family: 'Roboto', sans-serif;
     padding-top: 30px;
-    margin-bottom: 230px;
+    margin-bottom: 41px;
 }
 
 .container_inner {
@@ -71242,7 +71242,7 @@ body .basket-item-info-name-link {
 
 .header-wrapper .block_search_wrap {
     display: block;
-    width: 1408px;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -71302,6 +71302,7 @@ body .basket-item-info-name-link {
 .shk-item { 
    margin-right: 9px;
    margin-bottom: 30px;
+   border: 1px solid #00000042;
 }
 
 .category_module_basket {
@@ -71450,6 +71451,28 @@ ul.tabs {
     border-bottom: 1px solid #fff;
     position: relative;
     border-radius: 5px 5px 0 0;
+}
+
+@media (max-width: 480px) {
+    .filter_span_left {
+        width: 35%;
+        float: left;
+        padding-top: 5px;
+        max-height: 130px;
+    }
+
+    .filter_list {
+        width: 60%;
+        float: left;
+    }
+
+    .filter_span_right {
+        width: 35%;
+    }
+
+    .form label {
+        margin-right: 0vw;
+    }
 }
 
 
