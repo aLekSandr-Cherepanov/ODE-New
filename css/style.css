@@ -7638,7 +7638,7 @@ body.compensate-for-scrollbar {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    align-items: center
+    /*align-items: center*/
 }
 
 .flexbox--row-reverse {
@@ -71299,8 +71299,7 @@ body .basket-item-info-name-link {
     flex-wrap: wrap;
 }
 
-.shk-item {
-   border: 1px solid #00000038; 
+.shk-item { 
    margin-right: 9px;
    margin-bottom: 30px;
 }
@@ -71370,6 +71369,24 @@ body .basket-item-info-name-link {
     overflow: hidden;
     padding: 10px 0;
     margin-top: 116px;
+}
+
+.valve_basket input {
+    background-color: #00aff0;
+    width: 230px;
+    height: 50px;
+    border: 0;
+    font: 16px playregular, verdana;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    /*text-shadow: 1px 1px #777;*/
+    /*padding-right: 5px;*/
+    outline: none;
+    border-radius: 10px;
+}
+
+.valve_price {
+    margin-bottom: 70px;
 }
 
 
