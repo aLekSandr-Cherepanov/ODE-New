@@ -71302,7 +71302,6 @@ body .basket-item-info-name-link {
 .shk-item { 
    margin-right: 9px;
    margin-bottom: 30px;
-   border: 1px solid #00000042;
 }
 
 .category_module_basket {
@@ -71473,6 +71472,15 @@ ul.tabs {
     .form label {
         margin-right: 0vw;
     }
+}
+
+.banner-wrapper {
+    background-color: rgb(0 0 0 / 37%);
+}
+
+.heading-banner {
+    color: #fff;
+    font-size: 2em;
 }
 
 
