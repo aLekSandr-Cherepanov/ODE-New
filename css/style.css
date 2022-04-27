@@ -71302,6 +71302,7 @@ body .basket-item-info-name-link {
 .shk-item { 
    margin-right: 9px;
    margin-bottom: 30px;
+   /*border: 1px solid #0000005e;*/
 }
 
 .category_module_basket {
@@ -71452,7 +71453,7 @@ ul.tabs {
     border-radius: 5px 5px 0 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .filter_span_left {
         width: 35%;
         float: left;
@@ -71472,6 +71473,9 @@ ul.tabs {
     .form label {
         margin-right: 0vw;
     }
+    .label_button {
+        margin-right: 0;
+    }
 }
 
 .banner-wrapper {
@@ -71481,6 +71485,18 @@ ul.tabs {
 .heading-banner {
     color: #fff;
     font-size: 2em;
+}
+
+.category_module_basket:hover {
+    opacity: 0.7;
+}
+
+.product {
+    border: 0;
+}
+
+.category_module {
+    border: 1px solid #0000005e;
 }
 
 
