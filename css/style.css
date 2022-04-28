@@ -71499,4 +71499,15 @@ ul.tabs {
     border: 1px solid #0000005e;
 }
 
+.cross-mobmenu {
+    width: 35px;
+    margin-top: 4vw;
+    cursor: pointer;
+}
+
+.li-mobmenu {
+    display: flex;
+    justify-content: space-between;
+}
+
 
