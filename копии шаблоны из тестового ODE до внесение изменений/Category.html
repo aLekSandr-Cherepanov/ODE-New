@@ -72,7 +72,6 @@
             <div id="sidebar_category">
 
                 <div class="filters">
-
                     [[tmFilters?
                     &innerTpl=`new_filters_innerTpl`
                     &outerTpl=`new_filters_outerTpl`
@@ -81,34 +80,23 @@
                     ]]
                     <div class="filters__inner" id="filters">
                         <form action="[[~[[*id]]]]" method="get">
-
                             <input type="hidden" name="page_id" value="[[*id]]" disabled="disabled" />
-
                             [[+filters]]
-
-
                         </form>
                     </div>
                 </div>
-
-
-
             </div>
             [[*id:is=`3`:then=`<div class="pipe-attention">
                 <small>*Фильтрация не охватывает <a href="/catalog/pipe-valves/" title="Клапаны под силиконовые трубки">клапаны под трубки</a>
                 </small>
             </div>`:else=``]]
-
         </div>
-
         <div id="element_right_top">
             <div class="element_menu_title">
                 [[$menu]]
                 <div class="main_title">
                     <h1>[[*pagetitle]]</h1>
                 </div>
-
-
             </div>
             <div class="element_street_phone">
                 <div class="city_list">
@@ -120,26 +108,21 @@
                         </div>
                     </a><span>Контакты:</span>
                 </div>
-
                 <div class="street">
                     <span>+7 (8442) 26-76-52</span>
                     <br />
                     <span>E-mail: info@test.ode-rus</span>
                     <br />
                 </div>
-
             </div>
         </div>
-
         <div class="element_right_bottom">
             <div class="category_bg_center">
                 <br />
                 <div class="element_bg_left"></div>
-
                 <div class="valve_list_cont">
                     <div class="basket_cat">[[!Shopkeeper3@cart_catalog]]</div>
                     <div class="sorting">
-
                         <div style="float:right;">
                             <select style="width:168px;" id="showLimit" class="f_limit" name="limit" onchange="tmFilters.changeOrder(this);">
                                 <option value="20" selected="selected">Показывать по 20</option>
@@ -147,7 +130,6 @@
                                 <option value="50">Показывать по 50</option>
                             </select>
                         </div>
-
                         <!--span class="sep-vert"><span>&nbsp;</span></span-->
 
                         <div id="sorting">
@@ -175,7 +157,6 @@
                         </ul>
                     </div>
                     `]]
-
                 </div>
 
                 <div class="element_bg_right"></div>
