@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Электромагнитные клапаны ODE Россия | Трехходовые и двухходовые соленоидные клапаны</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/templates/site/style.css" />
+    <base href="[[++site_url]]" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Клапаны, электромагнитные клапаны, соленоидные клапаны, каталог клапанов, каталог электромагнитных клапанов,  двухходовые клапаны, клапаны прямого действия, клапаны непрямого действия, взрывозащищенные клапаны, клапаны под трубки" />
+    <meta name="description" content="Каталог электромагнитных клапанов ODE в различном исполнении" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/skidka.js"></script>
+</head>
+
+<body>
+    <div class="mobil-menu">
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+                <input type="checkbox" />
+
+                <!--
+            Some spans to act as a hamburger.
+          
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+                <ul id="menu">
+                    <a href="/">
+                        <li>Главная</li>
+                    </a>
+                    <a href="/products/">
+                        <li>Каталог</li>
+                    </a>
+                    <a href="/material-o-klapanah/">
+                        <li>Статьи</li>
+                    </a>
+                    <a href="/kompaniya-ode/">
+                        <li>О Компании</li>
+                    </a>
+                    <a href="/predstaviteli-ode/">
+                        <li>Контакты</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="wrap">
+        <div class="header">
+            <div class="top_left">
+                <a style="border:0" href="/" title="Электромагнитные клапаны ODE">
+                    <img class="img-mobil" style="margin:10px auto" src="/assets/templates/site/logo.png">
+                </a>
+                <div class="search_box">
+                    <span>Поиск по маркировке:</span>
+                    [[$search_form]]
+                </div>
+            </div>
+
+            <div class="top_center">
+                [[$menu]]
+                <div class="main_title">
+                    <h1 class="title_ode">Электромагнитные клапаны ODE</h1>
+                </div>
+                <div class="filter_center">
+                    <form action="[[~[[*id]]]]filterresults/" method="get">
+                        <div class="filter_left"></div>
+                        <div class="wrapper-block-form">
+                            <div class="block-form">
+                                <div class="filter_span_left">
+                                    <span>Соединение:</span>
+                                    <span>Тип клапана:</span>
+                                    <span>Функция:</span>
+                                </div>
+                                <div class="filter_list">
+                                    <select name="f_pipetype">
+                                        <option value="" selected="selected"> любое соединение</option>
+                                        <option value="резьба G">резьба G</option>
+                                        <option value="резьба NPT">резьба NPT</option>
+                                        <option value="монтаж на плиту">монтаж на плиту</option>
+                                        <option value="под трубки">под трубки</option>
+                                    </select>
+
+                                    <select name="f_type">
+                                        <option value="" selected="selected"> любой тип </option>
+                                        <option value="двухходовой">двухходовой</option>
+                                        <option value="трехходовой">трехходовой</option>
+                                        <option value="пятиходовой">пятиходовой</option>
+                                    </select>
+
+                                    <select name="f_func">
+                                        <option value="" selected="selected"> любая функция </option>
+                                        <option value="нормально-закрытый">нормально-закрытый</option>
+                                        <option value="нормально-открытый">нормально-открытый</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="block-form">
+                                <div class="filter_span_right">
+                                    <span>Диаметр:</span>
+                                    <span>Вид клапана:</span>
+                                    <span>Применение:</span>
+                                </div>
+                                <div class="filter_list">
+                                    <select name="f_pipe">
+                                        <option value="" selected="selected"> любой диаметр </option>
+                                        <option value="1/8 дюйма">1/8 дюйма</option>
+                                        <option value="1/4 дюйма">1/4 дюйма</option>
+                                        <option value="3/8 дюйма">3/8 дюйма</option>
+                                        <option value="1/2 дюйма">1/2 дюйма</option>
+                                        <option value="3/4 дюйма">3/4 дюйма</option>
+                                        <option value="1 дюйм">1 дюйм</option>
+                                        <option value="1 1/4 дюйма">1 1/4 дюйма</option>
+                                        <option value="1 1/2 дюйма">1 1/2 дюйма</option>
+                                        <option value="2 дюйма">2 дюйма</option>
+                                    </select>
+
+                                    <select name="f_kind">
+                                        <option value="" selected="selected"> любой вид </option>
+                                        <option value="прямого действия">прямого действия</option>
+                                        <option value="непрямого действия">непрямого действия</option>
+                                        <option value="комбинированного действия">комбинированный</option>
+                                    </select>
+
+                                    <select name="f_envioronmentfilter[like]">
+                                        <option value="" selected="selected"> любая среда </option>
+                                        <option value="Клапаны на воду">клапаны на воду</option>
+                                        <option value="Клапаны на пар">клапаны на пар</option>
+                                        <option value="Клапаны на воздух">клапаны на воздух</option>
+                                        <option value="Клапаны для химпрома">клапаны для химпрома</option>
+                                        <option value="Клапаны для кофемашин">клапаны для кофемашин</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter_button"><label>
+                                <input type="submit" value="Подобрать">
+                            </label></div>
+
+                        <div class="filter_right"></div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="top_right">
+                <div class="city_list">
+                    <a style="text-decoration:none;color:#555" href="/predstaviteli-ode/">
+                        <div tabindex="1" class="wrapper-dropdown-5" id="dd">Выбор города
+                            <ul class="dropdown">
+
+                            </ul>
+                        </div>
+                    </a>
+                    <span>Контакты:</span>
+                </div>
+                <div class="street">
+                    <span>+7 (8442) 26-76-52</span>
+                    <br />
+                    <span>E-mail: info@test.ode-rus</span>
+                    <br />
+                </div>
+                <img src="/assets/templates/site/valve_logo.png">
+            </div>
+        </div>
+        [[*content]]
+        <div class="wrapperContent">
+            <div class="sidebar" style="min-height: 350px">[[!Shopkeeper3@cart_catalog]]</div>
+            <div id="promo">
+                <span>Популярные позиции:</span>
+                <div class="position swiper-wrapper">
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-direct-acting/21a1kv20.html" title="Электромагнитный клапан 21A1KV20 на воду">
+                            <span class="promo_title">21A1KV20</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21a1kv20.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/fkm.png">
+                            <span class="promo_kv">На плиту<br /> Kv:2л/мин</span>
+                        </a>
+                    </div>
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-direct-acting/21a3kr30.html"
+                            title="Электромагнитный клапан 21A3KR30 для нефтепродуктов">
+                            <span class="promo_title">21A3KR30</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21a3kr20.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/fkm.png">
+                            <span class="promo_kv">G 1/8<br />Kv:2л/мин</span>
+                        </a>
+                    </div>
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-direct-acting/21a8kb55.html"
+                            title="Электромагнитный клапан 21A8KB55 для воды">
+                            <span class="promo_title">21A8KB55</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21a8kb55.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/nbr.png">
+                            <span class="promo_kv">G 1/2<br />Kv:9л/мин</span>
+                        </a>
+                    </div>
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-indirect-acting/21wa4k0v130.html"
+                            title="Электромагнитный клапан 21WA4KOV1305 для нефтепродуктов">
+                            <span class="promo_title">21WA4KOV130</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21wa4kov130.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/fkm.png">
+                            <span class="promo_kv">G 1/2<br />Kv:70л/мин</span>
+                        </a>
+                    </div>
+                </div>
+                <span>Специальные предложения:</span>
+                <div class="offers swiper-wrapper">
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-direct-acting/21a16ke25-xv.html"
+                            title="Электромагнитный клапан 21A16KE25-XV для пара">
+                            <span class="promo_title">21A16KE25-XV</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21a16ke25-xv.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/epdm.png">
+                            <span class="promo_kv">G 1/4<br />Kv:3.2л/мин</span>
+                        </a>
+                    </div>
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-direct-acting/21l1k1t40.html"
+                            title="Электромагнитный клапан 21L1K1T40 для химии">
+                            <span class="promo_title">21L1K1T40</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21l1k1t40.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/ptfe2.png">
+                            <span class="promo_kv">G 1/8<br />Kv:5л/мин</span>
+                        </a>
+                    </div>
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-indirect-acting/21h8kb120.html"
+                            title="Электромагнитный клапан 21H8KB120 для воды">
+                            <span class="promo_title">21H8KB120</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21h8kb120.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/nbr.png">
+                            <span class="promo_kv">G 1/2<br />Kv:35л/мин</span>
+                        </a>
+                    </div>
+                    <div class="promo_module">
+                        <a href="/catalog/2-way-indirect-acting/21x4ke250.html"
+                            title="Электромагнитный клапан 21X4KE250 для пищевой промышленности">
+                            <span class="promo_title">21X4KE250</span>
+                            <img style="display:block; margin: 17px auto 0" src="/assets/templates/site/21x2ke250.png">
+                            <img style="display:block; position:absolute; right:3px;top:5px;" src="/assets/templates/site/epdm2.png">
+                            <span class="promo_kv">G 1<br />Kv:160л/мин</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text_block">
+            <div class="left_block">
+                <h2>Конкурентные преимущества компании ODE</h2>
+                <p>
+                    Проведение исследовательских работ и внедрение самых передовых технологий в процесс производства
+                    электромагнитных клапанов. В составе итальянской компании ODE имеется производственный цех, который
+                    оборудован различными типами станков, что дает возможность изготавливать части электромагнитных
+                    клапанов, сочетая высокую производительность, качество и точность.
+                </p>
+                <p>
+                    Наличие высококвалифицированного персонала в составе компании ODE позволяет осуществить предельно
+                    точную сборку.Для обеспечения автоматизации и стандартизации производственного процесса компания ODE
+                    применяет в своей деятельности современные роботизированные системы. Завершающим этапом всех новых
+                    проектов являются испытания.
+                </p>
+                <p>
+                    В составе производства ODE имеется испытательная лаборатория, где проводятся различные виды
+                    пневмогидравлических, механических, электромагнитных, термо-вакуумных и климатических испытаний.
+                </p>
+                <h2>Классификация по принципу действия</h2>
+                <span>Электромагнитные клапаны прямого и непрямого действия могут быть:</span>
+                <p>
+                    Нормально-открытые клапаны (НО) — в таких электромагнитных клапанах при подаче питания или сигнала на
+                    электромагнитную катушку плунжер перекрывает диафрагму и поток жидкости останавливается.
+                </p>
+                <p>
+                    Нормально-закрытые клапаны (НЗ) — такие клапаны напротив, при подаче питания или сигнала на
+                    электромагнитную катушку открывают диафрагму и поток жидкости подается на выход.
+                    Корпуса клапанов ODE сделаны из латуни, бронзы, нержавеющей стали или специальных сплавов, а также
+                    из различных пластмасс.
+                </p>
+                </p>
+            </div>
+            <div class="right_block">
+                <h2>Классификация электромагнитных клапанов</h2>
+                <span>Прямого действия (двухходовые и трехходовые клапаны):</span>
+                <p>
+                    Двухходовые и трехходовые Соленоидные клапаны прямого действия работают посредством магнитного поля,
+                    создаваемого электромагнитной катушкой, которая приводит в движение плунжер. При этом плунжер
+                    открывает основное пропускное отверстие. В таких клапанах не требуется создания перепада давления
+                    между входом и выходом.
+                </p>
+                <span>Клапаны непрямого действия:</span>
+                <p>
+                    Принцип действия электромагнитных клапанов непрямого действия основан на создании разности давления
+                    между входом и выходом, что позволяет открыть или закрыть основное пропускное отверстие трехходового
+                    или двухходового клапана непрямого действия. При подаче напряжения на электромагнитную катушку,
+                    плунжер открывает (или закрывает) дополнительное пропускное отверстие, что изменяет давление на
+                    выходе клапана.
+                    Изменение разности давления на входе и выходе из клапана приводит в движение диафрагму, которая
+                    открывает (или закрывает) основное пропускное отверстие. В клапанах непрямого действия требуется
+                    создать начальный перепад давления как минимум в 0,2 бар, но в конечном итоге это зависит от
+                    технологии производства.
+                </p>
+                <span>Электромагнитные клапаны комбинированного действия:</span>
+                <p>
+                    Соленоидные клапаны комбинированного действия сочетают в себе принцип работы клапанов прямого и
+                    непрямого действия. В таком клапане плунжер с дополнительным пропускным отверстием закреплен
+                    непосредственно на диафрагме, что помогает клапану при разнице давлений равной нулю открыть (или
+                    закрыть) ее.
+                    В случае, если разница давлений между входом и выходом отлична от нуля, клапан работает по схеме
+                    клапана непрямого действия. В таких клапанах не требуется создания перепада давления между входом и
+                    выходом.
+                </p>
+            </div>
+        </div>
+    </div>
+    [[$footer]]</div>
+    <a class="skidka" href="/game.html" title="Как получить скидку"></a>
+</body>
+
+</html>

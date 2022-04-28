@@ -71103,7 +71103,7 @@ body .basket-item-info-name-link {
     /*background: url(button.png) no-repeat top left;*/
     width: 150px;
     height: 50px;
-    border: 0;
+    border: 1px solid #626262;
     font: 16px playregular, verdana;
     font-family: 'Roboto', sans-serif;
     color: #222;
