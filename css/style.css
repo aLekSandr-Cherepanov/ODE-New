@@ -71512,7 +71512,8 @@ ul.tabs {
 
 .sisea-search-form {
     background-color: #fff;
-    margin: 15px auto;
+    margin-bottom: 20px;
+    float: right;
     border: 1px solid #C0C0C0;
     width: 313px;
     height: 49px;
@@ -71552,6 +71553,17 @@ ul.tabs {
 
 .wrapper.form {
     display: block;
+}
+
+@media (max-width: 990px) {
+    .wrapper-head {
+        display: none;
+    }
+
+    .sisea-search-form {
+        float: none;
+        margin: 15px auto;
+    }
 }
 
 

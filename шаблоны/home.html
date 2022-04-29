@@ -180,9 +180,17 @@
                         </div>
                     </div>
                 </div>
-                <!--места где удалил код для теста начало меню(форма)-->
                 <div class="header-wrapper block_search_wrap">
-                    <div class="search_wrap" style=" opacity: 1; visibility: visible;">
+                    <div class="wrapper-head">
+                        <form class="sisea-search-form" action="search.html" method="get" role="search">
+                            <fieldset>
+                                <input type="text" name="f_pagetitle[like]" class="form-control search-query" value="">
+                                <input type="submit" value="">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--старая(новая)форма-->
+                    <!--<div class="search_wrap" style=" opacity: 1; visibility: visible;">
                         <div class="search-block inner-table-block">
                             <div class="search-wrapper">
                                 <div id="title-search_fixed">
@@ -208,9 +216,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
-                <!--места где удалил код для теста конец-->
                 <div class="line-row visible-xs"></div>
             </div>
         </header>
