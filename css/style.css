@@ -71543,6 +71543,7 @@ ul.tabs {
     border: 0;
     color: #ccc;
     background: url("https://s1.iconbird.com/ico/0512/GlyphIcons/file1337172064.png") no-repeat 50% 50%;
+    opacity: 0.5;
 }
 
 .wrapper {
