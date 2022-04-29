@@ -71510,4 +71510,47 @@ ul.tabs {
     justify-content: space-between;
 }
 
+.sisea-search-form {
+    background-color: #fff;
+    margin: 15px auto;
+    border: 1px solid #C0C0C0;
+    width: 313px;
+    height: 49px;
+    border-radius: 5px;
+    box-shadow: 0 -1px 4px 1px rgb(75 75 75 / 20%) inset;
+}
+
+.sisea-search-form fieldset {
+    border: 0;
+    padding: 4px 3px 0 5px;
+}
+
+.sisea-search-form input[type="text"] {
+    position: absolute;
+    height: 40px;
+    width: 270px;
+    border: 0;
+    color: #525151;
+    background: white;
+}
+
+.sisea-search-form input[type="submit"] {
+    float: right;
+    position: relative;
+    height: 35px;
+    width: 40px;
+    padding-top: 3px;
+    border: 0;
+    color: #ccc;
+    background: url("https://s1.iconbird.com/ico/0512/GlyphIcons/file1337172064.png") no-repeat 50% 50%;
+}
+
+.wrapper {
+    display: none;
+}
+
+.wrapper.form {
+    display: block;
+}
+
 

@@ -9,3 +9,11 @@ menu.addEventListener('click', function(){
 cross.addEventListener('click', function(){
     menuBtn.classList.toggle('show');
 })
+
+
+let wrappIcon = document.querySelector('.inline-search-show');
+let wrapperForm = document.querySelector('.wrapper');
+
+wrappIcon.addEventListener('click', function(){
+    wrapperForm.classList.toggle('form');
+})
