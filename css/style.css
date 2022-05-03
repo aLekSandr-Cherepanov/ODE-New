@@ -71297,6 +71297,7 @@ body .basket-item-info-name-link {
 #products {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .shk-item { 
