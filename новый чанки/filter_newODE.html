@@ -1,0 +1,76 @@
+<div class="filter_center">
+    <form action="[[~[[*id]]]]filterresults/" method="get">
+        <div class="wrapper-block-form">
+             <div class="block-form">
+                <div class="filter_span_left">
+                    <span>Соединение:</span>
+                    <span>Тип клапана:</span>
+                    <span>Функция:</span>
+                </div>
+                <div class="filter_list">
+                    <select name="f_pipetype">
+                        <option value="" selected="selected"> любое соединение</option>
+                        <option value="резьба G">резьба G</option>
+                        <option value="резьба NPT">резьба NPT</option>
+                        <option value="монтаж на плиту">монтаж на плиту</option>
+                        <option value="под трубки">под трубки</option>
+                    </select>
+                    <select name="f_type">
+                        <option value="" selected="selected"> любой тип </option>
+                        <option value="двухходовой">двухходовой</option>
+                        <option value="трехходовой">трехходовой</option>
+                        <option value="пятиходовой">пятиходовой</option>
+                    </select>
+                    <select name="f_func">
+                        <option value="" selected="selected"> любая функция </option>
+                        <option value="нормально-закрытый">нормально-закрытый</option>
+                        <option value="нормально-открытый">нормально-открытый</option>
+                    </select>
+                </div>
+             </div>
+            <div class="block-form">
+                <div class="filter_span_right">
+                    <span>Диаметр:</span>
+                    <span>Вид клапана:</span>
+                    <span>Применение:</span>
+                </div>
+                <div class="filter_list">
+                    <select name="f_pipe">
+                        <option value="" selected="selected"> любой диаметр </option>
+                        <option value="1/8 дюйма">1/8 дюйма</option>
+                        <option value="1/4 дюйма">1/4 дюйма</option>
+                        <option value="3/8 дюйма">3/8 дюйма</option>
+                        <option value="1/2 дюйма">1/2 дюйма</option>
+                        <option value="3/4 дюйма">3/4 дюйма</option>
+                        <option value="1 дюйм">1 дюйм</option>
+                        <option value="1 1/4 дюйма">1 1/4 дюйма</option>
+                        <option value="1 1/2 дюйма">1 1/2 дюйма</option>
+                        <option value="2 дюйма">2 дюйма</option>
+                    </select>
+                
+                    <select name="f_kind">
+                        <option value="" selected="selected"> любой вид </option>
+                        <option value="прямого действия">прямого действия</option>
+                        <option value="непрямого действия">непрямого действия</option>
+                        <option value="комбинированного действия">комбинированный</option>
+                    </select>
+                
+                    <select name="f_envioronmentfilter[like]">
+                        <option value="" selected="selected"> любая среда </option>
+                        <option value="Клапаны на воду">клапаны на воду</option>
+                        <option value="Клапаны на пар">клапаны на пар</option>
+                        <option value="Клапаны на воздух">клапаны на воздух</option>
+                        <option value="Клапаны для химпрома">клапаны для химпрома</option>
+                        <option value="Клапаны для кофемашин">клапаны для кофемашин</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+         <div class="filter_button">
+             <label class="label_button">
+                <input type="submit" value="Подобрать" >
+            </label>
+        </div>
+    </form>              
+</div>
