@@ -7927,12 +7927,12 @@ svg .cls-2,
 svg .nspcls-1,
 svg .sscls-1,
 svg .sscls-2 {
-    fill: #fff;
+    fill: #000;
     fill-rule: evenodd;
 }
 
 svg .clsw-1 {
-    fill: #fff;
+    fill: #000;
     fill-rule: evenodd
 }
 
@@ -7943,7 +7943,7 @@ svg .sscls-1 {
 svg .bfcls-1,
 svg .bfcls-2 {
     fill: none;
-    stroke: #fff;
+    stroke: #000;
     stroke-linecap: round;
     stroke-width: 2px;
     fill-rule: evenodd
@@ -68481,4 +68481,9 @@ ul.tabs {
 .cart_price {
     font-weight: bold;
     color: #333;
+}
+
+.footer_icon {
+    fill: #fff;
+    fill-rule: evenodd;
 }
