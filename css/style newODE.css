@@ -7927,12 +7927,12 @@ svg .cls-2,
 svg .nspcls-1,
 svg .sscls-1,
 svg .sscls-2 {
-    fill: #333;
-    fill-rule: evenodd
+    fill: #fff;
+    fill-rule: evenodd;
 }
 
 svg .clsw-1 {
-    fill: #333;
+    fill: #fff;
     fill-rule: evenodd
 }
 
@@ -7943,7 +7943,7 @@ svg .sscls-1 {
 svg .bfcls-1,
 svg .bfcls-2 {
     fill: none;
-    stroke: #333;
+    stroke: #fff;
     stroke-linecap: round;
     stroke-width: 2px;
     fill-rule: evenodd
@@ -7966,7 +7966,7 @@ svg .op-cls {
     opacity: .1
 }
 
-body.jqm-initied #panel,
+/*body.jqm-initied #panel,
 body.jqm-initied .basket_bottom_block>div,
 body.jqm-initied .basket_fly_forms>div,
 body.jqm-initied .basket_wrapp .opener,
@@ -7989,7 +7989,7 @@ body.jqm-initied.wf .wrapper1>div#mobilefilter,
 body.jqm-initied.wf .wrapper1>div#mobilefilter>div {
     -webkit-filter: none;
     filter: none
-}
+}*/
 
 body.jqm-initied.wf {
     padding-right: 18px
@@ -68478,4 +68478,7 @@ ul.tabs {
     color: #fff;
 }
 
-
+.cart_price {
+    font-weight: bold;
+    color: #333;
+}

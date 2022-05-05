@@ -3,10 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <base href="[[++site_url]]" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <meta name="keywords" content="[[*id:is=`2`:then=`Клапаны, `:else=`[[*pagetitle]], клапаны, `]]электромагнитные клапаны, соленоидные клапаны, клапаны ODE, клапаны для воды, клапаны для пара, клапаны для воздуха, клапаны для нефтепродуктов, клапаны для кофемашин, нормально закрытые клапаны, нормально-открытые клапаны" />
+    <meta name="description" content="[[*id:is=`2`:then=`Электромагнитные соленоидные клапаны`:else=`[[*pagetitle]]`]] под различные сферы применения" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/файлы сайтов/ODE/код/переделывание ODE/css/style newODE.css" rel="stylesheet">
     <link href="/переделывание ODE/css/style2.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <title>Catalog</title>
 </head>
 
@@ -23,14 +28,13 @@
                                     <div class="logo-block pull-left floated">
                                         <div class="logo">
                                             <a href="/">
-                                                <img src="https://poltraf.ru/upload/medialibrary/0de/0de5f0f79fdbe6d79a5df9c93b79c231.png" alt="Полтраф СНГ" title="Полтраф СНГ" data-src="">
+                                                <img src="/файлы сайтов/ODE/код/переделывание ODE/img/0de5f0f79fdbe6d79a5df9c93b79c231.png" alt="ODE" title="ODE" data-src="">
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="search_wrap pull-left" style="max-width: 735px; opacity: 1; visibility: visible;margin: 0 auto;">
+                                    <div class="search_wrap pull-left" style="opacity: 1;">
                                         <div class="search-block inner-table-block">
                                             <div class="search-wrapper">
-                                                <!--место под код  который вырезал для теста начало-->
                                                 <div class="menu-row middle-block bglight">
                                                     <div class="maxwidth-theme">
                                                         <div class="row">
@@ -113,7 +117,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!--место под код  который вырезал для теста конец-->
                                             </div>
                                         </div>
                                     </div>
@@ -121,19 +124,15 @@
                                         <div class="pull-right"></div>
                                         <div class="pull-right">
                                             <div class="wrap_icon inner-table-block person">
-                                                <!--'start_frame_cache_header-auth-block2'-->
-                                                <!-- noindex -->
                                                 <div class="auth_wr_inner">
                                                     <a rel="nofollow" title="Мой кабинет" class="personal-link dark-color animate-load" data-event="jqm" data-param-type="auth" data-param-backurl="/about/proizvoditeli/ODE/" data-name="auth" href="/personal/"></a>
-                                                </div><!-- /noindex -->
-                                                <!--'end_frame_cache_header-auth-block2'-->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="pull-right">
                                         <div class="wrap_icon inner-table-block">
                                             <div class="phone-block blocks">
-                                                <!-- noindex -->
                                                 <div class="phone with_dropdown no-icons">
                                                     <i class="svg inline  svg-inline-phone" aria-hidden="true">
                                                         <svg class="" width="5" height="13" viewBox="0 0 5 13">
@@ -171,7 +170,6 @@
                                                         </svg>
                                                     </i>
                                                 </div>
-                                                <!-- /noindex -->
                                             </div>
                                         </div>
                                     </div>
@@ -180,37 +178,16 @@
                         </div>
                     </div>
                 </div>
-                <!--места где удалил код для теста начало меню(форма)-->
                 <div class="header-wrapper block_search_wrap">
-                    <div class="search_wrap" style="opacity: 1; visibility: visible;">
-                        <div class="search-block inner-table-block">
-                            <div class="search-wrapper">
-                                <div id="title-search_fixed">
-                                    <form action="/search/" class="search">
-                                        <div class="search-input-div">
-                                            <input class="search-input" id="title-search-input_fixed" type="text" name="q" value="" placeholder="Поиск" size="20" maxlength="50" autocomplete="off">
-                                        </div>
-                                        <div class="search-button-div">
-                                            <button class="btn btn-search has-ripple" type="submit" name="s" value="Найти">
-                                                <i class="svg inline  svg-inline-search2" aria-hidden="true">
-                                                    <svg class="" width="17" height="17" viewBox="0 0 17 17" aria-hidden="true">
-                                                        <path class="cls-1" d="M16.709,16.719a1,1,0,0,1-1.412,0l-3.256-3.287A7.475,7.475,0,1,1,15,7.5a7.433,7.433,0,0,1-1.549,4.518l3.258,3.289A1,1,0,0,1,16.709,16.719ZM7.5,2A5.5,5.5,0,1,0,13,7.5,5.5,5.5,0,0,0,7.5,2Z">
-                                                        </path>
-                                                    </svg>
-                                                </i> 
-                                            </button>
-                                            <span class="close-block inline-search-hide">
-                                                <span class="svg svg-close close-icons colored_theme_hover"></span>
-                                            </span>
-                                        </div>
-                                    </form>
-                                    <div class="title-search-result title-search-input_fixed" style="display: none;"></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="wrapper-head">
+                        <form class="sisea-search-form" action="search.html" method="get" role="search">
+                            <fieldset>
+                                <input type="text" name="f_pagetitle[like]" class="form-control search-query" value="">
+                                <input type="submit" value="">
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
-                <!--места где удалил код для теста конец-->
                 <div class="line-row visible-xs"></div>
             </div>
         </header>
@@ -641,7 +618,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 1,4 л/мин</li>
                                                 <br>
-                                                <li>Цена: по запросу</li>
+                                                <li class="cart_price">Цена: по запросу</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kb15.html">Подробнее</a>
@@ -667,7 +644,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 2 л/мин</li>
                                                 <br>
-                                                <li>Цена: по запросу</li>
+                                                <li class="cart_price">Цена: по запросу</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kb20.html">Подробнее</a>
@@ -692,7 +669,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 3,2 л/мин</li>
                                                 <br>
-                                                <li>Цена: по запросу</li>
+                                                <li class="cart_price">Цена: по запросу</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kb25.html">Подробнее</a>
@@ -717,7 +694,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 4 л/мин</li>                                            
                                                 <br>
-                                                <li>Цена: по запросу</li>
+                                                <li class="cart_price">Цена: по запросу</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kb30.html">Подробнее</a>  
@@ -742,7 +719,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 6,5 л/мин</li>                                
                                                 <br>
-                                                <li>Цена: по запросу</li>
+                                                <li class="cart_price">Цена: по запросу</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kb45.html">Подробнее</a>                                
@@ -767,7 +744,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 9 л/мин</li>
                                                 <br>
-                                                <li>Цена: по запросу</li>
+                                                <li class="cart_price">Цена: по запросу</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kb55.html">Подробнее</a>
@@ -792,7 +769,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 1,4 л/мин</li>
                                                 <br>
-                                                <li>Цена: 28  €</li>
+                                                <li class="cart_price">Цена: 28  €</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kv15.html">Подробнее</a>
@@ -817,7 +794,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 1,4 л/мин</li>
                                                 <br>
-                                                <li>Цена: 28  €</li>
+                                                <li class="cart_price">Цена: 28  €</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kv15.html">Подробнее</a>
@@ -842,7 +819,7 @@
                                                 <li>Присоединение: 1/4 дюйма</li>
                                                 <li>Расход: 1,4 л/мин</li>
                                                 <br>
-                                                <li>Цена: 28  €</li>
+                                                <li class="cart_price">Цена: 28  €</li>
                                             </ul>
                                             <div class="category_module_basket" style="text-align:center">
                                                 <a style="color:rgb(255, 255, 255); display: block;height: 100%;padding-top: 7px;" href="catalog/2-way-direct-acting/212a2kv15.html">Подробнее</a>
@@ -894,7 +871,7 @@
                         <div class="items">
                             <div class="item 0 childs  active  accordion-close " data-parent="#bottom" data-target="#bottom">
                                 <div class="title">
-                                    <a href="/about/proizvoditeli/">Меню</a>
+                                    <p class="head_footer">Меню</p>
                                 </div>
                                 <div class="compact_arrow">
                                     <i class="svg  svg-inline-down colored_theme_hover_bg-el" aria-hidden="true">
@@ -907,27 +884,27 @@
                             <div id="bottom" class="wrap panel-collapse wrap_compact_mobile">
                                 <div class="item 1">
                                     <div class="title">
-                                        <a href="/about/proizvoditeli/trafag/">Каталог</a>
+                                        <a href="/products/">Каталог</a>
                                     </div>
                                 </div>
                                 <div class="item 2">
                                     <div class="title">
-                                        <a href="/about/proizvoditeli/ee_Elektronik/">Карта сайта</a>
+                                        <a href="/sitemap.html">Карта сайта</a>
                                     </div>
                                 </div>
                                 <div class="item 3">
                                     <div class="title">
-                                        <a href="/about/proizvoditeli/sts/">Статьи</a>
+                                        <a href="/articles/">Статьи</a>
                                     </div>
                                 </div>
                                 <div class="item 4">
                                     <div class="title">
-                                        <a href="/about/proizvoditeli/merapribor/">О Компании</a>
+                                        <a href="/kompaniya-ode/">О Компании</a>
                                     </div>
                                 </div>
                                 <div class="item 5">
                                     <div class="title">
-                                        <a href="/about/proizvoditeli/In-Situ/">Обратная связь</a>
+                                        <a href="/predstaviteli-ode/">Обратная связь</a>
                                     </div>
                                 </div>
                             </div>
@@ -941,7 +918,7 @@
                         <div class="items">
                             <div class="item 0 childs   accordion-close " data-parent="#bottom_company" data-target="#bottom_company">
                                 <div class="title">
-                                    <a href="/kipia/">Виды клапанов</a>
+                                    <p class="head_footer">Виды клапанов</p>
                                 </div>
                                 <div class="compact_arrow">
                                     <i class="svg  svg-inline-down colored_theme_hover_bg-el" aria-hidden="true">
@@ -952,29 +929,29 @@
                                 </div>
                             </div>
                             <div id="bottom_company" class="wrap panel-collapse wrap_compact_mobile">
-                                <div class="item 1    ">
+                                <div class="item 1">
                                     <div class="title">
-                                        <a href="/davlenie/">Нормально-открытые клапаны</a>
+                                        <a href="/catalog#f_func=%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9&page=1&sortby=pagetitle&sortdir=asc" title="Нормально-открытые клапаны">Нормально-открытые клапаны</a>
                                     </div>
                                 </div>
-                                <div class="item 2    ">
+                                <div class="item 2">
                                     <div class="title">
-                                        <a href="/uroven/">Нормально-закрытые клапаны</a>
+                                        <a href="/catalog#f_func=%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B7%D0%B0%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9&page=1&sortby=pagetitle&sortdir=asc" title="Нормально-закрытые клапаны">Нормально-закрытые клапаны</a>
                                     </div>
                                 </div>
-                                <div class="item 3    ">
+                                <div class="item 3">
                                     <div class="title">
-                                        <a href="/temperatura/">Клапаны прямого действия</a>
+                                        <a href="/catalog/2-way-direct-acting/" title="Клапаны прямого действия">Клапаны прямого действия</a>
                                     </div>
                                 </div>
                                 <div class="item 4">
                                      <div class="title">
-                                         <a href="/gazoanaliz/">Клапаны непрямого действия</a>
+                                         <a href="/catalog/2-way-indirect-acting/" title="Клапаны непрямого действия">Клапаны непрямого действия</a>
                                      </div>
                                 </div>
                                 <div class="item 5">
                                      <div class="title">
-                                         <a href="/raskhod/">Клапаны под трубки</a>
+                                         <a href="/catalog/pipe-valves/" title="Клапаны под трубки">Клапаны под трубки</a>
                                      </div>
                                 </div>
                             </div>
@@ -987,9 +964,6 @@
                     <div class="bottom-menu">
                         <div class="items">
                             <div class="item 0 childs   accordion-close " data-parent="#bottom_info" data-target="#bottom_info">
-                                <!--<div class="title">
-                                    <a href="/po-otraslyam/">КИП ПО ОТРАСЛЯМ</a>
-                                </div>-->
                                 <div class="compact_arrow">
                                     <i class="svg  svg-inline-down colored_theme_hover_bg-el" aria-hidden="true">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5">
@@ -1001,32 +975,32 @@
                             <div id="bottom_info" class="wrap panel-collapse wrap_compact_mobile">
                                 <div class="item 1    ">
                                     <div class="title">
-                                        <a href="/po-otraslyam/#Промышленная автоматика">Клапаны для воды</a>
+                                        <a href="/voda/" title="Клапаны для воды">Клапаны для воды</a>
                                     </div>
                                 </div>
                                 <div class="item 2">
                                     <div class="title">
-                                        <a href="/po-otraslyam/#Вентиляция и кондиционирование">Клапаны для воздуха</a>
+                                        <a href="/vozduh/" title="Клапаны для воздуха">Клапаны для воздуха</a>
                                     </div>
                                 </div>
                                 <div class="item 3">
                                     <div class="title">
-                                        <a href="/po-otraslyam/#Водоснабжение">Клапаны для пара</a>
+                                        <a href="/par/" title="Клапаны для пара">Клапаны для пара</a>
                                     </div>
                                  </div>
                                 <div class="item 4">
                                     <div class="title">
-                                        <a href="/po-otraslyam/#Сельское хозяйство">Клапаны для пищепрома</a>
+                                        <a href="/kofe/" title="Клапаны для пищевой промышленности">Клапаны для пищепрома</a>
                                     </div>
                                 </div>
                                 <div class="item 5">
                                     <div class="title">
-                                        <a href="/po-otraslyam/#Экология и гидрометеорология">Клапаны для химпрома</a>
+                                        <a href="/himiya/" title="Клапаны для химической промышленности">Клапаны для химпрома</a>
                                     </div>
                                 </div>
                                 <div class="item 6">
                                     <div class="title">
-                                        <a href="/po-otraslyam/#Пищевая промышленность">Все клапаны</a>
+                                        <a href="/catalog" title="Все клапаны">Все клапаны</a>
                                     </div>
                                 </div>
                             </div>
@@ -1051,12 +1025,12 @@
                                 </div>
                             </div>
                             <div id="bottom_help" class="wrap panel-collapse wrap_compact_mobile">
-                                <div class="item 2    ">
+                                <div class="item 2">
                                     <div class="title">
                                         <a href="/publications/">Статьи</a>
                                     </div>
                                 </div>
-                                <div class="item 3    ">
+                                <div class="item 3">
                                     <div class="title">
                                         <a href="/about/sertifikaty/">Контакты</a>
                                     </div>
@@ -1069,41 +1043,37 @@
             <div class="col-md-3 col-sm-12 contact-block">
                 <div class="info">
                     <div class="row">
-
                         <div class="col-md-12 col-sm-12">
                             <div class="phone blocks">
                                 <div class="inline-block">
-                                    <!-- noindex -->
-                                        <div class="phone with_dropdown white sm">
-                                            <div class="wrap">
-                                                <div>
-                                                    <i class="svg inline  svg-inline-phone" aria-hidden="true">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="11" viewBox="0 0 5 11">
-                                                            <path data-name="Shape 51 copy 13" class="cls-1" d="M402.738,141a18.086,18.086,0,0,0,1.136,1.727,0.474,0.474,0,0,1-.144.735l-0.3.257a1,1,0,0,1-.805.279,4.641,4.641,0,0,1-1.491-.232,4.228,4.228,0,0,1-1.9-3.1,9.614,9.614,0,0,1,.025-4.3,4.335,4.335,0,0,1,1.934-3.118,4.707,4.707,0,0,1,1.493-.244,0.974,0.974,0,0,1,.8.272l0.3,0.255a0.481,0.481,0,0,1,.113.739c-0.454.677-.788,1.159-1.132,1.731a0.43,0.43,0,0,1-.557.181l-0.468-.061a0.553,0.553,0,0,0-.7.309,6.205,6.205,0,0,0-.395,2.079,6.128,6.128,0,0,0,.372,2.076,0.541,0.541,0,0,0,.7.3l0.468-.063a0.432,0.432,0,0,1,.555.175h0Z" transform="translate(-399 -133)"></path>
-                                                        </svg>
-                                                    </i>
-                                                    <a rel="nofollow" href="javascript:;">+7 (8442) 26-76-52</a>
-                                                </div>
+                                    <div class="phone with_dropdown white sm">
+                                        <div class="wrap">
+                                            <div>
+                                                <i class="svg inline  svg-inline-phone" aria-hidden="true">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="11" viewBox="0 0 5 11">
+                                                        <path data-name="Shape 51 copy 13" class="cls-1" d="M402.738,141a18.086,18.086,0,0,0,1.136,1.727,0.474,0.474,0,0,1-.144.735l-0.3.257a1,1,0,0,1-.805.279,4.641,4.641,0,0,1-1.491-.232,4.228,4.228,0,0,1-1.9-3.1,9.614,9.614,0,0,1,.025-4.3,4.335,4.335,0,0,1,1.934-3.118,4.707,4.707,0,0,1,1.493-.244,0.974,0.974,0,0,1,.8.272l0.3,0.255a0.481,0.481,0,0,1,.113.739c-0.454.677-.788,1.159-1.132,1.731a0.43,0.43,0,0,1-.557.181l-0.468-.061a0.553,0.553,0,0,0-.7.309,6.205,6.205,0,0,0-.395,2.079,6.128,6.128,0,0,0,.372,2.076,0.541,0.541,0,0,0,.7.3l0.468-.063a0.432,0.432,0,0,1,.555.175h0Z" transform="translate(-399 -133)"></path>
+                                                    </svg>
+                                                </i>
+                                                <a rel="nofollow" href="javascript:;">+7 (8442) 26-76-52</a>
                                             </div>
-                                            <div class="dropdown with_icons">
-                                                <div class="wrap srollbar-custom scroll-deferred scroll-init">
-                                                    <div class="more_phone">
-                                                        <a rel="nofollow" href="tel:7 (8442) 26-76-52">
-                                                            <span class="icon"></span>
-                                                            +7 (8442) 26-76-52
-                                                            <span class="descr">г.Волгоград</span>
-                                                        </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <i class="svg inline  svg-inline-down" aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="3" viewBox="0 0 5 3">
-                                                    <path class="cls-1" d="M250,80h5l-2.5,3Z" transform="translate(-250 -80)"></path>
-                                                </svg>
-                                            </i>
                                         </div>
-                                    <!-- /noindex -->
+                                        <!--<div class="dropdown with_icons">
+                                            <div class="wrap srollbar-custom scroll-deferred scroll-init">
+                                                <div class="more_phone">
+                                                    <a rel="nofollow" href="tel:7 (8442) 26-76-52">
+                                                        <span class="icon"></span>
+                                                        +7 (8442) 26-76-52
+                                                        <span class="descr">г.Волгоград</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                        <i class="svg inline  svg-inline-down" aria-hidden="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="3" viewBox="0 0 5 3">
+                                                <path class="cls-1" d="M250,80h5l-2.5,3Z" transform="translate(-250 -80)"></path>
+                                            </svg>
+                                        </i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1116,7 +1086,6 @@
                                 </i>					
                                 <a href="mailto:info@ode-rus.ru">info@ode-rus.ru</a>
                             </div>
-
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <div class="address blocks">
@@ -1125,11 +1094,10 @@
                                         <path class="cls-1" d="M959.135,82.315l0.015,0.028L955.5,87l-3.679-4.717,0.008-.013a4.658,4.658,0,0,1-.83-2.655,4.5,4.5,0,1,1,9,0A4.658,4.658,0,0,1,959.135,82.315ZM955.5,77a2.5,2.5,0,0,0-2.5,2.5,2.467,2.467,0,0,0,.326,1.212l-0.014.022,2.181,3.336,2.034-3.117c0.033-.046.063-0.094,0.093-0.142l0.066-.1-0.007-.009a2.468,2.468,0,0,0,.32-1.2A2.5,2.5,0,0,0,955.5,77Z" transform="translate(-951 -75)"></path>
                                     </svg>
                                 </i>					
-                                <!--<p>г. Санкт-Петербург, наб. Обводного канала, 199-201 П</p>-->
                                 <div class="logo-footer">
                                     <div>
                                         <a href="/about/news/company/Sertifikat-ISO/">
-                                            <img data-lazyload="" class="lazyloaded lazyloaded-footer" alt="Сертификат ИСО" src="https://poltraf.ru/upload/medialibrary/0de/0de5f0f79fdbe6d79a5df9c93b79c231.png" data-src="/upload/medialibrary/19e/19ef119e258b63de1efc0d41164021aa.png" title="Сертификат ИСО" width="80" height="80">
+                                            <img data-lazyload="" class="lazyloaded lazyloaded-footer" alt="ODE" src="/assets/templates/site/ODE_img.png" data-src="/upload/medialibrary/19e/19ef119e258b63de1efc0d41164021aa.png" title="ODE" width="80" height="80">
                                         </a>
                                     </div>
                                 </div>				
@@ -1139,7 +1107,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
     <script src="/файлы сайтов/ODE/код/переделывание ODE/js/mob menu js.js"></script>
 
