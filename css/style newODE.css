@@ -68472,6 +68472,10 @@ ul.tabs {
         float: none;
         margin: 15px auto;
     }
+
+    .element_right_bottom {
+        width: auto;
+    }
 }
 
 .head_footer {
@@ -68487,3 +68491,5 @@ ul.tabs {
     fill: #fff;
     fill-rule: evenodd;
 }
+
+
