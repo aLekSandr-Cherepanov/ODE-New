@@ -68155,12 +68155,12 @@ body .basket-item-info-name-link {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
-    margin-top: 50px
-    ;
+    margin-top: 50px;
+    border: 1px solid #8a8a8a;
 }
   
 .price {
@@ -68404,6 +68404,7 @@ ul.tabs {
 }
 
 .category_module {
+    width: 260px;
     border: 1px solid #0000005e;
 }
 
