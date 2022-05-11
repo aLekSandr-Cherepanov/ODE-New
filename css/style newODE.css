@@ -27900,7 +27900,7 @@ ol>li:first-of-type {
 }
 
 ul>li {
-    margin: 8px 0 0 21px;
+    margin: 8px 0 0 5px;
     list-style-type: none;
     position: relative;
 }
@@ -30214,7 +30214,7 @@ input[type="email"].form-control,
 input[type="tel"].form-control {
     padding: 8px 13px 7px;
     width: 100%;
-    height: 48px;
+    height: 35px;
 }
 
 textarea {
@@ -68220,7 +68220,8 @@ body .basket-item-info-name-link {
 }
 
 .description-product {
-    padding: 0 15px;
+    padding: 0 5px;
+    font-size: 13px;
 }
 
 .block_heading {
@@ -68404,7 +68405,7 @@ ul.tabs {
 }
 
 .category_module {
-    width: 260px;
+    width: 235px;
     border: 1px solid #0000005e;
 }
 
