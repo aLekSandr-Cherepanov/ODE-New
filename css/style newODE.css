@@ -29403,7 +29403,7 @@ form label {
     font-weight: normal;
     font-size: 13px;
     margin-bottom: 2px;
-    margin-right: 145px;
+    margin-right: 100px;
 }
 
 #content .right_block.catalog .catalog_list,
@@ -45273,6 +45273,7 @@ div[id^=bx_auth_error],
 
 /*history list*/
 .filter_block {
+    width: 345px;
     padding: 17px 24px 14px;
     overflow: hidden;
 }
@@ -68379,11 +68380,24 @@ ul.tabs {
         width: 35%;
     }
 
-    .form label {
+    form label {
         margin-right: 0vw;
     }
+
     .label_button {
         margin-right: 0;
+    }
+
+    .filter_block {
+        width: 80vw;
+    }
+
+    form .category_module {
+        width: 290px;
+    }
+
+    .description-product {
+        font-size: 15px;
     }
 }
 
@@ -68463,6 +68477,7 @@ ul.tabs {
 
 .wrapper.form {
     display: block;
+    z-index: 1000;
 }
 
 @media (max-width: 990px) {
