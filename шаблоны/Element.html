@@ -30,7 +30,6 @@
                                     <div class="search_wrap pull-left" style="opacity: 1; visibility: visible;margin: 0 auto;">
                                         <div class="search-block inner-table-block">
                                             <div class="search-wrapper">
-                                                <!--место под код  который вырезал для теста начало-->
                                                 <div class="menu-row middle-block bglight">
                                                     <div class="maxwidth-theme">
                                                         <div class="row">
@@ -113,7 +112,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!--место под код  который вырезал для теста конец-->
                                             </div>
                                         </div>
                                     </div>
@@ -121,19 +119,15 @@
                                         <div class="pull-right"></div>
                                         <div class="pull-right">
                                             <div class="wrap_icon inner-table-block person">
-                                                <!--'start_frame_cache_header-auth-block2'-->
-                                                <!-- noindex -->
                                                 <div class="auth_wr_inner">
                                                     <a rel="nofollow" title="Мой кабинет" class="personal-link dark-color animate-load" data-event="jqm" data-param-type="auth" data-param-backurl="/about/proizvoditeli/ODE/" data-name="auth" href="/personal/"></a>
-                                                </div><!-- /noindex -->
-                                                <!--'end_frame_cache_header-auth-block2'-->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="pull-right">
                                         <div class="wrap_icon inner-table-block">
                                             <div class="phone-block blocks">
-                                                <!-- noindex -->
                                                 <div class="phone with_dropdown no-icons">
                                                     <i class="svg inline  svg-inline-phone" aria-hidden="true">
                                                         <svg class="" width="5" height="13" viewBox="0 0 5 13">
@@ -171,7 +165,6 @@
                                                         </svg>
                                                     </i>
                                                 </div>
-                                                <!-- /noindex -->
                                             </div>
                                         </div>
                                     </div>
@@ -180,7 +173,6 @@
                         </div>
                     </div>
                 </div>
-                <!--места где удалил код для теста начало меню(форма)-->
                 <div class="header-wrapper block_search_wrap">
                     <div class="search_wrap" style="opacity: 1; visibility: visible;">
                         <div class="search-block inner-table-block">
@@ -210,7 +202,6 @@
                         </div>
                     </div>
                 </div>
-                <!--места где удалил код для теста конец-->
                 <div class="line-row visible-xs"></div>
             </div>
         </header>
@@ -243,10 +234,9 @@
                 </div>
                 <div class="pull-right">
                     <div class="wrap_icon wrap_cabinet">
-                <!--'start_frame_cache_header-auth-block3'-->			<!-- noindex -->
                         <div class="auth_wr_inner "> 
                             <a rel="nofollow" title="Мой кабинет" class="personal-link dark-color animate-load" data-event="jqm" data-param-type="auth" data-param-backurl="/about/proizvoditeli/ODE/" data-name="auth" href="/personal/"></a>
-                        </div><!-- /noindex -->		<!--'end_frame_cache_header-auth-block3'-->
+                        </div>
                     </div>
                 </div>
                 <div class="pull-right">
@@ -262,7 +252,6 @@
                 </div>
                 <div class="pull-right">
                     <div class="wrap_icon wrap_phones">
-                        <!-- noindex -->
                         <button class="top-btn inline-phone-show">
                             <i class="svg inline  svg-inline-phone" aria-hidden="true">
                                 <svg class="" width="18.031" height="17.969" viewBox="0 0 18.031 17.969">
@@ -270,7 +259,6 @@
                                 </svg>
                             </i>
                         </button>
-                        <!-- /noindex -->
                     </div>
                 </div>
             </div>
@@ -278,15 +266,8 @@
         <div id="mobilemenu" class="leftside">
             <div class="mobilemenu-v1 scroller">
                 <div class="wrap">
-                    <!-- noindex -->
                     <div class="menu top"></div>
-                    <!-- /noindex -->
-                    <!-- noindex -->
-                    <!-- /noindex -->
-                    <div class="social-icons">
-                    <!-- noindex -->
-                    <!-- /noindex -->
-                    </div>	
+                    <div class="social-icons"></div>	
                 </div>
             </div>	
         </div>
@@ -298,33 +279,33 @@
             <div class="filter_center">
                 <form action="[[~[[*id]]]]filterresults/" method="get">
                     <div class="wrapper-block-form">
-                         <div class="block-form">
-                            <div class="filter_span_left">
-                                <span>Соединение:</span>
-                                <span>Тип клапана:</span>
-                                <span>Функция:</span>
-                            </div>
-                            <div class="filter_list">
-                                <select name="f_pipetype">
-                                    <option value="" selected="selected"> любое соединение</option>
-                                    <option value="резьба G">резьба G</option>
-                                    <option value="резьба NPT">резьба NPT</option>
-                                    <option value="монтаж на плиту">монтаж на плиту</option>
-                                    <option value="под трубки">под трубки</option>
-                                </select>
-                                <select name="f_type">
-                                    <option value="" selected="selected"> любой тип </option>
-                                    <option value="двухходовой">двухходовой</option>
-                                    <option value="трехходовой">трехходовой</option>
-                                    <option value="пятиходовой">пятиходовой</option>
-                                </select>
-                                <select name="f_func">
-                                    <option value="" selected="selected"> любая функция </option>
-                                    <option value="нормально-закрытый">нормально-закрытый</option>
-                                    <option value="нормально-открытый">нормально-открытый</option>
-                                </select>
-                            </div>
-                         </div>
+                        <div class="block-form">
+                           <div class="filter_span_left">
+                               <span>Соединение:</span>
+                               <span>Тип клапана:</span>
+                               <span>Функция:</span>
+                           </div>
+                           <div class="filter_list">
+                               <select name="f_pipetype">
+                                   <option value="" selected="selected"> любое соединение</option>
+                                   <option value="резьба G">резьба G</option>
+                                   <option value="резьба NPT">резьба NPT</option>
+                                   <option value="монтаж на плиту">монтаж на плиту</option>
+                                   <option value="под трубки">под трубки</option>
+                               </select>
+                               <select name="f_type">
+                                   <option value="" selected="selected"> любой тип </option>
+                                   <option value="двухходовой">двухходовой</option>
+                                   <option value="трехходовой">трехходовой</option>
+                                   <option value="пятиходовой">пятиходовой</option>
+                               </select>
+                               <select name="f_func">
+                                   <option value="" selected="selected"> любая функция </option>
+                                   <option value="нормально-закрытый">нормально-закрытый</option>
+                                   <option value="нормально-открытый">нормально-открытый</option>
+                               </select>
+                           </div>
+                        </div>
                         <div class="block-form">
                             <div class="filter_span_right">
                                 <span>Диаметр:</span>
@@ -545,7 +526,6 @@
         <div class="left_block sticky-sidebar"></div>		
     </div> 	
     <footer class="footer">
-
         <div class="row">
             <div class="col-md-2 col-sm-3">
                 <div class="fourth_bottom_menu">
@@ -798,7 +778,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
 
     <script src="/файлы сайтов/ODE/код/переделывание ODE/js/mob menu js.js"></script>
