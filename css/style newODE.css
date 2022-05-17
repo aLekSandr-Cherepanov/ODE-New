@@ -68418,7 +68418,11 @@ ul.tabs {
     }
 
     .shop-cart {
-        width: 80vw !important;
+        width: 90vw !important;
+    }
+
+    #shopOrderForm input, #shopOrderForm select {
+        width: 55vw !important;
     }
 
 }
