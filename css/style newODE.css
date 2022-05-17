@@ -68604,7 +68604,7 @@ ul.tabs {
 }
 
 #filters .filter_block {
-    margin: 10px 0;
+    margin: 40px 0 !important;
     padding: 5px;
     /* border: 1px solid #888888; */
 }
@@ -68634,4 +68634,9 @@ ul.tabs {
     height: 30px;
     width: 80%;
     /*box-shadow: 0 -1px 4px 1px rgb(75 75 75 / 20%) inset;*/
+}
+
+.head_sidebar {
+    display: block;
+    text-align: center;
 }
