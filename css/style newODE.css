@@ -116,9 +116,10 @@ figure {
 }
 
 fieldset {
-    border: 1px solid silver;
+    border: 1px solid #787878;
     margin: 0 2px;
-    padding: .35em .625em .75em
+    padding: .35em .625em .75em;
+    border-radius: 10px;
 }
 
 legend {
@@ -1958,11 +1959,11 @@ table th[class*=col-] {
     }
 }
 
-fieldset {
+/*fieldset {
     padding: 0;
     margin: 0;
     border: 0
-}
+}*/
 
 legend {
     display: block;
@@ -66550,8 +66551,8 @@ h4:hover .opener_icon,
 .faq.list .item .q:hover .opener_icon,
 .jobs_wrapp .item .name tr:hover .opener_icon,
 .owl-carousel.owl-theme.owl-bg-nav .owl-nav button:hover:not(.disabled) {
-    color: #FFF;
-    background: #1f7ae4;
+    color: #FFF !important;
+    background: #088b4a;
 }
 
 .basket-share-detail__head .char_name .props_list .hint .icon:hover,
@@ -68037,14 +68038,14 @@ body .basket-item-info-name-link {
     border-radius: 5px;
     background: #fafbfc;
     color: #555;
-    border: 1px solid #c0c0c0;
+    border: 1px solid #6c6c6c;
     outline: none;
     display: inline-block;
     appearance: none;
     cursor: pointer;
     height: 30px;
     width: 100%;
-    box-shadow: 0 -1px 4px 1px rgb(75 75 75 / 20%) inset;
+    /*box-shadow: 0 -1px 4px 1px rgb(75 75 75 / 20%) inset;*/
 }
 
 .filter_span_right span {
@@ -68409,6 +68410,17 @@ ul.tabs {
     #promo {
         width: 85vw;
     }
+
+    .box.visible {
+        width: 80vw;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .shop-cart {
+        width: 80vw !important;
+    }
+
 }
 
 .banner-wrapper {
@@ -68549,4 +68561,77 @@ ul.tabs {
     color: #fff;
 }
 
+.fieldset {
+    border: 2px solid #e8e9eb !important;
+    padding: 0.35em 0.625em 0.75em !important;
+    border-radius: 10px !important;
+}
 
+#shopOrderForm input, #shopOrderForm select {
+    color: #888;
+    border: 1px solid #797979;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    width: 300px;
+    height: 35px;
+    padding: 0 25px;
+    margin: 7px 0;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+#shopOrderForm table {
+    width: 100%;
+}
+
+#shopOrderForm table tr td:first-child {
+    width: 25%;
+}
+
+#shopOrderForm select {
+    padding: 7px 0 5px 25px;
+}
+
+.button {
+    background: #088b4a;
+    color: #fff;
+}
+
+.shop-cart {
+    width: 21vw;
+}
+
+#filters .filter_block {
+    margin: 10px 0;
+    padding: 5px;
+    /* border: 1px solid #888888; */
+}
+
+.filter_head {
+    margin: 3px 0;
+    text-align: center;
+}
+
+#sidebar_category span {
+    font: 15px playregular, verdana;
+    font-family: 'Roboto', sans-serif;
+    color: #2e2e2e;
+}
+
+#filters select {
+    padding: 3px;
+    margin: 12px auto;
+    border-radius: 5px;
+    background: #fafbfc;
+    color: #555;
+    border: 1px solid #6c6c6c;
+    outline: none;
+    display: block;
+    appearance: none;
+    cursor: pointer;
+    height: 30px;
+    width: 80%;
+    /*box-shadow: 0 -1px 4px 1px rgb(75 75 75 / 20%) inset;*/
+}
