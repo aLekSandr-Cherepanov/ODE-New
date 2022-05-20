@@ -27901,7 +27901,7 @@ ol>li:first-of-type {
 }
 
 ul>li {
-    margin: 8px 0 0 5px;
+    margin: 25px 0 0 5px;
     list-style-type: none;
     position: relative;
 }
@@ -68425,6 +68425,10 @@ ul.tabs {
         width: 55vw !important;
     }
 
+    h2 {
+        font-size: 1.567em;
+    }
+
 }
 
 .banner-wrapper {
@@ -68523,6 +68527,14 @@ ul.tabs {
     #promo {
         width: 80vw;
     }
+
+    /*.shop-cart {
+        width: 70vw !important;
+    }*/
+
+    .filter_list {
+        width: 60%;
+    }
 }
 
 .head_footer {
@@ -68604,7 +68616,7 @@ ul.tabs {
 }
 
 .shop-cart {
-    width: 21vw;
+    width: 20vw;
 }
 
 #filters .filter_block {
@@ -68641,10 +68653,17 @@ ul.tabs {
 }
 
 .head_sidebar {
-    display: block;
-    text-align: center;
+    font-size: 18px;
 }
 
 .article_pr {
     font-size: 13px;
+}
+
+.empty {
+    text-align: center;
+    color: #3d3d3d;
+    border: 1px solid #8e8e8e;
+    padding-top: 10px;
+    border-radius: 10px;
 }
