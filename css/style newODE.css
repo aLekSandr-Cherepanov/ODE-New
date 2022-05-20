@@ -27689,7 +27689,7 @@ body {
     position: relative;
     margin: 0 auto;
     padding: 0;
-    color: #777;
+    color: #3e3d3d;
 }
 
 button,
@@ -30233,6 +30233,8 @@ textarea[readonly] {
 
 input:not(.btn) {
     line-height: 20px;
+    /*background: #088b4a;
+    color: #fff;*/
 }
 
 input.big {
@@ -68616,7 +68618,7 @@ ul.tabs {
 }
 
 .shop-cart {
-    width: 20vw;
+    width: 17vw;
 }
 
 #filters .filter_block {
@@ -68666,4 +68668,12 @@ ul.tabs {
     border: 1px solid #8e8e8e;
     padding-top: 10px;
     border-radius: 10px;
+}
+
+.valve_intro {
+    font-size: 17px;
+}
+
+.valve_parameters {
+    font-size: 17px;
 }
