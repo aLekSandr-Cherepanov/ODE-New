@@ -3,7 +3,7 @@
 }
 
 .container {
-    max-width: 1320px;
+    max-width: 1408px;
 }
 
 .justify-content-lg-start {
@@ -24,9 +24,9 @@
     align-items: center;
 }
 
-.me-lg-auto {
+/*.me-lg-auto {
     margin-right: auto!important;
-}
+}*/
 
 .justify-content-center {
     display: flex;
@@ -46,4 +46,9 @@
 .nav-link {
     text-decoration: none;
     color: black;
+}
+
+.dropdown_phone {
+    color: black;
+    font-weight: 600;
 }

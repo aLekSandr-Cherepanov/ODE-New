@@ -582,7 +582,7 @@ h6 {
 ol,
 ul {
     margin-top: 0;
-    margin-bottom: 10px
+    /*margin-bottom: 10px*/
 }
 
 ol ol,
@@ -1093,9 +1093,9 @@ pre code {
 }
 
 @media (min-width:768px) {
-    .container {
+    /*.container {
         width: 750px
-    }
+    }*/
 
     .col-sm-1,
     .col-sm-10,
@@ -1305,9 +1305,9 @@ pre code {
 }
 
 @media (min-width:992px) {
-    .container {
+    /*.container {
         width: 970px
-    }
+    }*/
 
     .col-md-1,
     .col-md-10,
@@ -1517,9 +1517,9 @@ pre code {
 }
 
 @media (min-width:1200px) {
-    .container {
+    /*.container {
         width: 1170px
-    }
+    }*/
 
     .col-lg-1,
     .col-lg-10,
@@ -3333,7 +3333,11 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .nav {
     margin-bottom: 0;
     padding-left: 0;
-    list-style: none
+    list-style: none;
+    font-weight: 550;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-top: 0;
 }
 
 .nav:after,
@@ -68007,7 +68011,7 @@ body .basket-item-info-name-link {
 }
 
 .filter_button {
-    padding-top: 40px;
+    /*padding-top: 40px;*/
     text-align: center;
 }
 
@@ -68092,6 +68096,8 @@ body .basket-item-info-name-link {
     display: none;
 }
 
+/* Анимация при новедении в меню начало */
+
 .dropdown-toggle {
     background-image: linear-gradient(
     to right,
@@ -68124,6 +68130,8 @@ body .basket-item-info-name-link {
 .dropdown-toggle:hover:before {
     width: 100%;
 }
+
+/* Анимация при новедении в меню конец */
 
 .search_wrap {
     width: 350px;
@@ -68468,10 +68476,10 @@ ul.tabs {
 
 .sisea-search-form {
     background-color: #fff;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     float: right;
     border: 1px solid #C0C0C0;
-    width: 313px;
+    width: 240px;
     height: 40px;
     border-radius: 5px;
     box-shadow: 0 -1px 4px 1px rgb(75 75 75 / 20%) inset;
@@ -68485,7 +68493,7 @@ ul.tabs {
 .sisea-search-form input[type="text"] {
     position: absolute;
     height: 30px;
-    width: 270px;
+    width: 220px;
     border: 0;
     color: #525151;
     background: white;
@@ -68698,4 +68706,96 @@ ul.tabs {
 
 .basket_cat {
     margin-bottom: 65px;
+}
+
+/* Стили для переписанного меню начало */
+
+.p-3 {
+    padding: 1rem!important;
+}
+
+.container {
+    max-width: 1408px;
+}
+
+.justify-content-lg-start {
+    justify-content: flex-start!important;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap!important;
+}
+
+.container__wrapper-block {
+    display: flex!important;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*.me-lg-auto {
+    margin-right: auto!important;
+}*/
+
+.justify-content-center {
+    display: flex;
+    justify-content: center!important;
+}
+
+.logo img {
+    max-height: 100px;
+    max-width: 200px;
+}
+
+.list-menu {
+    list-style-type: none; 
+    padding-left: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown_phone {
+    color: black;
+    font-weight: 600;
+}
+
+/* Стили для переписанного меню конец */
+
+@media (max-width: 1240px) {
+   .nav { 
+    font-size: 14px;
+    }
+
+    .nav>li>a {
+        padding: 10px 6px;
+    }
+
+    .sisea-search-form {
+        width: 195px;
+    }
+
+    .sisea-search-form input[type="text"] {
+        width: 160px;
+    }
+
+    .logo img {
+        max-height: 80px;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .sisea-search-form {
+        width: 270px;
+    }
+
+    .sisea-search-form input[type="text"] {
+        width: 220px;
+    }
 }
