@@ -1,13 +1,3 @@
-/* Start:/bitrix/templates/aspro_max/vendor/css/bootstrap.min.css?161311725092469*/
-/*!
- * Bootstrap v3.0.0
- *
- * Copyright 2013 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
 textarea.bxeditor-textarea {
     line-height: normal !important
 }
@@ -6149,7 +6139,7 @@ tr.visible-md {
 @media (min-width:1200px) {
     .visible-md.visible-lg {
         display: block !important;
-        margin-top: 15px;
+        /*margin-top: 15px;*/
     }
 
     tr.visible-md.visible-lg {
@@ -68370,7 +68360,7 @@ ul.tabs {
     color: #555;
     background: #fff;
     padding: 0 13px 2px;
-    border: 1px solid #D4D4D4;
+    border: 1px solid #696969;
     border-bottom: 1px solid #fff;
 }
 
@@ -68382,7 +68372,7 @@ ul.tabs {
     color: #088c4a;
     cursor: pointer;
     background: #fff;
-    border: 1px solid #E4E4E4;
+    border: 1px solid #1d1d1d;
     border-bottom: 1px solid #fff;
     position: relative;
     border-radius: 5px 5px 0 0;
@@ -68738,7 +68728,7 @@ ul.tabs {
 /* Стили для переписанного меню начало */
 
 .p-3 {
-    padding: 1rem!important;
+    padding: 10px;
 }
 
 .container {
