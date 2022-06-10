@@ -59159,7 +59159,8 @@ handheld and (max-width:767px) {
     body ul.tabs li {
         padding: 0 4px;
         height: 20px;
-        line-height: 20px
+        line-height: 20px;
+        margin-bottom: 20px;
     }
 
     .show-normal-sort .filter-panel__filter .controls-hr,
@@ -68445,6 +68446,13 @@ ul.tabs {
         font-size: 1.567em;
     }
 
+    ul.tabs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
 }
 
 .banner-wrapper {
@@ -68681,7 +68689,7 @@ ul.tabs {
 }
 
 .empty {
-    display: none;
+    /*display: none;*/
     text-align: center;
     color: #3d3d3d;
     border: 1px solid #8e8e8e;
