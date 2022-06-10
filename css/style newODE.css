@@ -68335,19 +68335,20 @@ body .basket-item-info-name-link {
 
 .section {
     background: #fff;
-    margin: 15px 25px 30px;
+    margin: 15px 0px 30px;
     font: 15px playregular;
     font-family: 'Roboto', sans-serif;
 }
 
 ul.tabs {
-    height: 28px;
+    font-size: 17px;
+    height: 35px;
     line-height: 25px;
     list-style: none;
     border-bottom: 1px solid #DDD;
     background: #FFF;
     padding: 0;
-    margin: 0;
+    /*margin: 0;*/
 }
 
 .box {
@@ -68451,8 +68452,15 @@ ul.tabs {
         flex-direction: column;
     }
 
-    
+    .tabs {
+        margin-bottom: 100px;
+    }
 
+    .box {
+        overflow-x: scroll;
+    }
+
+    
 }
 
 .banner-wrapper {
