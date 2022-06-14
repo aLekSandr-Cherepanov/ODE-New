@@ -68228,6 +68228,7 @@ body .basket-item-info-name-link {
     text-align: center;
     background-color: #088b4a;
     height: 40px;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .description-product {
@@ -68473,6 +68474,7 @@ ul.tabs {
 .category_module {
     width: 235px;
     border: 1px solid #0000005e;
+    border-radius: 15px;
 }
 
 .cross-mobmenu {
