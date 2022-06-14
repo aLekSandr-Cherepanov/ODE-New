@@ -33,11 +33,6 @@
     justify-content: center!important;
 }
 
-.logo img {
-    max-height: 100px;
-    max-width: 200px;
-}
-
 .list-menu {
     list-style-type: none; 
     padding-left: 25px;

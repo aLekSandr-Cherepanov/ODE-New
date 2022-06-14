@@ -771,6 +771,7 @@ pre code {
 }
 
 .container {
+    max-width: 1408px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -68749,9 +68750,6 @@ ul.tabs {
     padding: 10px;
 }
 
-.container {
-    max-width: 1408px;
-}
 
 .justify-content-lg-start {
     justify-content: flex-start!important;
@@ -68846,3 +68844,4 @@ ul.tabs {
 .head_title {
     font-size: 30px; 
 }
+
