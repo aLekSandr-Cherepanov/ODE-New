@@ -34035,8 +34035,11 @@ ul.mobile_menu .search .search-input-div input {
 #mobileheader {
     margin: 0;
     padding: 0;
-    position: relative;
+    position: fixed;
     height: 63px;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
 }
 
 #mobileheader.fixed {
