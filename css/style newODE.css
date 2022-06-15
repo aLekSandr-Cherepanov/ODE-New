@@ -68244,7 +68244,7 @@ body .basket-item-info-name-link {
 .category_module_basket {
     text-align: center;
     background-color: #088b4a;
-    height: 40px;
+    /*height: 40px;*/
     border-radius: 10px;
     width: 100%;
     margin-left: 5px;
