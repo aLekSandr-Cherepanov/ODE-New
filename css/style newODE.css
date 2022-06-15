@@ -30205,7 +30205,7 @@ input[type="tel"],
 select,
 textarea {
     background: #fafafa;
-    border: 1px solid #ececec;
+    border: 1px solid #cdcdcd;
     border-radius: 3px;
     box-shadow: none;
     color: #383838;
@@ -66627,7 +66627,7 @@ h4:hover .opener_icon,
 .btn.btn-primary:active,
 .btn.btn-primary:focus {
     background-color: #30c4a8;
-    border-color: #30c4a8;
+    border-color: #088b4a;
 }
 
 .btn.btn-success {
@@ -69020,6 +69020,47 @@ ul.tabs {
     color: #383d41;
     background-color: #e2e3e5;
     border-color: #d6d8db;
+}
+
+.alerd {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.cart {
+    width: 50vw;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.btn-primary_basket {
+    width: 50%;
+}
+
+.wrapper_button {
+    text-align: center;
+}
+
+.form-phone-basket {
+    width: 50%;
+    height: 35px !important;
+    padding: 10px;
 }
 
 /* Корзина\ */
