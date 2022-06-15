@@ -27908,7 +27908,7 @@ ol>li:first-of-type {
 }
 
 ul>li {
-    margin: 25px 0 0 5px;
+    margin: 15px 0 0 5px;
     list-style-type: none;
     position: relative;
 }
@@ -28645,7 +28645,7 @@ a.icon-text:focus {
     border: 1px solid;
     letter-spacing: .8px;
     border-radius: 3px;
-    padding: 12px 21px 11px;
+    padding: 12px 0px 11px;
     overflow: hidden;
     transition: background-color 0.3s ease;
     -moz-transition: background-color 0.3s ease;
@@ -65573,7 +65573,7 @@ h6 {
 
 /* Start:/bitrix/templates/aspro_max/css/round-elements.min.css?16131172501049*/
 .btn:not(.round-ignore) {
-    border-radius: 26px !important
+    border-radius: 10px !important
 }
 
 .footer_button .btn {
@@ -68245,8 +68245,9 @@ body .basket-item-info-name-link {
     text-align: center;
     background-color: #088b4a;
     height: 40px;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 10px;
     width: 100%;
+    margin-left: 5px;
 }
 
 .description-product {
@@ -69009,4 +69010,5 @@ ul.tabs {
 
 .wrapper_batton {
     display: flex;
+    padding: 10px;
 }
