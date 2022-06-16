@@ -68863,7 +68863,7 @@ ul.tabs {
 	height: 30px;
 	overflow: hidden;
     margin: 0 auto;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     align-items: center;
 }
 
@@ -69034,7 +69034,7 @@ ul.tabs {
 }
 
 .cart {
-    width: 50vw;
+    width: 45vw;
     position: relative;
     display: -ms-flexbox;
     display: flex;
