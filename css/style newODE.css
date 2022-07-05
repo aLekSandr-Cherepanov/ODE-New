@@ -52782,7 +52782,7 @@ ul.tabs li.stretch {
     }
 
     .banners-content .maxwidth-banner .maxwidth-theme {
-        min-height: 400px
+        min-height: 430px
     }
 
     .with-text-block-wrapper>.row>div:first-of-type {
@@ -68470,6 +68470,12 @@ ul.tabs {
     }
 
     
+}
+
+@media (max-width: 990px) {
+    .shop-cart {
+        width: 87vw !important;
+    }
 }
 
 .banner-wrapper {
