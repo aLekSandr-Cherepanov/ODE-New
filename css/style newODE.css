@@ -771,7 +771,6 @@ pre code {
 }
 
 .container {
-    max-width: 1408px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -27891,7 +27890,7 @@ h6:first-child {
 
 ul {
     padding: 0;
-    margin: 15px 0 20px;
+    margin: 26px 0 36px;
 }
 
 ol {
@@ -27908,7 +27907,7 @@ ol>li:first-of-type {
 }
 
 ul>li {
-    margin: 5px 0 0 5px;
+    margin: 25px 0 0 5px;
     list-style-type: none;
     position: relative;
 }
@@ -28645,7 +28644,7 @@ a.icon-text:focus {
     border: 1px solid;
     letter-spacing: .8px;
     border-radius: 3px;
-    padding: 12px 0px 11px;
+    padding: 12px 21px 11px;
     overflow: hidden;
     transition: background-color 0.3s ease;
     -moz-transition: background-color 0.3s ease;
@@ -30205,7 +30204,7 @@ input[type="tel"],
 select,
 textarea {
     background: #fafafa;
-    border: 1px solid #cdcdcd;
+    border: 1px solid #ececec;
     border-radius: 3px;
     box-shadow: none;
     color: #383838;
@@ -52783,7 +52782,7 @@ ul.tabs li.stretch {
     }
 
     .banners-content .maxwidth-banner .maxwidth-theme {
-        min-height: 400px
+        min-height: 340px
     }
 
     .with-text-block-wrapper>.row>div:first-of-type {
@@ -65573,7 +65572,7 @@ h6 {
 
 /* Start:/bitrix/templates/aspro_max/css/round-elements.min.css?16131172501049*/
 .btn:not(.round-ignore) {
-    border-radius: 10px !important
+    border-radius: 26px !important
 }
 
 .footer_button .btn {
@@ -66627,7 +66626,7 @@ h4:hover .opener_icon,
 .btn.btn-primary:active,
 .btn.btn-primary:focus {
     background-color: #30c4a8;
-    border-color: #088b4a;
+    border-color: #30c4a8;
 }
 
 .btn.btn-success {
@@ -67736,7 +67735,7 @@ body.fill_bg_y,
 body .maxwidth-theme,
 body .wrapper_inner {
     max-width: 1408px;
-    margin-top: 100px;
+    margin-top: 115px;
 }
 
 body .maxwidth-theme-popup {
@@ -68247,12 +68246,12 @@ body .basket-item-info-name-link {
     /*height: 40px;*/
     border-radius: 10px;
     width: 100%;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
 }
 
 .description-product {
     padding: 0 5px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 550;
 }
 
@@ -68473,6 +68472,12 @@ ul.tabs {
     
 }
 
+@media (max-width: 990px) {
+    .shop-cart {
+        width: 87vw !important;
+    }
+}
+
 .banner-wrapper {
     background-color: rgb(0 0 0 / 37%);
 }
@@ -68585,7 +68590,7 @@ ul.tabs {
 }
 
 .cart_price {
-    font-size: 15px;
+    font-size: 18px;
     /*font-weight: bold;
     color: #333;*/
 }
@@ -68660,7 +68665,13 @@ ul.tabs {
 }
 
 .shop-cart {
-    width: 17vw;
+    width: 18vw;
+}
+
+@media (max-width: 1390px) {
+    .shop-cart {
+        width: 23vw;
+    }
 }
 
 #filters .filter_block {
@@ -68752,6 +68763,9 @@ ul.tabs {
     padding: 10px;
 }
 
+.container {
+    max-width: 1408px;
+}
 
 .justify-content-lg-start {
     justify-content: flex-start!important;
@@ -68846,221 +68860,3 @@ ul.tabs {
 .head_title {
     font-size: 30px; 
 }
-
-
-
-/* Стили для кнопок +- в карточки товара */
-
-
-
-.items {
-	font-family: 'Merriweather', serif;
-	background: #dadada;
-	border-radius: 8px;
-	width: 120px;
-	display: flex;
-	font-size: 18px;
-	height: 30px;
-	overflow: hidden;
-    margin: 0 auto;
-    /*margin-bottom: 10px;*/
-    align-items: center;
-}
-
-.items__control {
-	width: 40px;
-	cursor: pointer;
-	transition: 0.2s ease-in;
-	text-align: center;
-}
-
-.items__control:hover {
-    background: #eb5a1e;
-    color: #FFF;
-}
-
-.items__current {
-	width: 40px;
-    text-align: center;
-}
-
-/* items--small */
-.items.items--small {
-	width: 90px;
-	font-size: 16px;
-	height: 26px;
-	text-align: center;
-}
-
-.items.items--small .items__control {
-	width: 30px;
-}
-
-.items.items--small .items__current {
-	width: 30px;
-}
-
-.price {
-	text-align: left;
-}
-
-.price__weight {
-	color: #6c757d!important;
-	font-size: 80%;
-	line-height: 1;
-}
-
-.price__currency {
-	font-size: 1.5rem;
-	font-weight: 600;
-	line-height: 1;
-}
-
-.btn-outline-warning {
-    color: #eb5a1e;
-    border-color: #eb5a1e;
-}
-
-.btn-outline-warning:hover {
-    color: #FFF;
-    background-color: #eb5a1e;
-    border-color: #eb5a1e;
-}
-
-
-.cart-item__top {
-	display: flex;
-	align-items: flex-start;
-	padding-bottom: 15px;
-	border-bottom: 1px solid #dee2e6;
-	margin-bottom: 15px;
-}
-
-.cart-item__img  {
-
-}
-
-.cart-item__img img {
-	max-width: 100px;
-	height: auto;
-}
-
-.cart-item__desc {
-	padding-top: 15px;
-	padding-left: 15px;
-}
-
-.cart-item__title {
-	font-family: 'Merriweather', serif;
-	font-size: 16px;
-    line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 5px;
-}
-
-.cart-item__weight {
-    color: #6c757d!important;
-    font-size: 80%;
-    line-height: 1;
-    margin-bottom: 15px;
-}
-
-.cart-item__details {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.cart-item__details .price__currency {
-	font-size: 18px;
-	margin-left: 15px;
-}
-
-.cart-total {
-	font-size: 18px;
-	font-weight: 500;
-}
-
-.delivery-cost {
-
-}
-
-.free {
-	color: #0EA107;
-}
-
-.total-price {
-	color: #EB5A1E;
-}
-
-.rouble {
-	color: #EB5A1E;
-}
-
-.none {
-	display: none;
-}
-
-
-/* Стили для кнопок +- в карточки товара конец */
-
-
-.wrapper_batton {
-    display: flex;
-    padding: 10px;
-}
-
-/* Корзина/ */
-
-.img_basket {
-    cursor: pointer;
-}
-
-.alert-secondary {
-    color: #383d41;
-    background-color: #e2e3e5;
-    border-color: #d6d8db;
-}
-
-.alerd {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-}
-
-.cart {
-    width: 45vw;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 20px;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 0.25rem;
-}
-
-.btn-primary_basket {
-    width: 50%;
-}
-
-.wrapper_button {
-    text-align: center;
-}
-
-.form-phone-basket {
-    width: 50%;
-    height: 35px !important;
-    padding: 10px;
-}
-
-/* Корзина\ */

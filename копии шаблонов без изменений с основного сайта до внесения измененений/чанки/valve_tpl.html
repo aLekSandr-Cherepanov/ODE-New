@@ -1,0 +1,37 @@
+<div class="shk-item">
+<form>
+<input type="hidden" name="shk-id" value="[[+id]]" />
+        <input type="hidden" name="shk-name" value="[[+pagetitle]]" />
+        <input type="hidden" name="shk-count" value="1" size="2" maxlength="3" />
+<div class="category_module"><a href="[[~[[+resource_id]]]][[+alias]].html" title="[[+pagetitle]]"><img title="Электромагнитный клапан [[+pagetitle]]" alt="[[+pagetitle]]" style="display:block; margin: 17px 5px 0;float:left;" src="/assets/image/valves/small/[[+image:lcase]].jpg"></a><div class="category_module_environment">[[+envioronment:replace=`||==`]]</div>
+<div class="category_module_info">
+<ul>
+<li>Наименование: [[+pagetitle]]</li>
+[[*id:is=`10`:then=`
+<li>Напряжение: [[+direct]] [[+voltage]]</li>
+<li>Мощность: [[+power]]</li>
+<li>Корпус: [[+body]]</li>
+`:else=`
+<li>Температура: [[+tvalve]]</li>
+<li>Присоединение: [[+pipe:is=``:then=`[[+pipetype]]`:else=`[[+pipe]]`]]</li>
+<li>Расход: [[+kv]] л/мин</li>
+`]]
+<br>
+<li>Цена: [[+price:is=`0`:then=`по запросу`:else=`[[+price]]  &#128;`]]</li>
+</ul>
+<div class="category_module_basket" style="text-align:center"><a style="color:#333" href="[[~[[+resource_id]]]][[+alias]].html">Описание позиции</a>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+</div>
+
+</form>
+</div>

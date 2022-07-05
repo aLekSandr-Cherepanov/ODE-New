@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>[[*pagetitle]] - [[++site_name]]</title>
+    <base href="[[++site_url]]" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="[[*id:is=`3`:then=`Клапаны, `:else=`[[*pagetitle]], клапаны, `]]электромагнитные клапаны, соленоидные клапаны, клапаны ODE, клапаны для воды, клапаны для пара, клапаны для воздуха, клапаны для нефтепродуктов, клапаны для кофемашин, нормально закрытые клапаны, нормально-открытые клапаны" />
+    <meta name="description" content="[[*id:is=`3`:then=`Электромагнитные соленоидные клапаны`:else=`[[*pagetitle]]`]] под различные сферы применения" />
+    <link rel="stylesheet" type="text/css" href="/assets/templates/site/style.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="mobil-menu">
+        <nav role="navigation">
+            <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+                <input type="checkbox" />
+
+            <!--
+            Some spans to act as a hamburger.
+          
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+                <ul id="menu">
+                    <a href="/">
+                        <li>Главная</li>
+                    </a>
+                    <a href="/products/">
+                        <li>Каталог</li>
+                    </a>
+                    <a href="/material-o-klapanah/">
+                        <li>Статьи</li>
+                    </a>
+                    <a href="/kompaniya-ode/">
+                        <li>О Компании</li>
+                    </a>
+                    <a href="/predstaviteli-ode/">
+                        <li>Контакты</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="wrap">
+        <div class="grid">
+        <div class="top_left">
+            <a style="border:0" href="/" title="Электромагнитные клапаны ODE">
+                <img class="img-mobil" style="margin:10px auto" src="/assets/templates/site/logo.png">
+            </a>
+            <div class="search_box">
+                <span>Поиск по маркировке:</span>
+                [[$search_form]]
+            </div>
+
+            <div id="sidebar_category">
+                [[tmFilters?
+                &filtersType=`filters_simple`
+                &toPlaceholder=`filters`
+                ]]
+                <div class="filters">
+                    [[$simplefilter]]
+
+                </div>
+
+            </div>
+            [[*id:is=`3`:then=`<div class="pipe-attention">
+                <small>*Фильтрация не охватывает 
+                    <a href="/catalog/pipe-valves/" title="Клапаны под силиконовые трубки">клапаны под трубки</a>
+                </small>
+            </div>`:else=``]]
+
+        </div>
+
+        <div id="element_right_top">
+            <div class="element_menu_title">
+                [[$menu]]
+                <div class="main_title">
+                    <h1>[[*pagetitle]]</h1>
+                </div>
+
+
+            </div>
+            <div class="element_street_phone">
+                <div class="city_list">
+                    <a style="text-decoration:none;color:#555" href="/predstaviteli-ode/">
+                        <div tabindex="1" class="wrapper-dropdown-5" id="dd">Выбор города
+                            <ul class="dropdown">
+
+                            </ul>
+                        </div>
+                    </a>
+                    <span>Контакты:</span>
+                </div>
+
+                <div class="street">
+                    <span>+7 (8442) 26-76-52</span>
+                    <br />
+                    <span>E-mail: info@ode-rus.ru</span>
+                    <br />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="element_right_bottom">
+            <div class="category_bg_center">
+                <br />
+                <div class="element_bg_left"></div>
+
+                <div class="valve_list_cont">
+                    <div class="basket_cat">[[!Shopkeeper3@cart_catalog]]</div>
+                    <div class="sorting">
+
+                        <div style="float:right;">
+                            <select style="width:168px;" class="f_limit" name="limit" id="showLimit">
+                                <option value="20" selected="selected">Показывать по 20</option>
+                                <option value="30">Показывать по 30</option>
+                                <option value="50">Показывать по 50</option>
+                            </select>
+                        </div>
+
+                        <!--span class="sep-vert"><span>&nbsp;</span></span-->
+
+                        <div id="sorting">
+                            Сортировать по:
+                            &nbsp;&nbsp;
+                            <select class="f_sortby" name="sortby">
+                                <option value="pagetitle">по названию</option>
+                                <option value="price">по цене</option>
+                                <option value="kv">расходу</option>
+                            </select>
+                            &nbsp;
+                            <select class="f_sortdir" name="sortdir">
+                                <option value="asc">по возрастанию</option>
+                                <option value="desc">по убыванию</option>
+                            </select>
+
+                        </div>
+
+
+                    </div>
+                    <div id="products">[[!tmCatalog? &parents=`2` &where=`[[*envLike]]`]]</div>
+                    [[!+pageCount:gt=`1`:then=`
+                    <div class="pages">
+                        <ul id="pages">
+                            [[!+page.nav]]
+                        </ul>
+                    </div>
+                    `]]
+                    <div>[[*content]]</div>
+                </div>
+
+                <div class="element_bg_right"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    [[$footer]]
+</body>
+
+</html>

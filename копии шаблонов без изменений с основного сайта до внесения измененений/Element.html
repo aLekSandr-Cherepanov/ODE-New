@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>[[*type:ucwords]] [[*func]] клапан [[*pagetitle]] - [[++site_name]]</title>
+    <link rel="stylesheet" type="text/css" href="/assets/templates/site/style.css" />
+    <base href="[[++site_url]]" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Клапан, электромагнитный клапан, соленоидный клапан, [[*pagetitle]], [[*func]] клапан, [[*type]] клапан, [[+file:envFilter2=`[[*environmentfilter]]`]]" />
+    <meta name="description" content="Электромагнитный [[*type]] [[*func]] клапан [[*kind]] с расходом [[*kv]]л/мин" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/[[*parent:is=`671`:then=`fix1.js`:else=`fix2.js`]]"></script>
+    <script type="text/javascript" src="assets/js/tabs.js"></script>
+</head>
+
+<body>
+    <div class="mobil-menu">
+        <nav role="navigation">
+            <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+                <input type="checkbox" />
+
+            <!--
+            Some spans to act as a hamburger.
+          
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+                <ul id="menu">
+                    <a href="/">
+                        <li>Главная</li>
+                    </a>
+                    <a href="/products/">
+                        <li>Каталог</li>
+                    </a>
+                    <a href="/material-o-klapanah/">
+                        <li>Статьи</li>
+                    </a>
+                    <a href="/kompaniya-ode/">
+                        <li>О Компании</li>
+                    </a>
+                    <a href="/predstaviteli-ode/">
+                        <li>Контакты</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="wrap">
+        <div class="header">
+            <div class="top_left">
+                <a style="border:0" href="/" title="Электромагнитные клапаны ODE">
+                    <img class="img-mobil" style="margin:10px auto" src="/assets/templates/site/logo.png">
+                </a>
+                <div class="search_box">
+                    <span>Поиск по маркировке:</span>
+                    [[$search_form]]
+                </div>
+
+            </div>
+
+            <div id="element_right_top">
+                <div class="element_menu_title">
+                    [[$menu]]
+                    <div class="main_title">
+                        <h1>[[*resource_id:ne=`10`:then=`Электромагнитный клапан`:else=`Электромагнитная катушка`]]
+                            [[*pagetitle]]</h1>
+                    </div>
+                </div>
+                <div class="element_street_phone">
+                    <div class="city_list">
+                        <a style="text-decoration:none;color:#555" href="/predstaviteli-ode/">
+                            <div tabindex="1" class="wrapper-dropdown-5" id="dd">Выбор города
+                                <ul class="dropdown">
+
+                                </ul>
+                            </div>
+                        </a>
+                        <span>Контакты:</span>
+                    </div>
+
+                    <div class="street">
+                        <span class="phone">+7 (8442) 26-76-52</span>
+                        <br /><span>E-mail: info@ode-rus.ru</span>
+                        <br />
+                    </div>
+
+                </div>
+            </div>
+            <div class="element_right_bottom element-product">
+                <div class="element_bg_center">
+                    <div class="element_bg_left"></div>
+                    [[*resource_id:ne=`10`:then=`[[$parameters_valve_SHOP]]`:else=`[[$parameters_coil_SHOP]]`]]
+                    <div class="element_bg_right"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sidebar sidebar-product">
+            [[!Shopkeeper3@cart_catalog]]
+        </div>
+
+        <div>[[!Breadcrumbs? &homeCrumbTitle=`Главная` &maxCrumbs=`1`]]</div>
+        <div id="promo">
+            <div class="section">
+                <ul class="tabs">
+                    <li class="current">Характеристики</li>
+                    <li>Схема и материалы</li>
+                    <li>Габаритные размеры</li>
+                </ul>
+
+                <div class="box visible">
+                    <p>[[*content]]</p>
+
+                    [[*temp:is=`element`:then=`[[$introcontent_valve]]`]]
+                    [[*temp:is=`trubki`:then=`[[$introcontent_trubki]]`]]
+                    [[*temp:is=`pnevmo`:then=`[[$introcontent_pnevmo]]`]]
+
+                    [[*temp:is=`element`:then=`[[$table_valve]]`]]
+                    [[*temp:is=`trubki`:then=`[[$table_valve]]`]]
+                    [[*temp:is=`pnevmo`:then=`[[$table_pnevmo]]`]]
+                    [[*temp:is=`katushki`:then=`[[$table_coil]]`]]
+                    <br />
+                    [[param_edit_table?
+                    &tvValue=`[[*pression]]`
+                    &tpl=`properties_table`
+                    ]]
+                </div>
+                <div class="box">
+                    <br />
+                    <img src="assets/image/valves/scheme/[[*image:lcase]]_small1.jpg" title="Схема клапана ODE [[*pageitile]]" alt="Схема [[*pageitile]]">
+                </div>
+                <div class="box">
+                    <br />
+                    <img src="assets/image/valves/scheme/[[*image:lcase]]_small2.jpg" title="Габаритные размеры [[*pageitile]]" alt="Размеры ODE [[*pageitile]]">
+                </div>
+            </div>
+        </div>
+    </div>
+    [[$footer]]
+</body>
+
+</html>
