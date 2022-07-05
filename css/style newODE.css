@@ -68665,7 +68665,13 @@ ul.tabs {
 }
 
 .shop-cart {
-    width: 17vw;
+    width: 18vw;
+}
+
+@media (max-width: 1390px) {
+    .shop-cart {
+        width: 23vw;
+    }
 }
 
 #filters .filter_block {
