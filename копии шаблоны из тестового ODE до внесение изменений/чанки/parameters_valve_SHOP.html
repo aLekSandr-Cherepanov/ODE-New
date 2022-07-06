@@ -5,41 +5,45 @@
         <input type="hidden" name="shk-name" value="[[*pagetitle]]" />
 
         <div class="form-grid">
-            <div class="valve_image_m">
-                <img src="assets/image/valves/big/[[*image:lcase]].jpg" title="Электромагнитный клапан [[*pagetitle]]" alt="[[*pagetitle]]">
-            </div>
-            <div class="valve_intro">
-                <p>Клапан электромагнитный [[*functioning]] [[*kind]] ODE модели [[*pagetitle]] применяется для
-                    автоматического перекрытия потоков [[!+file:envFilter=`[[*envioronmentfilter]]`]]. ЭМК с уплотнением
-                    [[*gasket]] применяется для среды с температурой [[*tvalve:replace=`C==&deg;C`]].</p>
+            <div class="wrapper-description">
+                <div class="valve_image_m">
+                    <img src="assets/image/valves/big/[[*image:lcase]].jpg" title="Электромагнитный клапан [[*pagetitle]]" alt="[[*pagetitle]]" style="width: 180px;">
+                </div>
+                <div class="valve_intro">
+                    <p>Клапан электромагнитный [[*functioning]] [[*kind]] ODE модели [[*pagetitle]] применяется для
+                        автоматического перекрытия потоков [[!+file:envFilter=`[[*envioronmentfilter]]`]]. ЭМК с уплотнением
+                        [[*gasket]] применяется для среды с температурой [[*tvalve:replace=`C==&deg;C`]].</p>
+                </div>
             </div>
             <div class="valve_param_cont">
-                <div class="valve_parameters">
-                    <ul>
-                        <li>Наименование: [[*pagetitle]]</li>
-                        <li>Тип: [[*type]] [[*kind]]</li>
-                        <li>Функция: [[*func]]</li>
-                        <li>Соединение: [[*pipetype]] [[*temp:is=`trubki`:then=`[[*duct]]`:else=`[[*pipe]]`]]</li>
-                        <li>Уплотнение: [[*gasket]]</li>
-                        <li>Расход Kv: [[*kv]] л/мин</li>
+                <div class="specifications_price">
+                    <div class="valve_parameters">
+                        <ul>
+                            <li>Наименование: [[*pagetitle]]</li>
+                            <li>Тип: [[*type]] [[*kind]]</li>
+                            <li>Функция: [[*func]]</li>
+                            <li>Соединение: [[*pipetype]] [[*temp:is=`trubki`:then=`[[*duct]]`:else=`[[*pipe]]`]]</li>
+                            <li>Уплотнение: [[*gasket]]</li>
+                            <li>Расход Kv: [[*kv]] л/мин</li>
 
-                    </ul>
-                    [[*temp:is=`element`:or:is=`trubki`:then=`<div class="valve_coil" style="margin-top:1rem; font-size:12px">[[*resource_id:is=`6`:then=`*Временно не поставляется в
-                        Россию.`:else=`*Катушка не входит в комплект поставки.`]]</div>`]]
+                        </ul>
+                        [[*temp:is=`element`:or:is=`trubki`:then=`<div class="valve_coil" style="margin-top:1rem; font-size:12px">[[*resource_id:is=`6`:then=`*Временно не поставляется в
+                            Россию.`:else=`*Катушка не входит в комплект поставки.`]]</div>`]]
+                    </div>
+                    <div class="wrapper-price">
+                        <span class="valve_span">Сфера применения:</span>
+                        <div class="valve_enviroment"> [[*envioronment:replace=`small==big`:replace=`||==`]]
+                        </div>
+                        <div class="valve_price">Цена: 
+                            <span class="shk-price">[[*price:num_format]]</span>
+                            <span class="euro">&#128;</span>
+                        </div>
+                    </div>
                 </div>
-                <span class="valve_span">Сфера применения:</span>
-                <div class="valve_enviroment"> [[*envioronment:replace=`small==big`:replace=`||==`]]
-                </div>
-                <div class="valve_price">Цена: 
-                    <span class="shk-price">[[*price:num_format]]</span>
-                    <span class="euro">&#128;</span>
-
-                </div>
-
                 <div class="valve_basket product-tocart shk-item">
                     <div class="product-tocart-b">
                         <img src="assets/image/basket.jpg">
-                        <label>
+                        <label class="button-card">
                             <input type="submit" name="shk-submit" value="Добавить в заказ">
                         </label>
                     </div>

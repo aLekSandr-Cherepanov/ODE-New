@@ -68234,7 +68234,7 @@ body .basket-item-info-name-link {
 }
 
 .shk-item { 
-   margin-right: 9px;
+   /*margin-right: 9px;*/
    margin-bottom: 30px;
    margin-bottom: 90px;
    /*border: 1px solid #0000005e;*/
@@ -68327,7 +68327,7 @@ body .basket-item-info-name-link {
 }
 
 .valve_price {
-    margin-bottom: 70px !important;
+    margin-top: 70px !important;
     font-size: 25px !important;
     color: black;
 }
@@ -68728,11 +68728,35 @@ ul.tabs {
 }
 
 .valve_intro {
-    font-size: 17px !important;
+    font-size: 16px !important;
 }
 
 .valve_parameters {
-    font-size: 17px !important;
+    font-size: 14px !important;
+}
+
+.product-tocart-b {
+    text-align: right;
+}
+
+.button-card {
+    margin-right: 0px;
+}
+
+.specifications_price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.wrapper-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.valve_image_m {
+    margin-right: 30px;
 }
 
 .basket_block {
@@ -68755,6 +68779,10 @@ ul.tabs {
 
 .basket_cat {
     margin-bottom: 65px;
+}
+
+.wrapper-description {
+    display: flex;
 }
 
 /* Стили для переписанного меню начало */
