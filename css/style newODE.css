@@ -68234,7 +68234,7 @@ body .basket-item-info-name-link {
 }
 
 .shk-item { 
-   /*margin-right: 9px;*/
+   margin-right: 9px;
    margin-bottom: 30px;
    margin-bottom: 90px;
    /*border: 1px solid #0000005e;*/
@@ -68314,8 +68314,8 @@ body .basket-item-info-name-link {
 
 .valve_basket input {
     background-color: #088b4a;
-    width: 230px;
-    height: 50px;
+    width: 200px;
+    height: 40px;
     border: 0;
     font: 16px playregular, verdana;
     font-family: 'Roboto', sans-serif;
@@ -68328,7 +68328,7 @@ body .basket-item-info-name-link {
 
 .valve_price {
     margin-top: 70px !important;
-    font-size: 25px !important;
+    font-size: 20px !important;
     color: black;
 }
 
@@ -68733,6 +68733,7 @@ ul.tabs {
 
 .valve_parameters {
     font-size: 14px !important;
+    margin-right: 45px;
 }
 
 .product-tocart-b {

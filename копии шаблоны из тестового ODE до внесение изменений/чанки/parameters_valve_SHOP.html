@@ -3,19 +3,11 @@
         <input type="hidden" name="shk-id" value="[[*id]]" />
         <input type="hidden" name="shk-count" value="1" />
         <input type="hidden" name="shk-name" value="[[*pagetitle]]" />
-
         <div class="form-grid">
             <div class="wrapper-description">
                 <div class="valve_image_m">
                     <img src="assets/image/valves/big/[[*image:lcase]].jpg" title="Электромагнитный клапан [[*pagetitle]]" alt="[[*pagetitle]]" style="width: 180px;">
                 </div>
-                <div class="valve_intro">
-                    <p>Клапан электромагнитный [[*functioning]] [[*kind]] ODE модели [[*pagetitle]] применяется для
-                        автоматического перекрытия потоков [[!+file:envFilter=`[[*envioronmentfilter]]`]]. ЭМК с уплотнением
-                        [[*gasket]] применяется для среды с температурой [[*tvalve:replace=`C==&deg;C`]].</p>
-                </div>
-            </div>
-            <div class="valve_param_cont">
                 <div class="specifications_price">
                     <div class="valve_parameters">
                         <ul>
@@ -25,7 +17,6 @@
                             <li>Соединение: [[*pipetype]] [[*temp:is=`trubki`:then=`[[*duct]]`:else=`[[*pipe]]`]]</li>
                             <li>Уплотнение: [[*gasket]]</li>
                             <li>Расход Kv: [[*kv]] л/мин</li>
-
                         </ul>
                         [[*temp:is=`element`:or:is=`trubki`:then=`<div class="valve_coil" style="margin-top:1rem; font-size:12px">[[*resource_id:is=`6`:then=`*Временно не поставляется в
                             Россию.`:else=`*Катушка не входит в комплект поставки.`]]</div>`]]
@@ -40,9 +31,16 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="valve_param_cont">
+                <div class="valve_intro">
+                    <p>Клапан электромагнитный [[*functioning]] [[*kind]] ODE модели [[*pagetitle]] применяется для
+                        автоматического перекрытия потоков [[!+file:envFilter=`[[*envioronmentfilter]]`]]. ЭМК с уплотнением
+                        [[*gasket]] применяется для среды с температурой [[*tvalve:replace=`C==&deg;C`]].</p>
+                </div>
                 <div class="valve_basket product-tocart shk-item">
                     <div class="product-tocart-b">
-                        <img src="assets/image/basket.jpg">
+                        <img src="assets/image/basket.jpg" style="display: none;">
                         <label class="button-card">
                             <input type="submit" name="shk-submit" value="Добавить в заказ">
                         </label>
