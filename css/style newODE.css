@@ -68742,6 +68742,12 @@ ul.tabs {
     text-align: right;
 }
 
+@media (max-width: 450px) {
+    .product-tocart-b {
+        text-align: center;
+    }
+}
+
 .button-card {
     margin-right: 0px;
 }
@@ -68752,10 +68758,22 @@ ul.tabs {
     margin-bottom: 50px;
 }
 
+@media (max-width: 450px) {
+    .specifications_price {
+        flex-direction: column;
+    }
+}
+
 .wrapper-price {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+@media (max-width: 450px) {
+    .wrapper-price {
+        align-items: flex-start;
+    }
 }
 
 .valve_image_m {
@@ -68786,6 +68804,12 @@ ul.tabs {
 
 .wrapper-description {
     display: flex;
+}
+
+@media (max-width: 450px) {
+    .wrapper-description {
+        flex-direction: column;
+    }
 }
 
 /* Стили для переписанного меню начало */
