@@ -68082,12 +68082,13 @@ body .basket-item-info-name-link {
     /* width: 100%; */
     font: 14px playregular, verdana;
     font-family: 'Roboto', sans-serif;
-    margin-top: 60px;
+    margin-top: 80px;
     margin-bottom: 41px;
 }
 
 .container_inner {
     display: flex;
+    margin-top: 60px
 }
 
 .wrapper_inner   {
