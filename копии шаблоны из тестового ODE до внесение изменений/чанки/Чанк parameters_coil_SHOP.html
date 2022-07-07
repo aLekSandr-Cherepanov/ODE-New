@@ -1,0 +1,41 @@
+<div class="product shk-item">
+    <form action="[[~13]]" method="post">
+        <input type="hidden" name="shk-id" value="[[*id]]" />
+        <input type="hidden" name="shk-count" value="1" />
+        <input type="hidden" name="shk-name" value="[[*pagetitle]]" />
+
+        <div class="form-grid">
+            <div class="valve_image_m">
+                <img src="assets/image/valves/big/[[*image:lcase]].jpg" title="Электромагнитный клапан [[*pagetitle]]" alt="[[*pagetitle]]">
+            </div>
+            <div class="valve_intro">
+                <p>Электромагнитная катушка [[*pagetitle]] относится к типу [[*type]] катушек ODE и имеет корпус из
+                    [[*body]]. У катушки [[*pagetitle]] [[*kind]] напряжения питания [[*voltage]] и мощность [[*power]].</p>
+            </div>
+            <div class="valve_param_cont">
+                <div class="valve_parameters">
+                    <ul>
+                        <li>Наименование: [[*pagetitle]]</li>
+                        <li>Тип: [[*type]] </li>
+                        <li>Напряжение: [[*kind]] [[*voltage]]</li>
+                        <li>Мощность: [[*power]]</li>
+                        <li>Корпус: [[*body]]</li>
+                        <li>Класс изоляции: [[*body:is=`PA (черный полиамид)`:then=`F (155&deg;C)`:else=`H (180&deg;C)`]]</li>
+                    </ul>
+                </div>
+                <div class="valve_price">Цена: 
+                    <span class="shk-price">[[*price:num_format]]</span>
+                    <span class="euro">&#128;</span>
+                </div>
+                <div class="valve_basket product-tocart shk-item">
+                    <div class="product-tocart-b">
+                        <img src="assets/image/basket.jpg">
+                        <label>
+                            <input type="submit" name="shk-submit" value="Добавить в заказ">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
