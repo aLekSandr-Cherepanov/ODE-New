@@ -11,7 +11,7 @@
     position: absolute;
     right: 0;
     top: 100%;
-    width: 440px;
+    width: 485px;
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(135, 135, 135, 0.25);
 }
@@ -46,15 +46,18 @@
     display: flex;
     align-items: center;
     padding: 12px 20px;
+    justify-content: space-between;
 }
 
 .cart-product__img {
     max-width: 100px;
     max-height: 100px;
     object-fit: cover;
+    margin: 0 10px;
 }
 
 .cart-product__title {
+    max-width: 280px;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
@@ -67,4 +70,14 @@
     font-size: 18px;
     line-height: 23px;
     color: var(--color-darc);
+}
+
+.cart-product__delete {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(..//img/icon-recycle-bin.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
