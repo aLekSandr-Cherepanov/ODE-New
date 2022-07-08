@@ -14,6 +14,7 @@
     width: 485px;
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(135, 135, 135, 0.25);
+    border: 1px #d7d4d4 solid;
 }
 
 .cerd.active:hover {
@@ -80,4 +81,38 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.cart-content__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 85px;
+    margin-bottom: 20px;
+}
+
+.cart-content__fullprice {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-darc);
+
+}
+
+.fullprice {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--color-darc);
+}
+
+.cart-content__btn {
+    width: 200px;
+    text-align: center;
+    background-color: #00b290;
+    color: #fff;
+    border: 0;
+    height: 35px;
+    border-radius: 7px;
 }
