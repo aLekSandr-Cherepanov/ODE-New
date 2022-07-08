@@ -8,53 +8,53 @@ textarea.bxeditor-textarea {
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-    margin: 0
+    margin: 0;
 }
 
 a {
-    background: 0 0
+    background: 0 0;
 }
 
 a:focus {
-    outline: thin dotted
+    outline: thin dotted;
 }
 
 a:active,
 a:hover {
-    outline: 0
+    outline: 0;
 }
 
 h1 {
     font-size: 2em;
-    margin: .67em 0
+    margin: .67em 0;
 }
 
 abbr[title] {
-    border-bottom: 1px dotted
+    border-bottom: 1px dotted;
 }
 
 b,
 strong {
-    font-weight: 700
+    font-weight: 700;
 }
 
 dfn {
-    font-style: italic
+    font-style: italic;
 }
 
 hr {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    height: 0
+    height: 0;
 }
 
 mark {
     background: #ff0;
-    color: #000
+    color: #000;
 }
 
 code,
@@ -62,19 +62,19 @@ kbd,
 pre,
 samp {
     font-family: monospace, serif;
-    font-size: 1em
+    font-size: 1em;
 }
 
 pre {
-    white-space: pre-wrap
+    white-space: pre-wrap;
 }
 
 q {
-    quotes: "\201C""\201D""\2018""\2019"
+    quotes: "\201C""\201D""\2018""\2019";
 }
 
 small {
-    font-size: 80%
+    font-size: 80%;
 }
 
 sub,
@@ -82,7 +82,7 @@ sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 sup {

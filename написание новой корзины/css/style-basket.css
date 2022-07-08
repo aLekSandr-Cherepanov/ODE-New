@@ -41,6 +41,7 @@
 
 .cart-content__list {
     max-height: 330px;
+    overflow: auto;
 }
 
 .cart-product {
@@ -87,7 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 85px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
