@@ -1153,6 +1153,24 @@
         	return String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
         };
 
+        const plusFullPrice = (currentPrice) => {
+	        return price += currentPrice;
+        };
+
+        const minusFullPrice = (currentPrice) => {
+	        return price -= currentPrice;
+        };
+
+        const printFullPrice = () => {
+	        fullPrice.textContent = `${normalPrice(price)} ₽`;
+        };
+
+        const printQuantity = () => {
+	        let length = cartProductsList.querySelector('.simplebar-content').children.length;
+	        cartQuantity.textContent = length;
+	        productsListLength > 0 ? cart.classList.add('active') : cart.classList.remove('active');
+        };
+
         const generateCartProduct = (img, title, price, id) => {
             return `
             <li class="cart-content__item">
@@ -1179,9 +1197,15 @@
 		        let title = parent.querySelector('.product__title').textContent;
 		        /*let priceString = priceWithoutSpaces(parent.querySelector('.product-price__current').textContent);*/
 		        let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-price__current').textContent));
-                console.log(priceNumber);
+                
+                plusFullPrice(priceNumber);
+
+                printFullPrice();
+                cartProductsList.querySelector('.simplebar-content').insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceString, id));
+
+		        printQuantity();
 		        
-            
+                self.disabled = true;
         	});
         });
 
