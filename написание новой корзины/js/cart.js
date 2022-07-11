@@ -53,8 +53,9 @@ productsBtn.forEach(el => {
 
 		
 		self.disabled = true;
+
 	});
 });
 
 
-/* остановился на 39:00 */
+/* остановился на 39:43 */
