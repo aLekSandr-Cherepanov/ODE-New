@@ -1,54 +1,54 @@
 const productsBtn = document.querySelectorAll ('.product__btn');
-        const cartProductsList = document.querySelector('.cart-content__list');
-        const cart = document.querySelector('.cerd');
-        const cartQuantity = document.querySelector('.cart__quantity');
-        const fullPrice = document.querySelector('.fullprice');
-        let price = 0;
+const cartProductsList = document.querySelector('.cart-content__list');
+const cart = document.querySelector('.cerd');
+const cartQuantity = document.querySelector('.cart__quantity');
+const fullPrice = document.querySelector('.fullprice');
+let price = 0;
 
-        const randomId = () => {
-        	return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        };
+const randomId = () => {
+	return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+};
 
-        /*const priceWithoutSpaces = (str) => {
-        	return str.replace(/\s/g, '');
-        };*/
+/*const priceWithoutSpaces = (str) => {
+	return str.replace(/\s/g, '');
+};*/
 
-        const normalPrice = (str) => {
-        	return String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-        };
+const normalPrice = (str) => {
+	return String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+};
 
-        /*const plusFullPrice = (currentPrice) => {
-	        return price += currentPrice;
-        };
+/*const plusFullPrice = (currentPrice) => {
+    return price += currentPrice;
+};
 
-        const minusFullPrice = (currentPrice) => {
-	        return price -= currentPrice;
-        };*/
+const minusFullPrice = (currentPrice) => {
+    return price -= currentPrice;
+};*/
 
-        const printFullPrice = () => {
-	        fullPrice.textContent = `${normalPrice(price)} ₽`;
-        };
+const printFullPrice = () => {
+    fullPrice.textContent = `${normalPrice(price)} `;
+};
 
-        const printQuantity = () => {
-	        let length = cartProductsList.querySelector('.simplebar-content').children.length;
-	        cartQuantity.textContent = length;
-	        length > 0 ? cart.classList.add('active') : cart.classList.remove('active');
-        };
+const printQuantity = () => {
+    let length = cartProductsList.querySelector('.simplebar-content').children.length;
+    cartQuantity.textContent = length;
+    length > 0 ? cart.classList.add('active') : cart.classList.remove('active');
+};
 
-        const generateCartProduct = (img, title, price, id) => {
-            return `
-            <li class="cart-content__item">
-                <article class="cart-content__product cart-product" data-id = "${id}">
-                    <img src="${img}" alt="Клапан" class="cart-product__img">
-                    <div class="cart-product__text">
-                        <h3 class="cart-product__title">${title}</h3>
-                        <span class="cart-product__price">${price} ₽</span>
-                    </div>
-                    <button class="cart-product__delete" aria-label="Удалить товар"></button>
-                </article>
-            </li>
-            `;
-        };
+const generateCartProduct = (img, title, price, id) => {
+    return `
+    <li class="cart-content__item">
+        <article class="cart-content__product cart-product" data-id = "${id}">
+            <img src="${img}" alt="Клапан" class="cart-product__img">
+            <div class="cart-product__text">
+                <h3 class="cart-product__title">${title}</h3>
+                <span class="cart-product__price">${price} ₽</span>
+            </div>
+            <button class="cart-product__delete" aria-label="Удалить товар"></button>
+        </article>
+    </li>
+    `;
+};
 
         productsBtn.forEach(el => {
         	el.closest('.product').setAttribute('data-id', randomId());
