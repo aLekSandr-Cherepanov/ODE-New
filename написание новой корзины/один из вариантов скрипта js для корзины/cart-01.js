@@ -72,4 +72,16 @@ window.addEventListener('click', function (event) {
         printQuantity();
 
     };
+
+    const deleteProducts = (productParent) => {
+        console.log(productParent)
+        productParent.remove();
+    
+        printQuantity();
+    }
+
+    cartWrapper.addEventListener('click', (e) => {
+        if (e.target.classList.contains('cart-product__delete'))
+        deleteProducts(e.target.closest('cart-content__item'))
+    })
 });
