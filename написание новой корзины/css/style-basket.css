@@ -72,8 +72,8 @@
 }
 
 .cart-product__img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 90px;
+    max-height: 90px;
     object-fit: cover;
     margin: 0 10px;
 }

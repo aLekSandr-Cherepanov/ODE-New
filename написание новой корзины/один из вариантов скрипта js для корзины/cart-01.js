@@ -21,17 +21,17 @@ const cartQuantity = document.querySelector('.cart__quantity');
 const printQuantity = function() {
     let length = cartProductsList.querySelector('.simplebar-content').children.length;
     cartQuantity.textContent = length;
-    if(length > 0){
+    if (length > 0) {
         cart.classList.add('active');
     }
-    else{
+    else {
         cart.classList.remove('active');
     }
 
-    if(length > 0){
+    if (length > 0) {
         quantity.classList.add('cart__quantity-none');
     }
-    else{
+    else {
         quantity.classList.remove('cart__quantity-none');
     }
 
@@ -72,5 +72,4 @@ window.addEventListener('click', function (event) {
         printQuantity();
 
     };
-    
 });
