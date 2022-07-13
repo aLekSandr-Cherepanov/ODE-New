@@ -15,13 +15,27 @@ const cartWrapper = document.querySelector('.cart-content__list');
 // добавление класса active если в корзине есть товары + считаем колличество товаров в корзине и выводим число
 const cartProductsList = document.querySelector('.cart-content');
 const cart = document.querySelector('.cerd');
+const quantity = document.querySelector('.quantity');
 const cartQuantity = document.querySelector('.cart__quantity');
-const printQuantity = () => {
+
+const printQuantity = function() {
     let length = cartProductsList.querySelector('.simplebar-content').children.length;
     cartQuantity.textContent = length;
-    length > 0 ? cart.classList.add('active') : cart.classList.remove('active');
-};
+    if(length > 0){
+        cart.classList.add('active');
+    }
+    else{
+        cart.classList.remove('active');
+    }
 
+    if(length > 0){
+        quantity.classList.add('cart__quantity-none');
+    }
+    else{
+        quantity.classList.remove('cart__quantity-none');
+    }
+
+};
 
 // Отслеживаем клик на странице
 window.addEventListener('click', function (event) {
