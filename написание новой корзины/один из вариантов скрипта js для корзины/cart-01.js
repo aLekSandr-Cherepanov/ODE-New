@@ -7,8 +7,21 @@ productsBtn.forEach(el => {
     el.closest('.product').setAttribute('data-id', randomId());
 });
 
+
 //Div внутри корзины,в которую мы добавляем товары
 const cartWrapper = document.querySelector('.cart-content__list');
+
+
+// добавление класса active если в корзине есть товары + считаем колличество товаров в корзине и выводим число
+const cartProductsList = document.querySelector('.cart-content');
+const cart = document.querySelector('.cerd');
+const cartQuantity = document.querySelector('.cart__quantity');
+const printQuantity = () => {
+    let length = cartProductsList.querySelector('.simplebar-content').children.length;
+    cartQuantity.textContent = length;
+    length > 0 ? cart.classList.add('active') : cart.classList.remove('active');
+};
+
 
 // Отслеживаем клик на странице
 window.addEventListener('click', function (event) {
@@ -41,6 +54,8 @@ window.addEventListener('click', function (event) {
 
         // Отобразим товар в корзине
         cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+
+        printQuantity();
 
     };
     

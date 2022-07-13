@@ -40,8 +40,9 @@
     margin-top: -10px;
     background-color: #de707b;
     border-radius: 100%;
-    padding: 2px;
-    min-width: 26px;
+    font-size: 13px;
+    /*padding: 2px;*/
+    min-width: 24px;
     min-height: 16px;
     display: inline-flex;
     align-items: center;
