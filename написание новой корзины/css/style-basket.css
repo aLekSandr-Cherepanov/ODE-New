@@ -112,6 +112,16 @@
     margin-bottom: 20px;
 }
 
+.batn {
+    width: 200px;
+    text-align: center;
+    background-color: #00b290;
+    color: #fff;
+    border: 0;
+    height: 35px;
+    border-radius: 7px;
+}
+
 .cart-content__fullprice {
     font-weight: 400;
     font-size: 14px;
