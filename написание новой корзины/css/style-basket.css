@@ -181,6 +181,10 @@
     font-weight: 600;
 }
 
+.order-modal__info-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
 .order-modal__btn {
     position: relative;
     background-color: transparent;
