@@ -60,7 +60,7 @@ window.addEventListener('click', function (event) {
                     <img src="${productInfo.imgSrc}" alt="Клапан" class="cart-product__img">
                     <div class="cart-product__text">
                         <h3 class="cart-product__title">${productInfo.title}</h3>
-                        <span class="cart-product__price">${productInfo.price} ₽</span>
+                        <span class="cart-product__price">${productInfo.price}</span>
                     </div>
                     <button class="cart-product__delete" aria-label="Удалить товар"></button>
                 </article>
@@ -74,7 +74,6 @@ window.addEventListener('click', function (event) {
     };
 
     const deleteProducts = (productParent) => {
-        console.log(productParent)
         productParent.remove();
     
         printQuantity();
