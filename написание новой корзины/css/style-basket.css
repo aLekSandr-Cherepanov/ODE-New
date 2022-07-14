@@ -113,12 +113,12 @@
 }
 
 .batn {
-    width: 200px;
+    width: 100%;
     text-align: center;
     background-color: #00b290;
     color: #fff;
     border: 0;
-    height: 35px;
+    height: 45px;
     border-radius: 7px;
 }
 
@@ -146,4 +146,90 @@
     border: 0;
     height: 35px;
     border-radius: 7px;
+}
+
+.order-modal {
+    width: 592px;
+    min-height: 542px;
+    border: 1px solid lightgrey;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+
+.order-modal__title {
+    font-family: Noto Sans;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.order-modal__info {
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 35px 35px;
+    font-family: Noto Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.order-modal__info span {
+    font-weight: 600;
+}
+
+.order-modal__btn {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.order-modal__btn::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    background-image: url("../img/vector.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.order__label {
+    font-family: 'Noto Sans';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #808080;
+    margin-bottom: 20px;
+    margin-right: 0px;
+}
+
+.order__inpute {
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 240px !important;
+    height: 45px !important;
+    background: #e7e5e5 !important;
+    border-radius: 4px !important;
+    border: none !important;
+}
+
+.order__inpute::placeholder {
+    color: #b1b1b1;
 }
