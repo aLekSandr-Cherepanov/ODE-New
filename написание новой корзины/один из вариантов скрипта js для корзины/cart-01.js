@@ -1,8 +1,10 @@
 const productsBtn = document.querySelectorAll ('.product__btn');
-
+// функция для формирования рандомного id для карточки товара
 const randomId = () => {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 };
+
+// присвоение рандомного id карточке товара
 productsBtn.forEach(el => {
     el.closest('.product').setAttribute('data-id', randomId());
 });
