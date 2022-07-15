@@ -210,6 +210,10 @@
     background-repeat: no-repeat;
 }
 
+.order-modal__btn.open::after {
+    transform: translateY((-50%) rotate(180deg));
+}
+
 
 .order__label {
     font-family: 'Noto Sans';

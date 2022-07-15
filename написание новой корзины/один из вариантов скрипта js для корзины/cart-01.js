@@ -94,10 +94,12 @@ window.addEventListener('click', function (event) {
 let flag = 0;
 orderModalOpenProd.addEventListener('click', (e) => {
     if (flag == 0) {
+        orderModalOpenProd.classList.add('open');
         orderModalList.style.display = 'block';
         flag = 1;
     } else {
+        orderModalOpenProd.classList.remove('open');
         orderModalList.style.display = 'none';
         flag = 0;
     }
-})
+});
