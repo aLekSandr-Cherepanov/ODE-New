@@ -66500,7 +66500,7 @@ h4.hover,
 .button.white_bg,
 .item .child_container .child_wrapp .menu_item.current a,
 .item .child_container .child_wrapp .menu_item:hover a {
-    color: #1a70d5;
+    color: #424242;
 }
 
 button.button,
@@ -68038,7 +68038,7 @@ body .basket-item-info-name-link {
     /*text-shadow: 1px 1px #777;*/
     /*padding-right: 15px;*/
     cursor: pointer;
-    background-color: #088b4a;
+    background-color: #48b57f;
     border-radius: 12px;
 }
 
@@ -68200,7 +68200,7 @@ body .basket-item-info-name-link {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: #088b4a;
+  background-color: #48b57f;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -68243,7 +68243,7 @@ body .basket-item-info-name-link {
 
 .category_module_basket {
     text-align: center;
-    background-color: #088b4a;
+    background-color: #48b57f;
     /*height: 40px;*/
     border-radius: 10px;
     width: 100%;
@@ -68314,7 +68314,7 @@ body .basket-item-info-name-link {
 }
 
 .valve_basket input {
-    background-color: #088b4a;
+    background-color: #48b57f;
     width: 200px;
     height: 40px;
     border: 0;
@@ -68389,7 +68389,7 @@ ul.tabs {
     display: inline;
     margin: 0 1px -1px 0;
     padding: 0 13px 1px;
-    color: #088c4a;
+    color: #bebebe;
     cursor: pointer;
     background: #fff;
     border: 1px solid #1d1d1d;

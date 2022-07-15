@@ -1,8 +1,17 @@
 const productsBtn = document.querySelectorAll ('.product__btn');
+const cartProductsList = document.querySelector('.cart-content');
+const cart = document.querySelector('.cerd');
+const quantity = document.querySelector('.quantity');
+const cartQuantity = document.querySelector('.cart__quantity');
+const orderModalOpenProd = document.querySelector('.order-modal__btn');
+const orderModalList = document.querySelector('.order-modal__list');
+
+
 // функция для формирования рандомного id для карточки товара
 const randomId = () => {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 };
+
 
 // присвоение рандомного id карточке товара
 productsBtn.forEach(el => {
@@ -15,11 +24,6 @@ const cartWrapper = document.querySelector('.cart-content__list');
 
 
 // добавление класса active если в корзине есть товары + считаем колличество товаров в корзине и выводим число
-const cartProductsList = document.querySelector('.cart-content');
-const cart = document.querySelector('.cerd');
-const quantity = document.querySelector('.quantity');
-const cartQuantity = document.querySelector('.cart__quantity');
-
 const printQuantity = function() {
     let length = cartProductsList.querySelector('.simplebar-content').children.length;
     cartQuantity.textContent = length;
@@ -86,3 +90,14 @@ window.addEventListener('click', function (event) {
         deleteProducts(e.target.closest('cart-content__item'))
     })
 });
+
+let flag = 0;
+orderModalOpenProd.addEventListener('click', (e) => {
+    if (flag == 0) {
+        orderModalList.style.display = 'block';
+        flag = 1;
+    } else {
+        orderModalList.style.display = 'none';
+        flag = 0;
+    }
+})
