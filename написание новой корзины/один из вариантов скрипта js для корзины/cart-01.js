@@ -102,28 +102,28 @@ orderModalOpenProd.addEventListener('click', (e) => {
         orderModalList.style.display = 'none';
         flag = 0;
     }
+
+    let array = cartProductsList.querySelector('simplebar-content').children;
+    for (item of array) {
+    console.log(item)
+    }
 });
 
 const generateModalProduct = `
             <li class="order-modal__item">
-                article class="order-modal__product order-product">
+                <article class="order-modal__product order-product">
                    <img src="${productInfo.imgSrc}" alt="" class="order-product__img">
                    <div class="order-product__text">
                        <h3 class="order-product__title">${productInfo.title}</h3>
                        <span class="order-product__price">${productInfo.price}</span>
                    </div>
                    <button class="order-product__delete">Удалить</button>
-                /article>
-            </li>
-
-            <li class="cart-content__item">
-                <article class="cart-content__product cart-product">
-                    <img src="${productInfo.imgSrc}" alt="Клапан" class="cart-product__img">
-                    <div class="cart-product__text">
-                        <h3 class="cart-product__title">${productInfo.title}</h3>
-                        <span class="cart-product__price">${productInfo.price}</span>
-                    </div>
-                    <button class="cart-product__delete" aria-label="Удалить товар"></button>
                 </article>
             </li>`;
 
+
+
+let array = cartProductsList.querySelector('simplebar-content').children;
+for (item of array) {
+console.log(item)
+}
