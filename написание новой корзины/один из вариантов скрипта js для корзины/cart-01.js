@@ -143,6 +143,10 @@ console.log(cartProductsList.querySelector('.simplebar-content').children);
 
 for (item of array) {
     console.log(item);
-    let id = item.querySelector('.cart-content__item').dataset.id;
-    console.log(id)
+    let img = item.querySelector('.cart-product__img').getAttribute('src');
+    let title = item.querySelector('.cart-product__title').textContent;
+    let price = item.querySelector('.cart-product__price').textContent;
+    let id = item.querySelector('.cart-product').dataset.id;
+
+    orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price,id));
 }
