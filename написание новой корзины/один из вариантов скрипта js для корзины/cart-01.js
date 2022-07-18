@@ -3,7 +3,9 @@ const cartProductsList = document.querySelector('.cart-content');
 const cart = document.querySelector('.cerd');
 const quantity = document.querySelector('.quantity');
 const cartQuantity = document.querySelector('.cart__quantity');
+//переменная для кнопки состав заказа на странице оформления
 const orderModalOpenProd = document.querySelector('.order-modal__btn');
+//переменная где должны храниться товары из корзины
 const orderModalList = document.querySelector('.order-modal__list');
 
 
@@ -59,10 +61,11 @@ window.addEventListener('click', function (event) {
             imgSrc: card.querySelector('.product-img').getAttribute('src'),
             price: card.querySelector('.cart_price').innerText,
         };
+        console.log(productInfo);
 
         const cartItemHTML = `
             <li class="cart-content__item">
-                <article class="cart-content__product cart-product">
+                <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
                     <img src="${productInfo.imgSrc}" alt="Клапан" class="cart-product__img">
                     <div class="cart-product__text">
                         <h3 class="cart-product__title">${productInfo.title}</h3>
@@ -91,6 +94,12 @@ window.addEventListener('click', function (event) {
     })
 });
 
+
+// функция которая разворачивает список при клике на "состав заказа"
+
+
+
+
 let flag = 0;
 orderModalOpenProd.addEventListener('click', (e) => {
     if (flag == 0) {
@@ -103,27 +112,37 @@ orderModalOpenProd.addEventListener('click', (e) => {
         flag = 0;
     }
 
-    let array = cartProductsList.querySelector('simplebar-content').children;
-    for (item of array) {
-    console.log(item)
-    }
+    /*const test = document.querySelector('.cart-content');
+
+    const productTest = {
+        id: test.dataset.id,
+        title: test.querySelector('.cart-product__title').innerText,
+        imgSrc: test.querySelector('.cart-product__img').getAttribute('src'),
+        price: test.querySelector('.cart-product__price').innerText,
+    };
+    console.log(productTest);*/
+    
 });
 
-const generateModalProduct = `
+
+const generateModalProduct = (img, title, price,id) => {
+            return`
             <li class="order-modal__item">
-                <article class="order-modal__product order-product">
-                   <img src="${productInfo.imgSrc}" alt="" class="order-product__img">
+                <article class="order-modal__product order-product" data-id = "${id}">
+                   <img src="${img}" alt="" class="cart-product__img">
                    <div class="order-product__text">
-                       <h3 class="order-product__title">${productInfo.title}</h3>
-                       <span class="order-product__price">${productInfo.price}</span>
+                       <h3 class="cart-product__title">${title}</h3>
+                       <span class="cart-product__price">${price}</span>
                    </div>
                    <button class="order-product__delete">Удалить</button>
                 </article>
             </li>`;
+        };
+let array = cartProductsList.querySelector('.simplebar-content').children;
+console.log(cartProductsList.querySelector('.simplebar-content').children);   
 
-
-
-let array = cartProductsList.querySelector('simplebar-content').children;
 for (item of array) {
-console.log(item)
+    console.log(item);
+    let id = item.querySelector('.cart-content__item').dataset.id;
+    console.log(id)
 }
