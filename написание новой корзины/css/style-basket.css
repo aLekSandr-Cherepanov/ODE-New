@@ -211,7 +211,7 @@
 }
 
 .order-modal__btn.open::after {
-    transform: translateY((-50%) rotate(180deg));
+    transform: translateY(-50%) rotate(180deg);
 }
 
 
