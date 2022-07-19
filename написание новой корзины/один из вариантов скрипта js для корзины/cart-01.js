@@ -8,6 +8,8 @@ const orderModalOpenProd = document.querySelector('.order-modal__btn');
 //переменная где должны храниться товары из корзины
 const orderModalList = document.querySelector('.order-modal__list');
 
+let productArray = [];
+
 
 // функция для формирования рандомного id для карточки товара
 const randomId = () => {
@@ -61,7 +63,6 @@ window.addEventListener('click', function (event) {
             imgSrc: card.querySelector('.product-img').getAttribute('src'),
             price: card.querySelector('.cart_price').innerText,
         };
-        console.log(productInfo);
 
         const cartItemHTML = `
             <li class="cart-content__item">
@@ -144,11 +145,17 @@ let length = array.length;
 document.querySelector('.order-modal__quantity span').textContent = `${length} шт`;
 
 for (item of array) {
-    console.log(item);
     let img = item.querySelector('.cart-product__img').getAttribute('src');
     let title = item.querySelector('.cart-product__title').textContent;
     let price = item.querySelector('.cart-product__price').textContent;
     let id = item.querySelector('.cart-product').dataset.id;
 
     orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price,id));
+
+
+    let obj = {};
+    obj.title = title;
+    obj.price = price;
+    productArray.push(obj);
 }
+console.log(productArray)
