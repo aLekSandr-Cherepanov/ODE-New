@@ -100,7 +100,6 @@ window.addEventListener('click', function (event) {
 
 
 
-
 let flag = 0;
 orderModalOpenProd.addEventListener('click', (e) => {
     if (flag == 0) {
@@ -112,19 +111,7 @@ orderModalOpenProd.addEventListener('click', (e) => {
         orderModalList.style.display = 'none';
         flag = 0;
     }
-
-    /*const test = document.querySelector('.cart-content');
-
-    const productTest = {
-        id: test.dataset.id,
-        title: test.querySelector('.cart-product__title').innerText,
-        imgSrc: test.querySelector('.cart-product__img').getAttribute('src'),
-        price: test.querySelector('.cart-product__price').innerText,
-    };
-    console.log(productTest);*/
-    
 });
-
 
 const generateModalProduct = (img, title, price,id) => {
             return`
