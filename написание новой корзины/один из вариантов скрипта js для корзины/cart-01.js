@@ -139,7 +139,9 @@ const generateModalProduct = (img, title, price,id) => {
             </li>`;
         };
 let array = cartProductsList.querySelector('.simplebar-content').children;
-console.log(cartProductsList.querySelector('.simplebar-content').children);   
+let length = array.length;  
+
+document.querySelector('.order-modal__quantity span').textContent = `${length} шт`;
 
 for (item of array) {
     console.log(item);
