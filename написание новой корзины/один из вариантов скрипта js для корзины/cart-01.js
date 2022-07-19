@@ -158,4 +158,32 @@ for (item of array) {
     obj.price = price;
     productArray.push(obj);
 }
-console.log(productArray)
+console.log(productArray);
+
+document.querySelector('.order').addEventListener('submit', (e) => {
+    e.preventDefault();
+    let self = e.currentTarget;
+    let formData = new FotmData(self);
+    let name = self.querySelector('[name = "Имя"]').value;
+    let tel = self.querySelector('[name = "Телефон"]').value;
+    let mail = self.querySelector('[name = "Email"]').value;
+    formData.append('Товары', JSON.stringify(productArray));
+    formData.append('Имя', name);
+    formData.append('Телефон', tel);
+    formData.append('Email', mail);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log('Отправлено')
+            }
+        }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+    
+    self.reset();
+});
