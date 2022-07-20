@@ -47,6 +47,18 @@ const printQuantity = function() {
 
 };
 
+//функции для LocalStorage 
+
+const initialState = () => {
+
+};
+
+const updateStorage = () => {
+    let parent = cartProductsList.querySelector('.simplebar-content');
+    let html = parent.innerHTML;
+    console.log(html)
+};
+
 // Отслеживаем клик на странице
 window.addEventListener('click', function (event) {
     
@@ -146,6 +158,8 @@ for (item of array) {
     productArray.push(obj);
 }
 console.log(productArray);
+
+//сбор данных для формирования данных для отправки на почту
 
 document.querySelector('.order').addEventListener('submit', (e) => {
     e.preventDefault();
