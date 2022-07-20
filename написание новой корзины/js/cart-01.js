@@ -50,14 +50,36 @@ const printQuantity = function() {
 //функции для LocalStorage 
 
 const initialState = () => {
-
+    if (localStorage.getItem('products') !== null) {
+        console.log(localStorage.getItem('products'))
+    }
 };
+
+initialState();
 
 const updateStorage = () => {
     let parent = cartProductsList.querySelector('.simplebar-content');
     let html = parent.innerHTML;
+    html = html.trim();
     console.log(html)
+    console.log(html.length)
+
+    if (html.length) {
+        localStorage.setItem('products', html);
+    } else {
+        localStorage.removeItem('products');
+    }
+    
 };
+
+
+// функция для удаления товара 
+const deleteProducts = (productParent) => {
+    productParent.remove();
+    printQuantity();
+    updateStorage();
+};
+
 
 // Отслеживаем клик на странице
 window.addEventListener('click', function (event) {
@@ -73,7 +95,7 @@ window.addEventListener('click', function (event) {
             id: card.dataset.id,
             title: card.querySelector('.product__title').innerText,
             imgSrc: card.querySelector('.product-img').getAttribute('src'),
-            price: card.querySelector('.cart_price').innerText,
+            price: card.querySelector(' .cart_price').innerText,
         };
 
         const cartItemHTML = `
@@ -91,20 +113,18 @@ window.addEventListener('click', function (event) {
         // Отобразим товар в корзине
         cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
 
+        updateStorage();
         printQuantity();
 
     };
+});
 
-    const deleteProducts = (productParent) => {
-        productParent.remove();
-    
-        printQuantity();
-    }
+// удаление товара из корзины 
 
-    cartWrapper.addEventListener('click', (e) => {
-        if (e.target.classList.contains('cart-product__delete'))
-        deleteProducts(e.target.closest('cart-content__item'))
-    })
+cartWrapper.addEventListener('click', (e) => {
+    if (e.target.classList.contains('cart-product__delete')){
+    deleteProducts(e.target.closest('.cart-content__item'))
+}
 });
 
 
@@ -159,8 +179,6 @@ for (item of array) {
 }
 console.log(productArray);
 
-//сбор данных для формирования данных для отправки на почту
-
 document.querySelector('.order').addEventListener('submit', (e) => {
     e.preventDefault();
     let self = e.currentTarget;
@@ -188,3 +206,5 @@ document.querySelector('.order').addEventListener('submit', (e) => {
     
     self.reset();
 });
+
+
