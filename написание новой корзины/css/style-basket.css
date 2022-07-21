@@ -120,6 +120,7 @@
     border: 0;
     height: 45px;
     border-radius: 7px;
+    padding: 0 25px;
 }
 
 .cart-content__fullprice {
