@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const initialState = () => {
         if (localStorage.getItem('products') !== null) {
-            console.log(localStorage.getItem('products'))
             cartProductsList.querySelector('.simplebar-content').innerHTML = localStorage.getItem('products');
             printQuantity();
         }
@@ -64,8 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let parent = cartProductsList.querySelector('.simplebar-content');
         let html = parent.innerHTML;
         html = html.trim();
-        console.log(html)
-        console.log(html.length)
         localStorage.setItem('products', html);
     
         if (html.length) {
@@ -181,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
         obj.price = price;
         productArray.push(obj);
     }
-    console.log(productArray);
     
     document.querySelector('.order').addEventListener('submit', (e) => {
         e.preventDefault();
