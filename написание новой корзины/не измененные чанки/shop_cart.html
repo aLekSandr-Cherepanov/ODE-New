@@ -1,0 +1,49 @@
+<div id="shopCart" class="shop-cart" data-shopcart="1">
+  <div class="empty">
+	<div>
+        [[*template:is=`2`:or:is=`4`:or:is=`5`:or:is=`6`:then=`[[$sidebar]]`]]
+    </div>
+  </div>
+  [[+plugin]]
+</div>
+<!--tpl_separator-->
+<div id="shopCart" class="shop-cart" data-shopcart="1">
+  [[*template:is=`2`:or:is=`4`:or:is=`5`:or:is=`6`:then=`<div class="shop-cart-head"><a name="shopCart"></a><span>Корзина заказа</span></div>`]]
+  <div class="full">
+    <form action="[[+this_page_url]]#shopCart" method="post">
+    <fieldset class="basket_block">
+      <div  class="clear_basket">
+        <a href="[[+empty_url]]" id="shk_butEmptyCart">Очистить корзину</a>
+      </div>
+      <table width="100%">
+        <colgroup>
+            <col width="25%" />
+            <col width="40%" />
+            <col width="25%" />
+            <col width="10%" />
+        </colgroup>
+        <tbody>
+          [[+inner]]
+        </tbody>
+      </table>
+      <div  style="text-align:right;">Общая сумма: <b>[[+price_total:is=`0`:then=`по запросу`:else=`[[+price_total]] [[+currency]]*`]]</b></div>
+      <noscript>
+        <div><input type="submit" name="shk_recount" value="Пересчитать" /></div>
+      </noscript>
+      <div class="cart-order">
+        <a style="font-weight:bold" href="[[+order_page_url]]" id="shk_butOrder">Оформить заказ</a>
+      </div>
+    </fieldset>
+    </form>
+	
+  </div>
+
+[[+price_total:ne=`0`:then=`
+<div id="tagblock"><small>Сумма заказа в рублях: ~[[kurs?options=`[[+price_total:replace=` ==`]]`]]руб)</small></div><div><small>*Цены указаны в евро по курсу ЦБ РФ.</small></div>`]]
+
+      
+
+
+
+  [[+plugin]]
+</div>
