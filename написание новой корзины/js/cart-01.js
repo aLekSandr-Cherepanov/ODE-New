@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //валидация форм
 
-let mail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;;
+let mail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 let inp = document.querySelector('.order__inpute');
 
