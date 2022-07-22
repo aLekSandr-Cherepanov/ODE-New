@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.order').addEventListener('submit', (e) => {
         e.preventDefault();
         let self = e.currentTarget;
-        let formData = new FotmData(self);
+        let formData = new FormData(self);
         let name = self.querySelector('[name = "Имя"]').value;
         let tel = self.querySelector('[name = "Телефон"]').value;
         let mail = self.querySelector('[name = "Email"]').value;
