@@ -209,5 +209,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//валидация форм
 
+let mail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;;
+
+let inp = document.querySelector('.order__inpute');
+
+document.querySelector('.batn').onclick = function(e) {
+    e.preventDefault();
+    if (!mail.test(inp.value)) {
+        console.log('no')
+    } else {
+        console.log('yes')
+    }
+}
 
