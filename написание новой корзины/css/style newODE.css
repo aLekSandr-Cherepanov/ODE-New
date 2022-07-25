@@ -69064,3 +69064,60 @@ ul.tabs {
 }
 
 /* Корзина\ */
+
+.wrapper-description {
+    display: flex;
+}
+
+@media (max-width: 450px) {
+    .wrapper-description {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.valve_image_m {
+    margin-right: 30px;
+}
+
+.specifications_price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.wrapper-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.button-card {
+    margin-right: 0px;
+}
+
+.product-tocart-b {
+    text-align: right;
+}
+
+@media (max-width: 450px){
+    .wrapper-description {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper-price {
+        align-items: flex-start;
+    }
+    .specifications_price {
+        flex-direction: column;
+    }
+    .product-tocart-b {
+        text-align: center;
+    }
+}
+
+@media (max-width: 990px){
+    .shop-cart {
+        width: 91vw !important;
+    }
+}
