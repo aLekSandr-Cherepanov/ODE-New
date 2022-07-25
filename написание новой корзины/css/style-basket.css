@@ -225,8 +225,9 @@
     font-size: 14px;
     line-height: 20px;
     color: #808080;
-    margin-bottom: 20px;
-    margin-right: 0px;
+    /*margin-bottom: 20px;
+    margin-right: 0px;*/
+    margin: 0px 0px 20px 0px;
 }
 
 .order__inpute {
@@ -302,4 +303,31 @@
 
 .order-modal__list {
     display: none;
+}
+
+/* стили для мобильной версии корзины */
+
+
+@media (max-width: 990px) {
+    .order-modal {
+        width: 92vw;
+    }
+}
+
+@media (max-width: 420px) {
+    .order__label {
+        flex-direction: column;
+    }
+    .order-product {
+        flex-direction: column;
+    }
+    .cart-product__title {
+        font-size: 14px;
+    }
+    .cart-product__price {
+        font-size: 14px;
+    }
+    .order-product__delete {
+        margin-top: 20px;
+    }
 }
