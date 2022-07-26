@@ -68200,7 +68200,7 @@ body .basket-item-info-name-link {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: #088b4a;
+  background-color: #48b57f;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -68243,7 +68243,7 @@ body .basket-item-info-name-link {
 
 .category_module_basket {
     text-align: center;
-    background-color: #088b4a;
+    background-color: #48b57f;
     /*height: 40px;*/
     border-radius: 10px;
     width: 100%;
@@ -68325,6 +68325,10 @@ body .basket-item-info-name-link {
     /*padding-right: 5px;*/
     outline: none;
     border-radius: 10px;
+}
+
+.valve_basket input:hover {
+    opacity: 0.7;
 }
 
 .valve_price {
@@ -68708,7 +68712,7 @@ ul.tabs {
 }
 
 .empty {
-    /*display: none;*/
+    display: none;
     text-align: center;
     color: #3d3d3d;
     border: 1px solid #8e8e8e;
