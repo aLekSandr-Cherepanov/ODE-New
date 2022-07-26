@@ -68712,7 +68712,7 @@ ul.tabs {
 }
 
 .empty {
-    display: none;
+    /*display: none;*/
     text-align: center;
     color: #3d3d3d;
     border: 1px solid #8e8e8e;
