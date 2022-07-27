@@ -1,0 +1,33 @@
+<div class="order-modal">
+    <div class="order-modal__top">
+        <h2 class="order-modal__title">Оформление заказа</h2>
+    </div>
+    <div class="order-modal__info">
+        <div class="order-modal__quantity order-modal__info-item"> Товаров в заказе: <span>3 шт</span></div>
+        <div class="order-modal__sum order-modal__info-item"> Общая сумма заказа: <span>Цена: по запросу</span></div>
+        <div class="order-modal__products order-modal__info-item">
+            <button class="order-modal__btn">Состав заказа</button>
+            <ul class="order-modal__list">
+
+            </ul>
+        </div>
+    </div>
+    <form action="#" class="order-modal__form order" style="width: 100%;">
+        <input type="hidden" name="theme" value="Обратный звонок">
+        <input type="hidden" name="admin_email[]" value="super.sany96@yandex.ru">
+        <input type="hidden" name="form_subject" value="Заявка с сайта ODE">
+        <label class="order__label">
+            <span class="order__text">Ваше имя</span>
+            <input type="text" name="Имя" class="order__inpute">
+        </label>
+        <label class="order__label">
+            <span class="order__text">Номер телефона</span>
+            <input type="tel" name="Телефон" class="order__inpute" placeholder="+7 (__)__-__-__">
+        </label>
+        <label class="order__label">
+            <span class="order__text">Электронная почта</span>
+            <input type="email" name="Email" class="order__inpute" placeholder="email@gmail.com">
+        </label>
+        <button class="order__btn batn">Оформить заказ</button>
+    </form>
+</div>
