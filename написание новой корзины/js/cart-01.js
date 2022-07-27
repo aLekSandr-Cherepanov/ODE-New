@@ -97,19 +97,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: card.querySelector('.product__title').innerText,
                 imgSrc: card.querySelector('.product-img').getAttribute('src'),
                 price: card.querySelector(' .cart_price').innerText,
+                aSrc: card.querySelector('.product_href').getAttribute('href'),
             };
         
             const cartItemHTML = `
-                <li class="cart-content__item">
-                    <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
+            <li class="cart-content__item">
+                <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
+                    <a class="product_href" href="${productInfo.aSrc}" title="">
                         <img src="${productInfo.imgSrc}" alt="Клапан" class="cart-product__img">
-                        <div class="cart-product__text">
-                            <h3 class="cart-product__title">${productInfo.title}</h3>
-                            <span class="cart-product__price">${productInfo.price}</span>
-                        </div>
-                        <button class="cart-product__delete" aria-label="Удалить товар"></button>
-                    </article>
-                </li>`;
+                    </a>
+                    <div class="cart-product__text">
+                        <h3 class="cart-product__title">${productInfo.title}</h3>
+                        <span class="cart-product__price">${productInfo.price}</span>
+                    </div>
+                    <button class="cart-product__delete" aria-label="Удалить товар"></button>
+                </article>
+            </li>`;
         
             // Отобразим товар в корзине
             cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
@@ -146,11 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    const generateModalProduct = (img, title, price,id) => {
+    const generateModalProduct = (img, title, price,id, aHref) => {
                 return`
                 <li class="order-modal__item">
                     <article class="order-modal__product order-product" data-id = "${id}">
-                       <img src="${img}" alt="" class="cart-product__img">
+                        <a class="href_product" href="${aHref}" title="">
+                            <img src="${img}" alt="" class="cart-product__img">
+                        </a>
                        <div class="order-product__text">
                            <h3 class="cart-product__title">${title}</h3>
                            <span class="cart-product__price">${price}</span>
@@ -165,12 +170,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.order-modal__quantity span').textContent = `${length} шт`;
         
     for (item of array) {
+        let aHref = item.querySelector('.href_product').getAttribute('href');
         let img = item.querySelector('.cart-product__img').getAttribute('src');
         let title = item.querySelector('.cart-product__title').textContent;
         let price = item.querySelector('.cart-product__price').textContent;
         let id = item.querySelector('.cart-product').dataset.id;
     
-        orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price,id));
+        orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price,id, aHref));
     
     
         let obj = {};
