@@ -69125,3 +69125,11 @@ ul.tabs {
         width: 91vw !important;
     }
 }
+
+.order__order {
+    background-color: #48b57f;
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
