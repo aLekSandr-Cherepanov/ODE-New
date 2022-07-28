@@ -97,12 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: card.querySelector('.product__title').innerText,
                 imgSrc: card.querySelector('.product-img').getAttribute('src'),
                 price: card.querySelector(' .cart_price').innerText,
+                //nameAlt: card.querySelector(' .cart-product__img').innerText,//
             };
         
             const cartItemHTML = `
                 <li class="cart-content__item">
                     <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
-                        <img src="${productInfo.imgSrc}" alt="Клапан" class="cart-product__img">
+                        <img src="${productInfo.imgSrc}" alt="Катушка" class="cart-product__img">
                         <div class="cart-product__text">
                             <h3 class="cart-product__title">${productInfo.title}</h3>
                             <span class="cart-product__price">${productInfo.price}</span>
@@ -150,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return`
                 <li class="order-modal__item">
                     <article class="order-modal__product order-product" data-id = "${id}">
-                       <img src="${img}" alt="" class="cart-product__img">
+                       <img src="${img}" alt="Катушка" class="cart-product__img cart-product__img_test">
                        <div class="order-product__text">
                            <h3 class="cart-product__title">${title}</h3>
                            <span class="cart-product__price">${price}</span>
@@ -208,15 +209,17 @@ document.addEventListener('DOMContentLoaded', () => {
         self.reset();
     });
 
+    // функция для добавления и удаления блока оповещения при отсутствие катушек в заказе
     const  printWarning = function() {
+        //let blockWrapper = document.querySelector('.order-modal__info-item');
+        let warning = document.querySelector('.cart-product__img_test').getAttribute('alt');
         let blockWarning = document.querySelector('.order-warning__wrapper');
-        let warning = querySelector('.cart-product__img').getAttribute('alt');
-        let textAlt = 'Катушка';
-        if (warning === textAlt) {
-            blockWarning.style.display = 'block';
+        let test = "Катушка";
+        if (warning === test) {
+            blockWarning.style.display = 'none';
         }
         else {
-            false
+            blockWarning.style.display = 'block';
         }
     };
     printWarning();
