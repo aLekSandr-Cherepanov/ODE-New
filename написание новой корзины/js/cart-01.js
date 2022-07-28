@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: card.querySelector('.product__title').innerText,
                 imgSrc: card.querySelector('.product-img').getAttribute('src'),
                 price: card.querySelector(' .cart_price').innerText,
-                //nameAlt: card.querySelector(' .cart-product__img').innerText,//
+                nameTitle: card.querySelector(' .product-img').getAttribute('title'),
             };
         
             const cartItemHTML = `
                 <li class="cart-content__item">
                     <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
-                        <img src="${productInfo.imgSrc}" alt="assets/image/valves/big/bda08012as.jpg" class="cart-product__img">
+                        <img src="${productInfo.imgSrc}" title="${productInfo.nameTitle}" class="cart-product__img">
                         <div class="cart-product__text">
                             <h3 class="cart-product__title">${productInfo.title}</h3>
                             <span class="cart-product__price">${productInfo.price}</span>
@@ -147,11 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    const generateModalProduct = (img, title, price,id) => {
+    const generateModalProduct = (img, title, price, id, titleAtr) => {
                 return`
                 <li class="order-modal__item">
                     <article class="order-modal__product order-product" data-id = "${id}">
-                       <img src="${img}" alt="assets/image/valves/big/bda08012as.jpg" class="cart-product__img cart-product__img_test">
+                       <img src="${img}" title="${titleAtr}" class="cart-product__img cart-product__img">
                        <div class="order-product__text">
                            <h3 class="cart-product__title">${title}</h3>
                            <span class="cart-product__price">${price}</span>
@@ -167,11 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
     for (item of array) {
         let img = item.querySelector('.cart-product__img').getAttribute('src');
+        let titleAtr = item.querySelector('.cart-product__img').getAttribute('title');
         let title = item.querySelector('.cart-product__title').textContent;
         let price = item.querySelector('.cart-product__price').textContent;
         let id = item.querySelector('.cart-product').dataset.id;
     
-        orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price,id));
+        orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price, id, titleAtr));
     
     
         let obj = {};
@@ -212,9 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // функция для добавления и удаления блока оповещения при отсутствие катушек в заказе
     const  printWarning = function() {
         //let blockWrapper = document.querySelector('.order-modal__info-item');
-        let warning = document.querySelector('.cart-product__img_test').getAttribute('alt');
+        let warning = document.querySelector('.cart-product__img').getAttribute('title');
         let blockWarning = document.querySelector('.order-warning__wrapper');
-        let test = "assets/image/valves/big/";
+        let test = "Электромагнитная катушка";
         if (warning === test) {
             blockWarning.style.display = 'none';
         }
