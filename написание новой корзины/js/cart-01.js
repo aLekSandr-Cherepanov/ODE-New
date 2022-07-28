@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const cartItemHTML = `
                 <li class="cart-content__item">
                     <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
-                        <img src="${productInfo.imgSrc}" alt="Катушка" class="cart-product__img">
+                        <img src="${productInfo.imgSrc}" alt="assets/image/valves/big/bda08012as.jpg" class="cart-product__img">
                         <div class="cart-product__text">
                             <h3 class="cart-product__title">${productInfo.title}</h3>
                             <span class="cart-product__price">${productInfo.price}</span>
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return`
                 <li class="order-modal__item">
                     <article class="order-modal__product order-product" data-id = "${id}">
-                       <img src="${img}" alt="Катушка" class="cart-product__img cart-product__img_test">
+                       <img src="${img}" alt="assets/image/valves/big/bda08012as.jpg" class="cart-product__img cart-product__img_test">
                        <div class="order-product__text">
                            <h3 class="cart-product__title">${title}</h3>
                            <span class="cart-product__price">${price}</span>
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //let blockWrapper = document.querySelector('.order-modal__info-item');
         let warning = document.querySelector('.cart-product__img_test').getAttribute('alt');
         let blockWarning = document.querySelector('.order-warning__wrapper');
-        let test = "Катушка";
+        let test = "assets/image/valves/big/";
         if (warning === test) {
             blockWarning.style.display = 'none';
         }
