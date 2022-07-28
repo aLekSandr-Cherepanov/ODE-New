@@ -97,22 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: card.querySelector('.product__title').innerText,
                 imgSrc: card.querySelector('.product-img').getAttribute('src'),
                 price: card.querySelector(' .cart_price').innerText,
-                aSrc: card.querySelector('.product_href').getAttribute('href'),
             };
         
             const cartItemHTML = `
-            <li class="cart-content__item">
-                <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
-                    <a class="product_href" href="${productInfo.aSrc}" title="">
+                <li class="cart-content__item">
+                    <article class="cart-content__product cart-product" data-id = "${productInfo.id}" >
                         <img src="${productInfo.imgSrc}" alt="Клапан" class="cart-product__img">
-                    </a>
-                    <div class="cart-product__text">
-                        <h3 class="cart-product__title">${productInfo.title}</h3>
-                        <span class="cart-product__price">${productInfo.price}</span>
-                    </div>
-                    <button class="cart-product__delete" aria-label="Удалить товар"></button>
-                </article>
-            </li>`;
+                        <div class="cart-product__text">
+                            <h3 class="cart-product__title">${productInfo.title}</h3>
+                            <span class="cart-product__price">${productInfo.price}</span>
+                        </div>
+                        <button class="cart-product__delete" aria-label="Удалить товар"></button>
+                    </article>
+                </li>`;
         
             // Отобразим товар в корзине
             cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
@@ -149,13 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    const generateModalProduct = (img, title, price,id, aHref) => {
+    const generateModalProduct = (img, title, price,id) => {
                 return`
                 <li class="order-modal__item">
                     <article class="order-modal__product order-product" data-id = "${id}">
-                        <a class="href_product" href="${aHref}" title="">
-                            <img src="${img}" alt="" class="cart-product__img">
-                        </a>
+                       <img src="${img}" alt="" class="cart-product__img">
                        <div class="order-product__text">
                            <h3 class="cart-product__title">${title}</h3>
                            <span class="cart-product__price">${price}</span>
@@ -170,13 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.order-modal__quantity span').textContent = `${length} шт`;
         
     for (item of array) {
-        let aHref = item.querySelector('.href_product').getAttribute('href');
         let img = item.querySelector('.cart-product__img').getAttribute('src');
         let title = item.querySelector('.cart-product__title').textContent;
         let price = item.querySelector('.cart-product__price').textContent;
         let id = item.querySelector('.cart-product').dataset.id;
     
-        orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price,id, aHref));
+        orderModalList.insertAdjacentHTML('afterbegin', generateModalProduct(img, title, price,id));
     
     
         let obj = {};
@@ -202,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
+                    console.log('Отправлено')
                     alert("Письмо успешно отправлено");
                 }
             }
@@ -212,21 +207,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         self.reset();
     });
+
+    const  printWarning = function() {
+        let blockWarning = document.querySelector('.order-warning__wrapper');
+        let warning = querySelector('.cart-product__img').getAttribute('alt');
+        let textAlt = 'Катушка';
+        if (warning === textAlt) {
+            blockWarning.style.display = 'block';
+        }
+        else {
+            false
+        }
+    };
+    printWarning();
 });
-
-
-//валидация форм
-
-let mail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-let inp = document.querySelector('.order__inpute');
-
-document.querySelector('.batn').onclick = function(e) {
-    e.preventDefault();
-    if (!mail.test(inp.value)) {
-        console.log('no')
-    } else {
-        console.log('yes')
-    }
-}
-

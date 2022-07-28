@@ -69133,3 +69133,7 @@ ul.tabs {
     border-radius: 5px;
     color: #fff;
 }
+
+.order-warning__wrapper {
+    display: none;
+}
