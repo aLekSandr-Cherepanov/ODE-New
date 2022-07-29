@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderModalOpenProd = document.querySelector('.order-modal__btn');
     //переменная где должны храниться товары из корзины
     const orderModalList = document.querySelector('.order-modal__list');
+    const orderModalItem = document.querySelector('.order-modal__item');
     
     let productArray = [];
     
@@ -209,6 +210,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         self.reset();
     });
+
+
+
+    //функция для удаления товара из "Состав заказа"
+
+    orderModalItem.addEventListener('click', (b) => {
+        if (b.target.classList.contains('order-product__delete')){
+        deleteProducts(e.target.closest('.order-modal__item'))
+    }
+    });
+
+
 
     // функция для добавления и удаления блока оповещения при отсутствие катушек в заказе
     const  printWarning = function() {
