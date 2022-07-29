@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: card.dataset.id,
                 title: card.querySelector('.product__title').innerText,
                 imgSrc: card.querySelector('.product-img').getAttribute('src'),
-                price: card.querySelector(' .cart_price').innerText,
-                nameTitle: card.querySelector(' .product-img').getAttribute('title'),
+                price: card.querySelector('.cart_price').innerText,
+                nameTitle: card.querySelector('.product-img').getAttribute('title'),
             };
         
             const cartItemHTML = `
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return`
                 <li class="order-modal__item">
                     <article class="order-modal__product order-product" data-id = "${id}">
-                       <img src="${img}" title="${titleAtr}" class="cart-product__img cart-product__img">
+                       <img src="${img}" title="${titleAtr}" class="cart-product__img" id="cart-product__img-condition">
                        <div class="order-product__text">
                            <h3 class="cart-product__title">${title}</h3>
                            <span class="cart-product__price">${price}</span>
@@ -212,8 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // функция для добавления и удаления блока оповещения при отсутствие катушек в заказе
     const  printWarning = function() {
-        //let blockWrapper = document.querySelector('.order-modal__info-item');
-        let warning = document.querySelector('.cart-product__img').getAttribute('title');
+        let warning = document.getElementById('cart-product__img-condition').getAttribute('title');
         let blockWarning = document.querySelector('.order-warning__wrapper');
         let test = "Электромагнитная катушка";
         if (warning === test) {
