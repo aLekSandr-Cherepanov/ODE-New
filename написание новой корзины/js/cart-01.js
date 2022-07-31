@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                            <h3 class="cart-product__title">${title}</h3>
                            <span class="cart-product__price">${price}</span>
                        </div>
-                       <button class="order-product__delete">Удалить</button>
+                       <button class="order-product__delete" onclick="location.reload(); return false;">Удалить</button>
                     </article>
                 </li>`;
             };
@@ -215,9 +215,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //функция для удаления товара из "Состав заказа"
 
-    orderModalItem.addEventListener('click', (b) => {
+    orderModalList.addEventListener('click', (b) => {
         if (b.target.classList.contains('order-product__delete')){
-        deleteProducts(e.target.closest('.order-modal__item'))
+        deleteProducts(b.target.closest('.order-modal__item'))
     }
     });
 
