@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h3 class="cart-product__title">${productInfo.title}</h3>
                             <span class="cart-product__price">${productInfo.price}</span>
                         </div>
-                        <button class="cart-product__delete" aria-label="Удалить товар"></button>
+                        <button class="cart-product__delete" aria-label="Удалить товар" onclick="location.reload(); return false;"></button>
                     </article>
                 </li>`;
         
