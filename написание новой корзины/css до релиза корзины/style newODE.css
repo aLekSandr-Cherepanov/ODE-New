@@ -8,53 +8,53 @@ textarea.bxeditor-textarea {
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
 }
 
 body {
-    margin: 0;
+    margin: 0
 }
 
 a {
-    background: 0 0;
+    background: 0 0
 }
 
 a:focus {
-    outline: thin dotted;
+    outline: thin dotted
 }
 
 a:active,
 a:hover {
-    outline: 0;
+    outline: 0
 }
 
 h1 {
     font-size: 2em;
-    margin: .67em 0;
+    margin: .67em 0
 }
 
 abbr[title] {
-    border-bottom: 1px dotted;
+    border-bottom: 1px dotted
 }
 
 b,
 strong {
-    font-weight: 700;
+    font-weight: 700
 }
 
 dfn {
-    font-style: italic;
+    font-style: italic
 }
 
 hr {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    height: 0;
+    height: 0
 }
 
 mark {
     background: #ff0;
-    color: #000;
+    color: #000
 }
 
 code,
@@ -62,19 +62,19 @@ kbd,
 pre,
 samp {
     font-family: monospace, serif;
-    font-size: 1em;
+    font-size: 1em
 }
 
 pre {
-    white-space: pre-wrap;
+    white-space: pre-wrap
 }
 
 q {
-    quotes: "\201C""\201D""\2018""\2019";
+    quotes: "\201C""\201D""\2018""\2019"
 }
 
 small {
-    font-size: 80%;
+    font-size: 80%
 }
 
 sub,
@@ -82,7 +82,7 @@ sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
-    vertical-align: baseline;
+    vertical-align: baseline
 }
 
 sup {
@@ -6141,10 +6141,10 @@ tr.visible-md {
     .visible-md.visible-lg {
         display: block !important;
         /*margin-top: 15px;*/
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        width: 100%;
+        position: fixed; 
+        z-index: 1000; 
+        top: 0; 
+        width: 100%; 
         background-color: white;
         border-bottom: 1px solid #bfbfbf;
     }
@@ -7936,11 +7936,11 @@ svg .nspcls-1,
 svg .sscls-1,
 svg .sscls-2 {
     fill: #000;
-    fill-rule: evenodd;
+    fill-rule: evenodd
 }
 
 svg .clsw-1 {
-    fill: #000;
+    fill: #F7F7F7;
     fill-rule: evenodd
 }
 
@@ -49782,6 +49782,7 @@ table.contacts-stores .icons-text {
 /* content-banner */
 .banners-content {
     overflow: hidden;
+    margin-top: 95px;
 }
 
 .banners-content .maxwidth-banner {
@@ -52783,7 +52784,7 @@ ul.tabs li.stretch {
     }
 
     .banners-content .maxwidth-banner .maxwidth-theme {
-        min-height: 400px
+        min-height: 340px
     }
 
     .with-text-block-wrapper>.row>div:first-of-type {
@@ -61325,15 +61326,15 @@ handheld and (max-width:767px) {
 }
 
 .pull-left {
-    float: left;
+    float: left
 }
 
 .fa.pull-left {
-    margin-right: .3em;
+    margin-right: .3em
 }
 
 .fa.pull-right {
-    margin-left: .3em;
+    margin-left: .3em
 }
 
 .fa-spin {
@@ -67736,7 +67737,6 @@ body.fill_bg_y,
 body .maxwidth-theme,
 body .wrapper_inner {
     max-width: 1408px;
-    margin-top: 100px;
 }
 
 body .maxwidth-theme-popup {
@@ -68019,7 +68019,6 @@ body .basket-item-info-name-link {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
 }
 
 .filter_button {
@@ -68083,12 +68082,13 @@ body .basket-item-info-name-link {
     /* width: 100%; */
     font: 14px playregular, verdana;
     font-family: 'Roboto', sans-serif;
-    margin-top: 60px;
+    margin-top: 80px;
     margin-bottom: 41px;
 }
 
 .container_inner {
     display: flex;
+    margin-top: 60px
 }
 
 .wrapper_inner   {
@@ -68108,8 +68108,6 @@ body .basket-item-info-name-link {
 .logo_and_menu-row .wrap_icon.person {
     display: none;
 }
-
-/* Анимация при новедении в меню начало */
 
 .dropdown-toggle {
     background-image: linear-gradient(
@@ -68143,8 +68141,6 @@ body .basket-item-info-name-link {
 .dropdown-toggle:hover:before {
     width: 100%;
 }
-
-/* Анимация при новедении в меню конец */
 
 .search_wrap {
     width: 350px;
@@ -68247,7 +68243,7 @@ body .basket-item-info-name-link {
     /*height: 40px;*/
     border-radius: 10px;
     width: 100%;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
 }
 
 .description-product {
@@ -68327,13 +68323,9 @@ body .basket-item-info-name-link {
     border-radius: 10px;
 }
 
-.valve_basket input:hover {
-    opacity: 0.7;
-}
-
 .valve_price {
-    margin-bottom: 70px !important;
-    font-size: 25px !important;
+    margin-top: 80px !important;
+    font-size: 20px !important;
     color: black;
 }
 
@@ -68422,7 +68414,7 @@ ul.tabs {
     form label {
         margin-right: 0vw;
     }
-
+    
     .label_button {
         margin-right: 0;
     }
@@ -68475,6 +68467,12 @@ ul.tabs {
     }
 
     
+}
+
+@media (max-width: 990px) {
+    .shop-cart {
+        width: 91vw !important;
+    }
 }
 
 .banner-wrapper {
@@ -68601,7 +68599,6 @@ ul.tabs {
 
 .main_title {
     margin-bottom: 50px;
-    margin-top: 50px;
 }
 
 .valve_enviroment {
@@ -68610,6 +68607,7 @@ ul.tabs {
 
 .valve_enviroment img {
     padding: 0 3px;
+    width: 45px;
 }
 
 #promo table tr td:first-child {
@@ -68722,12 +68720,54 @@ ul.tabs {
 }
 
 .valve_intro {
-    font-size: 17px !important;
+    font-size: 16px !important;
 }
 
 .valve_parameters {
     font-size: 14px !important;
     margin-right: 45px;
+}
+
+.product-tocart-b {
+    text-align: right;
+}
+
+@media (max-width: 450px) {
+    .product-tocart-b {
+        text-align: center;
+    }
+}
+
+.button-card {
+    margin-right: 0px;
+}
+
+.wrapper-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media (max-width: 450px) {
+    .wrapper-price {
+        align-items: flex-start;
+    }
+}
+
+.valve_image_m {
+    margin-right: 30px;
+}
+
+.specifications_price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+} 
+
+@media (max-width: 450px) {
+    .specifications_price {
+        flex-direction: column;
+    }
 }
 
 .basket_block {
@@ -68808,6 +68848,8 @@ ul.tabs {
 
 /* Стили для переписанного меню конец */
 
+
+
 @media (max-width: 1240px) {
    .nav { 
     font-size: 14px;
@@ -68853,9 +68895,19 @@ ul.tabs {
     font-size: 30px; 
 }
 
+.wrapper-description {
+    display: flex;
+}
+
+@media (max-width: 450px) {
+    .wrapper-description {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 
-/* Стили для кнопок +- в карточки товара */
+/* Стили для кнопок +- в карточки товара начало */
 
 
 
@@ -69007,7 +69059,6 @@ ul.tabs {
 	display: none;
 }
 
-
 /* Стили для кнопок +- в карточки товара конец */
 
 
@@ -69018,9 +69069,9 @@ ul.tabs {
 
 /* Корзина/ */
 
-/*.img_basket {
+.img_basket {
     cursor: pointer;
-}*/
+}
 
 .alert-secondary {
     color: #383d41;
@@ -69070,68 +69121,3 @@ ul.tabs {
 }
 
 /* Корзина\ */
-
-.wrapper-description {
-    display: flex;
-}
-
-@media (max-width: 450px) {
-    .wrapper-description {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.valve_image_m {
-    margin-right: 30px;
-}
-
-.specifications_price {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.wrapper-price {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.button-card {
-    margin-right: 0px;
-}
-
-.product-tocart-b {
-    text-align: right;
-}
-
-@media (max-width: 450px){
-    .wrapper-description {
-        display: flex;
-        flex-direction: column;
-    }
-    .wrapper-price {
-        align-items: flex-start;
-    }
-    .specifications_price {
-        flex-direction: column;
-    }
-    .product-tocart-b {
-        text-align: center;
-    }
-}
-
-@media (max-width: 990px){
-    .shop-cart {
-        width: 91vw !important;
-    }
-}
-
-.order__order {
-    background-color: #48b57f;
-    border: 0;
-    padding: 5px;
-    border-radius: 5px;
-    color: #fff;
-}
