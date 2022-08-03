@@ -66500,7 +66500,7 @@ h4.hover,
 .button.white_bg,
 .item .child_container .child_wrapp .menu_item.current a,
 .item .child_container .child_wrapp .menu_item:hover a {
-    color: #1a70d5;
+    color: #424242;
 }
 
 button.button,
@@ -68032,14 +68032,14 @@ body .basket-item-info-name-link {
     /*background: url(button.png) no-repeat top left;*/
     width: 150px;
     height: 50px;
-    border: 1px solid #626262;
+    border: 1px solid #e4e4e4;
     font: 16px playregular, verdana;
     font-family: 'Roboto', sans-serif;
     color: #fff;
     /*text-shadow: 1px 1px #777;*/
     /*padding-right: 15px;*/
     cursor: pointer;
-    background-color: #088b4a;
+    background-color: #48b57f;
     border-radius: 12px;
 }
 
@@ -68314,9 +68314,9 @@ body .basket-item-info-name-link {
 }
 
 .valve_basket input {
-    background-color: #088b4a;
-    width: 230px;
-    height: 50px;
+    background-color: #48b57f;
+    width: 200px;
+    height: 40px;
     border: 0;
     font: 16px playregular, verdana;
     font-family: 'Roboto', sans-serif;
@@ -68393,7 +68393,7 @@ ul.tabs {
     display: inline;
     margin: 0 1px -1px 0;
     padding: 0 13px 1px;
-    color: #088c4a;
+    color: #bebebe;
     cursor: pointer;
     background: #fff;
     border: 1px solid #1d1d1d;
@@ -68601,6 +68601,7 @@ ul.tabs {
 
 .main_title {
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .valve_enviroment {
@@ -68725,7 +68726,8 @@ ul.tabs {
 }
 
 .valve_parameters {
-    font-size: 17px !important;
+    font-size: 14px !important;
+    margin-right: 45px;
 }
 
 .basket_block {
@@ -68923,6 +68925,7 @@ ul.tabs {
 .btn-outline-warning {
     color: #eb5a1e;
     border-color: #eb5a1e;
+    background-color: #fff;
 }
 
 .btn-outline-warning:hover {
