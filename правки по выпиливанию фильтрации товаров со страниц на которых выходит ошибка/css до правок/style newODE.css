@@ -68085,6 +68085,13 @@ body .basket-item-info-name-link {
     font-family: 'Roboto', sans-serif;
     margin-top: 60px;
     margin-bottom: 41px;
+    margin-right: 140px;
+}
+
+@media (max-width: 450px) {
+    .filter_center {
+        margin-right: 0;
+    }
 }
 
 .container_inner {
