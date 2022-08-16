@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="[[++site_url]]" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <meta name="keywords" content="[[*id:is=`2`:then=`Клапаны, `:else=`[[*pagetitle]], клапаны, `]]электромагнитные клапаны, соленоидные клапаны, клапаны ODE, клапаны для воды, клапаны для пара, клапаны для воздуха, клапаны для нефтепродуктов, клапаны для кофемашин, нормально закрытые клапаны, нормально-открытые клапаны" />
+    <meta name="description" content="[[*id:is=`2`:then=`Электромагнитные соленоидные клапаны`:else=`[[*pagetitle]]`]] под различные сферы применения" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<link href="/файлы сайтов/ODE/код/переделывание ODE/css/style newODE.css" rel="stylesheet">-->
+    <link href="/assets/templates/site/style-basket.css" rel="stylesheet">
+    <link href="/assets/templates/site/style newODE.css" rel="stylesheet">
+    <!--<link href="/переделывание ODE/css/style2.css" rel="stylesheet">-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title>[[*pagetitle]] - [[++site_name]]</title>
+</head>
+
+<body>
+
+    <div class="header_wrap visible-lg visible-md">
+        [[$header_newODE]]
+    </div>
+        [[$mobil_menu_newODE]]
+    <div class="wrapper_inner">
+		<div class="container_inner clearfix">
+            <div class="filter_center">
+                <div>
+                    <form action="[[~[[*id]]]]filterresults/" method="get">
+                        <div class="wrapper-block-form">
+                             <div class="block-form">
+                                <div class="filter_span_left">
+                                    <span>Соединение:</span>
+                                    <span>Тип клапана:</span>
+                                    <span>Функция:</span>
+                                </div>
+                                <div class="filter_list">
+                                    <select name="f_pipetype">
+                                        <option value="" selected="selected"> любое соединение</option>
+                                        <option value="резьба G">резьба G</option>
+                                        <option value="резьба NPT">резьба NPT</option>
+                                        <option value="монтаж на плиту">монтаж на плиту</option>
+                                        <option value="под трубки">под трубки</option>
+                                    </select>
+                                    <select name="f_type">
+                                        <option value="" selected="selected"> любой тип </option>
+                                        <option value="двухходовой">двухходовой</option>
+                                        <option value="трехходовой">трехходовой</option>
+                                        <option value="пятиходовой">пятиходовой</option>
+                                    </select>
+                                    <select name="f_func">
+                                        <option value="" selected="selected"> любая функция </option>
+                                        <option value="нормально-закрытый">нормально-закрытый</option>
+                                        <option value="нормально-открытый">нормально-открытый</option>
+                                    </select>
+                                </div>
+                             </div>
+                            <div class="block-form">
+                                <div class="filter_span_right">
+                                    <span>Диаметр:</span>
+                                    <span>Вид клапана:</span>
+                                    <span>Применение:</span>
+                                </div>
+                                <div class="filter_list">
+                                    <select name="f_pipe">
+                                        <option value="" selected="selected"> любой диаметр </option>
+                                        <option value="1/8 дюйма">1/8 дюйма</option>
+                                        <option value="1/4 дюйма">1/4 дюйма</option>
+                                        <option value="3/8 дюйма">3/8 дюйма</option>
+                                        <option value="1/2 дюйма">1/2 дюйма</option>
+                                        <option value="3/4 дюйма">3/4 дюйма</option>
+                                        <option value="1 дюйм">1 дюйм</option>
+                                        <option value="1 1/4 дюйма">1 1/4 дюйма</option>
+                                        <option value="1 1/2 дюйма">1 1/2 дюйма</option>
+                                        <option value="2 дюйма">2 дюйма</option>
+                                    </select>
+                                
+                                    <select name="f_kind">
+                                        <option value="" selected="selected"> любой вид </option>
+                                        <option value="прямого действия">прямого действия</option>
+                                        <option value="непрямого действия">непрямого действия</option>
+                                        <option value="комбинированного действия">комбинированный</option>
+                                    </select>
+                                
+                                    <select name="f_envioronmentfilter[like]">
+                                        <option value="" selected="selected"> любая среда </option>
+                                        <option value="Клапаны на воду">клапаны на воду</option>
+                                        <option value="Клапаны на пар">клапаны на пар</option>
+                                        <option value="Клапаны на воздух">клапаны на воздух</option>
+                                        <option value="Клапаны для химпрома">клапаны для химпрома</option>
+                                        <option value="Клапаны для кофемашин">клапаны для кофемашин</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter_button">
+                            <label class="label_button">
+                                <input type="submit" value="Подобрать" >
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div id="sidebar_category">
+                    <div class="filters">
+                        [[tmFilters?
+                        &innerTpl=`new_filters_innerTpl`
+                        &outerTpl=`new_filters_outerTpl`
+                        &jsMap=`1`
+                        &toPlaceholder=`filters`
+                        ]]
+                        <div class="filters__inner" id="filters">
+                            <form action="[[~[[*id]]]]" method="get">
+                                <input type="hidden" name="page_id" value="[[*id]]" disabled="disabled" />
+                                [[+filters]]
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                [[*id:is=`3`:then=`<div class="pipe-attention">
+                    <small>*Фильтрация не охватывает <a href="/catalog/pipe-valves/" title="Клапаны под силиконовые трубки">клапаны под трубки</a>
+                    </small>
+                </div>`:else=``]]
+            </div>
+			<div class="element_right_bottom">
+                <div class="category_bg_center">
+                    <div class="valve_list_cont">
+                        <div class="basket_cat" style="display: none;">[[!Shopkeeper3@cart_catalog]]</div>
+                        <div class="sorting">
+                            <div class="main_title">
+                                <h1>[[*pagetitle]]</h1>
+                            </div>
+                            <div class="block-f_limit">
+                                <select class="f_limit" style="width:168px;border: 1px solid #00000073;" id="showLimit"  name="limit" onchange="tmFilters.changeOrder(this);">
+                                    <option value="20" selected="selected">Показывать по 20</option>
+                                    <option value="30">Показывать по 30</option>
+                                    <option value="50">Показывать по 50</option>
+                                </select>
+                            </div>
+    
+                            <!--span class="sep-vert"><span>&nbsp;</span></span-->
+    
+                            <div id="sorting">
+                                Сортировать по:
+                                &nbsp;&nbsp;
+                                <select class="f_sortby" name="sortby" onchange="tmFilters.changeOrder(this);">
+                                    <option value="pagetitle">по названию</option>
+                                    <option value="price">по цене</option>
+                                    <option value="kv">расходу</option>
+                                </select>
+                                &nbsp;
+                                <select class="f_sortdir" name="sortdir" onchange="tmFilters.changeOrder(this);">
+                                    <option value="asc">по возрастанию</option>
+                                    <option value="desc">по убыванию</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="products">[[!tmCatalog]]</div>
+                        [[!+pageCount:gt=`1`:then=`
+                        <div class="pages">
+                            <ul id="pages">
+                                [[!+page.nav]]
+                            </ul>
+                        </div>
+                        `]]
+                    </div>
+                </div>
+            </div>        			
+        </div> 	
+        <div class="left_block sticky-sidebar"></div>		
+    </div> 	
+    [[$footer_newODE]]
+    <script src="/assets/js/mob menu(new ODE) js.js"></script>
+
+</body>
+
+</html>
