@@ -1,0 +1,107 @@
+<div id="filters">
+<form action="[[~[[*id]]]]" method="get">
+[[*id:is=`10`:then=`
+<div class="filter_block"><div class="filter_head"><span>Параметры катушек</span></div>
+<select name="f_kind">
+  <option selected="selected" value=""> любой вид напряжения </option>
+  <option value="двухходовой">постоянное</option>
+  <option value="трехходовой">переменное</option>
+  </select>
+<select name="f_voltage">
+  <option selected="selected" value=""> любое напряжение </option>
+  <option value="12В">12 Вольт</option>
+  <option value="24В">24 Вольт</option>
+<option value="110В">110 Вольт</option>
+<option value="110/120В">110/120 Вольт</option>
+<option value="220В">220 Вольт</option>
+<option value="220/230В">220/230 Вольт</option>
+<option value="230/240В">230/240 Вольт</option>
+<option value="220-240В">230-240 Вольт</option>
+<option value="380В">380 Вольт</option>
+  </select>
+
+<select name="f_body">
+  <option selected="selected" value=""> любой материал корпуса </option>
+  <option value="PA (черный полиамид)">PA (черный полиамид)</option>
+  <option value="PPS (черный полифениленсульфид)">PPS (черный полифениленсульфид)</option>
+<option value="EP (черная эпоксидная смола)">EP (черная эпоксидная смола)</option>
+<option value="PET (черный полиэтилен)">PET (черный полиэтилен)</option>
+  </select></div>
+`:else=`
+<div class="filter_block"><div class="filter_head"><span>Параметры клапана</span></div>
+<select name="f_type">
+  <option selected="selected" value=""> любой тип </option>
+  <option value="двухходовой">двухходовой</option>
+  <option value="трехходовой">трехходовой</option>
+<option value="пятиходовой">пятиходовой</option>
+  </select>
+
+<select name="f_kind">
+  <option selected="selected" value=""> любой вид </option>
+  <option value="прямого действия">прямого действия</option>
+  <option value="непрямого действия">непрямого действия</option>
+   <option value="комбинированного действия">комбинированный</option>
+  </select>
+
+<select name="f_func">
+    <option selected="selected" value=""> любая функция </option>
+  <option value="нормально-закрытый">нормально-закрытый</option>
+  <option value="нормально-открытый">нормально-открытый</option>
+  </select>
+</div>
+
+
+<div class="filter_block">
+    
+    <div class="filter_head"><span>Вид соединения</span></div>
+    
+   <select name="f_pipetype">
+  <option selected="selected" value=""> любое соединение</option>
+  <option value="резьба G">резьба G</option>
+<option value="резьба NPT">резьба NPT</option>
+  <option value="монтаж на плиту">монтаж на плиту</option>
+<option value="под трубки">под трубки</option>
+  </select>
+
+
+<select name="f_pipe">
+  <option selected="selected" value=""> любой диаметр </option>
+  <option value="1/8 дюйма">1/8 дюйма</option>
+  <option value="1/4 дюйма">1/4 дюйма</option>
+<option value="3/8 дюйма">3/8 дюйма</option>
+<option value="1/2 дюйма">1/2 дюйма</option>
+<option value="3/4 дюйма">3/4 дюйма</option>
+<option value="1 дюйм">1 дюйм</option>
+<option value="1 1/4 дюйма">1 1/4 дюйма</option>
+<option value="1 1/2 дюйма">1 1/2 дюйма</option>
+<option value="2 дюйма">2 дюйма</option>
+  </select>
+</div>
+
+
+<div class="filter_block">
+        <div class="filter_head"><span>Среда применения</span></div>
+        <div class="filter_row">
+    <input type="checkbox" value="Клапаны на воду" name="f_envioronmentfilter[like][]" id="f_envioronmentfilter[like][]">
+   Клапаны на воду
+</div><div class="filter_row">
+    <input type="checkbox" value="Клапаны на пар" name="f_envioronmentfilter[like][]" id="f_envioronmentfilter[like][]">
+   Клапаны на пар
+</div><div class="filter_row">
+    <input type="checkbox" value="Клапаны на воздух" name="f_envioronmentfilter[like][]" id="f_envioronmentfilter[like][]">
+    Клапаны на воздух
+</div><div class="filter_row">
+    <input type="checkbox" value="Клапаны для химпрома" name="f_envioronmentfilter[like][]" id="f_envioronmentfilter[like][]">
+  Клапаны для химпрома
+</div><div class="filter_row">
+    <input type="checkbox" value="Клапаны для кофемашин" name="f_envioronmentfilter[like][]" id="f_envioronmentfilter[like][]">
+   Клапаны для кофемашин
+</div>
+</div>
+`]]
+[[+filters]]
+<input onclick="window.location.href='/filterresults/';return false;" type="submit" value="Сбросить" />
+
+
+        <input type="submit" value="Подобрать" /></form>
+</div>
